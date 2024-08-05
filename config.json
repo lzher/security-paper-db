@@ -10,6 +10,8 @@
         "json/sp-2023.json",
         "json/sp-2022.json",
         "json/sp-2021.json",
-        "json/sp-2020.json"
+        "json/sp-2020.json",
+        "json/ccs-2023.json",
+        "json/ccs-2022.json"
     ]
 }
