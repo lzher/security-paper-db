@@ -45,6 +45,12 @@ def main(target_url, keyword, year, publication):
                 title = link_soup.select_one('h1[property=name]').get_text(strip=True) if link_soup.select_one('h1[property=name]') else '无标题'
                 abstract = link_soup.select_one('section#abstract').get_text(strip=True) if link_soup.select_one('section#abstract') else '无摘要'
                 author = link_soup.select_one('div.contributors').get_text(strip=True) if link_soup.select_one('div.contributors') else '无作者信息'
+            elif publication == 'ndss':
+                title = link_soup.select_one('h1.entry-title').get_text(strip=True) if link_soup.select_one('h1.entry-title') else '无标题'
+                abstract = link_soup.select_one('div.paper-data').get_text(strip=True) if link_soup.select_one('div.paper-data') else '无摘要'
+                author = link_soup.select_one('div.entry-content strong').get_text(strip=True) if link_soup.select_one('div.entry-content strong') else '无作者信息'
+                # 把author部分替换掉
+                abstract = abstract.replace(author, "").strip()
             else:
                 print("不支持的刊物类型")
                 break
