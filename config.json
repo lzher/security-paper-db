@@ -17,6 +17,11 @@
         "json/ndss-2023.json",
         "json/ndss-2022.json",
         "json/ndss-2021.json",
-        "json/ndss-2020.json"
+        "json/ndss-2020.json",
+        "json/icse-2024.json",
+        "json/icse-2023.json",
+        "json/icse-2022.json",
+        "json/icse-2021.json",
+        "json/icse-2020.json"
     ]
 }

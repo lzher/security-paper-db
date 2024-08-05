@@ -1,4 +1,7 @@
 # go to https://www.computer.org/csdl/proceedings/sp/2024/1RjE8VKKk1y, and "generate citations"
+# for sp, icse
+# sp: 
+# icse: https://www.computer.org/csdl/proceedings/10548016
 import json
 import argparse
 import re

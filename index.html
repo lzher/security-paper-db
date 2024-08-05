@@ -37,6 +37,9 @@
         th {
             background-color: #f0f0f0;
         }
+        .checkbox-container {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -48,9 +51,16 @@
     <input type="number" id="yearInput" placeholder="只搜索某年以后的论文...">
     <button onclick="filterTable()">搜索</button>
 
+    <div class="checkbox-container">
+        <button onclick="selectAll()">全选</button>
+        <button onclick="deselectAll()">全不选</button>
+        <div id="publicationFilters"></div>
+    </div>
+
     <table id="resultsTable">
         <thead>
             <tr>
+                <th>序号</th>
                 <th>标题</th>
                 <th>摘要</th>
                 <th>作者</th>
@@ -73,7 +83,31 @@
             const config = await response.json();
             const filePromises = config.json_files.map(file => fetch(file).then(res => res.json()));
             jsonData = (await Promise.all(filePromises)).flat(); // 将多个 JSON 文件的数据合并
+            loadPublicationFilters(jsonData);
             loadTableData(jsonData); // 初始加载数据
+        }
+
+        // 加载发表刊物的复选框
+        function loadPublicationFilters(data) {
+            const uniquePublications = [...new Set(data.map(item => item.publication))];
+            const filterContainer = document.getElementById('publicationFilters');
+
+            uniquePublications.forEach(publication => {
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.checked = true; // 默认全选
+                checkbox.value = publication;
+                checkbox.id = `filter-${publication}`;
+                checkbox.onchange = filterTable; // 过滤时触发
+
+                const label = document.createElement('label');
+                label.htmlFor = `filter-${publication}`;
+                label.innerText = publication;
+
+                filterContainer.appendChild(checkbox);
+                filterContainer.appendChild(label);
+                filterContainer.appendChild(document.createElement('br'));
+            });
         }
 
         // 向表格中填充数据
@@ -81,9 +115,10 @@
             const tableBody = document.getElementById('resultsBody');
             tableBody.innerHTML = ""; // 清空现有内容
 
-            data.forEach(item => {
+            data.forEach((item, index) => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
+                    <td>${index + 1}</td>
                     <td>${item.title}</td>
                     <td>${item.abstract}</td>
                     <td>${item.author}</td>
@@ -101,16 +136,37 @@
             const authorInput = document.getElementById('authorInput').value;
             const yearInput = document.getElementById('yearInput').value;
 
+            const checkedPublications = [...document.querySelectorAll('#publicationFilters input:checked')]
+                .map(checkbox => checkbox.value);
+
             const filteredData = jsonData.filter(item => {
                 const titleMatch = new RegExp(titleAbstractInput, 'i').test(item.title) || 
                                    new RegExp(titleAbstractInput, 'i').test(item.abstract);
                 const authorMatch = item.author.toLowerCase().includes(authorInput.toLowerCase());
                 const yearMatch = yearInput ? parseInt(item.year) >= parseInt(yearInput) : true;
+                const publicationMatch = checkedPublications.includes(item.publication);
 
-                return titleMatch && authorMatch && yearMatch;
+                return titleMatch && authorMatch && yearMatch && publicationMatch;
             });
 
             loadTableData(filteredData);
+        }
+
+        // 全选和全不选功能
+        function selectAll() {
+            const checkboxes = document.querySelectorAll('#publicationFilters input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = true;
+            });
+            filterTable(); // 重新筛选
+        }
+
+        function deselectAll() {
+            const checkboxes = document.querySelectorAll('#publicationFilters input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            filterTable(); // 重新筛选
         }
 
         // 初始加载配置和数据
