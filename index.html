@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文献搜索和筛选</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="text"], input[type="number"] {
+            width: 48%;
+            padding: 10px;
+            margin: 10px 1%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>文献搜索和筛选</h1>
+    
+    <input type="text" id="titleAbstractInput" placeholder="正则搜索标题和摘要...">
+    <input type="text" id="authorInput" placeholder="基于作者搜索...">
+    <input type="number" id="yearInput" placeholder="只搜索某年以后的论文...">
+    <button onclick="filterTable()">搜索</button>
+
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>标题</th>
+                <th>摘要</th>
+                <th>作者</th>
+                <th>年份</th>
+                <th>发表刊物</th>
+                <th>链接</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody">
+            <!-- 结果将填充到这里 -->
+        </tbody>
+    </table>
+
+    <script>
+        let jsonData = [];
+
+        // 从配置文件加载 JSON 文件
+        async function loadConfig() {
+            const response = await fetch('config.json');
+            const config = await response.json();
+            const filePromises = config.json_files.map(file => fetch(file).then(res => res.json()));
+            jsonData = (await Promise.all(filePromises)).flat(); // 将多个 JSON 文件的数据合并
+            loadTableData(jsonData); // 初始加载数据
+        }
+
+        // 向表格中填充数据
+        function loadTableData(data) {
+            const tableBody = document.getElementById('resultsBody');
+            tableBody.innerHTML = ""; // 清空现有内容
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.title}</td>
+                    <td>${item.abstract}</td>
+                    <td>${item.author}</td>
+                    <td>${item.year}</td>
+                    <td>${item.publication}</td>
+                    <td><a href="${item.link}" target="_blank">查看</a></td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // 搜索和筛选功能
+        function filterTable() {
+            const titleAbstractInput = document.getElementById('titleAbstractInput').value;
+            const authorInput = document.getElementById('authorInput').value;
+            const yearInput = document.getElementById('yearInput').value;
+
+            const filteredData = jsonData.filter(item => {
+                const titleMatch = new RegExp(titleAbstractInput, 'i').test(item.title) || 
+                                   new RegExp(titleAbstractInput, 'i').test(item.abstract);
+                const authorMatch = item.author.toLowerCase().includes(authorInput.toLowerCase());
+                const yearMatch = yearInput ? parseInt(item.year) >= parseInt(yearInput) : true;
+
+                return titleMatch && authorMatch && yearMatch;
+            });
+
+            loadTableData(filteredData);
+        }
+
+        // 初始加载配置和数据
+        loadConfig();
+    </script>
+
+</body>
+</html>
