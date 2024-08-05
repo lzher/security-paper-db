@@ -24,7 +24,13 @@
         "json/icse-2021.json",
         "json/icse-2020.json",
         "json/ase-2023.json",
+        "json/ase-2022.json",
         "json/ase-2021.json",
-        "json/ase-2020.json"
+        "json/ase-2020.json",
+        "json/fse-2024.json",
+        "json/fse-2023.json",
+        "json/fse-2022.json",
+        "json/fse-2021.json",
+        "json/fse-2020.json"
     ]
 }

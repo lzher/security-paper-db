@@ -1,0 +1,974 @@
+[
+  {
+    "title": "The Incredible Machine: Developer Productivity and the Impact of AI on Productivity (Keynote)",
+    "author": "Zimmermann, Thomas",
+    "abstract": "Developer productivity is about more than an individual’s activity levels or the efficiency of the engineering systems, and it cannot be measured by a single metric or dimension. In this talk, I will discuss a decade of my productivity research. I will show how to use the SPACE framework to measure developer productivity across multiple dimensions to better understand productivity in practice. I will also discuss common myths around developer productivity and propose a collection of sample metrics to navigate around those pitfalls. Measuring developer productivity at Microsoft has allowed us to build new insights about the challenges remote work has introduced for software engineers, and how to overcome many of those challenges moving forward into a new future of work. Finally, I will talk about how I expect that the AI revolution will change developers and their productivity.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3674721",
+    "comment": ""
+  },
+  {
+    "title": "It’s Organic: Software Testing of Emerging Domains (Keynote)",
+    "author": "Cohen, Myra B.",
+    "abstract": "Software is inherently complex and as a result over the years we have spent significant resources designing techniques for automated testing, debugging and repair to help ensure its correctness. Some of these techniques leverage algorithms that mimic biology, a natural domain with built in complexity, from which our community has made many parallels. These testing techniques are often predicated on the fact that we have the ground truth and a single set of specifications, and that the system behaves deterministically. However, the software development process and types of software we are building today is rapidly changing and these assumptions may no longer hold. In fact, our software is becoming more organic, resembling the biology we sometimes exploit to test it. In this talk I discuss some forays into software testing in emerging and scientific domains where the boundaries of our assumptions are becoming fuzzy and discuss a future of software testing within this context.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3674720",
+    "comment": ""
+  },
+  {
+    "title": "Paths to Testing: Why Women Enter and Remain in Software Testing?",
+    "author": "Silva, Kleice and Barcomb, Ann and Santos, Ronnie de Souza",
+    "abstract": "Women bring unique problem-solving skills to software development, often favoring a holistic approach and attention to detail. In software testing, precision and attention to detail are essential as professionals explore system functionalities to identify defects. Recognizing the alignment between these skills and women's strengths can derive strategies for enhancing diversity in the field. This study investigates the motivations behind women choosing careers in software testing, aiming to provide insights into their reasons for entering and remaining in the field. We used a cross-sectional survey methodology following established software engineering guidelines, collecting data from women in software testing to explore their motivations, experiences, and perspectives. Our findings reveal that women enter software testing due to increased entry-level job opportunities, work-life balance, and even fewer gender stereotypes. Their motivations to stay include the impact of delivering high-quality software, continuous learning opportunities, and the challenges the activities bring to them. However, inclusiveness and career development in the field need improvement for sustained diversity. Preliminary yet significant, these findings offer insights for researchers and practitioners towards the understanding of women's motivations in software testing and how this can be used to foster a more inclusive and equitable industry landscape.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663822",
+    "comment": ""
+  },
+  {
+    "title": "FinHunter: Improved Search-Based Test Generation for Structural Testing of FinTech Systems",
+    "author": "Ding, Xuanwen and Wang, Qingshun and Liu, Dan and Xu, Lihua and Xiao, Jun and Zhang, Bojun and Li, Xue and Dou, Liang and He, Liang and Xie, Tao",
+    "abstract": "Ensuring high quality of software systems is highly critical in mission-critical industrial sectors such as FinTech. To test such systems, replaying the historical data (typically in the form of input field values) recorded during system real usage has been quite valuable in industrial practices; augmenting the recorded data by crossing over and mutating them (as seed inputs) can further improve the structural coverage achieved by testing. However, the existing augmentation approaches based on search-based test generation face three major challenges: (1) the recorded data used as seed inputs for search-based test generation are often insufficient for achieving high structural coverage, (2) randomly crossing over individual primitive field values easily breaks the input constraints (which are often not documented) among multiple related fields, leading to invalid test inputs, and (3) randomly crossing over constituent primitive fields within a composite field easily breaks the input constraints (which are often not documented) among these constituent primitive fields, leading to invalid test inputs. To address these challenges, in this paper, we propose FinHunter, a search-based test generation framework that improves a genetic algorithm for structural testing. FinHunter includes the technique of gene-pool expansion to address the insufficient seeds for search-based test generation, and the technique of multi-level crossover to address input-constraint violations during crossover. We apply FinHunter in the Ant Group to test a real commercial system, with more than 100,000 lines of code, and 46 different interfaces each of which corresponds to a service in the system. The system provides a range of services, including customer application processing, analysis, appraisal, credit extension decision-making, and implementation. Our experimental results show that FinHunter outperforms the current practice in the Ant Group and the traditional genetic algorithm.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663823",
+    "comment": ""
+  },
+  {
+    "title": "Automated End-to-End Dynamic Taint Analysis for WhatsApp",
+    "author": "Cela, Sopot and Ciancone, Andrea and Gustafsson, Per and Hajdu, \\'{A}kos and Jia, Yue and Kapus, Timotej and Koshtenko, Maksym and Lewis, Will and Mao, Ke and Martac, Dragos",
+    "abstract": "Taint analysis aims to track data flows in systems, with potential use cases for security, privacy and performance. This paper describes an end-to-end dynamic taint analysis solution for WhatsApp. We use exploratory UI testing to generate realistic interactions and inputs, serving as data sources on the clients and then we track data propagation towards sinks on both client and server sides. Finally, a reporting pipeline localizes tainted flows in the source code, applies deduplication, filters false positives based on production call sites, and files tasks to code owners. Applied to WhatsApp, our approach found 89 flows that were fixed by engineers, and caught 50\\% of all privacy-related flows that required escalation, including instances that would have been difficult to uncover by conventional testing.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663824",
+    "comment": ""
+  },
+  {
+    "title": "Exploring Hybrid Work Realities: A Case Study with Software Professionals from Underrepresented Groups",
+    "author": "Santos, Ronnie de Souza and Magalhaes, Cleyton and Santos, Robson and Correia-Neto, Jorge",
+    "abstract": "In the post-pandemic era, software professionals resist returning to office routines, favoring the flexibility gained from remote work. Hybrid work structures, then, become popular within software companies, allowing them to choose not to work in the office every day, preserving flexibility, and creating several benefits, including an increase in the support for underrepresented groups in software development. In this study, we investigated how software professionals from underrepresented groups are experiencing post-pandemic hybrid work. In particular, we analyzed the experiences of neurodivergents, LGBTQIA+ individuals, and people with disabilities working in the software industry. We conducted a case study within a well-established South American software company and observed that hybrid work is preferred by software professionals from underrepresented groups in the post-pandemic era. Advantages include improved focus at home, personalized work setups, and accommodation for health treatments. Concerns arise about isolation and inadequate infrastructure support, highlighting the need for proactive organizational strategies.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663825",
+    "comment": ""
+  },
+  {
+    "title": "MonitorAssistant: Simplifying Cloud Service Monitoring via Large Language Models",
+    "author": "Yu, Zhaoyang and Ma, Minghua and Zhang, Chaoyun and Qin, Si and Kang, Yu and Bansal, Chetan and Rajmohan, Saravan and Dang, Yingnong and Pei, Changhua and Pei, Dan and Lin, Qingwei and Zhang, Dongmei",
+    "abstract": "In large-scale cloud service systems, monitoring metric data and conducting anomaly detection is an important way to maintain reliability and stability. However, great disparity exists between academic approaches and industrial practice to anomaly detection. Industry predominantly uses simple, efficient methods due to better interpretability and ease of implementation. In contrast, academically favor deep-learning methods, despite their advanced capabilities, face practical challenges in real-world applications. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTo address these challenges, this paper introduces MonitorAssistant, an end-to-end practical anomaly detection system via Large Language Models. MonitorAssistant automates model configuration recommendation achieving knowledge inheritance and alarm interpretation with guidance-oriented anomaly reports, facilitating a more intuitive engineer-system interaction through natural language. By deploying MonitorAssistant in Microsoft's cloud service system, we validate its efficacy and practicality, marking a significant advancement in the field of practical anomaly detection for large-scale cloud services.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663826",
+    "comment": ""
+  },
+  {
+    "title": "Chain-of-Event: Interpretable Root Cause Analysis for Microservices through Automatically Learning Weighted Event Causal Graph",
+    "author": "Yao, Zhenhe and Pei, Changhua and Chen, Wenxiao and Wang, Hanzhang and Su, Liangfei and Jiang, Huai and Xie, Zhe and Nie, Xiaohui and Pei, Dan",
+    "abstract": "This paper presents Chain-of-Event (CoE), an interpretable model for root cause analysis in microservice systems that analyzes causal relationships of events transformed from multi-modal observation data. CoE distinguishes itself by its interpretable parameter design that aligns with the operation experience of Site Reliability Engineers (SREs), thereby facilitating the integration of their expertise directly into the analysis process. Furthermore, CoE automatically learns event-causal graphs from history incidents and accurately locates root cause events, eliminating the need for manual configuration.    Through evaluation on two datasets sourced from an e-commerce system involving over 5,000 services, CoE achieves top-tier performance, with 79.30\\% top-1 and 98.8\\% top-3 accuracy on the Service dataset and 85.3\\% top-1 and 96.6\\% top-3 accuracy on the Business dataset. An ablation study further explores the significance of each component within the CoE model, offering insights into their individual contributions to the model’s overall effectiveness. Additionally, through real-world case analysis, this paper demonstrates how CoE enhances interpretability and improves incident comprehension for SREs. Our codes are available at https://github.com/NetManAIOps/Chain-of-Event.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663827",
+    "comment": ""
+  },
+  {
+    "title": "How Well Industry-Level Cause Bisection Works in Real-World: A Study on Linux Kernel",
+    "author": "Gu, Kangzheng and Zhang, Yuan and Cao, Jiajun and Tan, Xin and Yang, Min",
+    "abstract": "Bug fixing is a laborious task. In bug-fixing, debugging needs much manual effort. Various automatic analyses have been proposed to address the challenges of debugging like locating bug-inducing changes. One of the representative approaches to automatically locate bug-inducing changes is cause bisection. It bisects a range of code change history and locates the change introducing the bug. Although cause bisection has been applied in industrial testing systems for years, it still lacks a systematic understanding of it, which limits the further improvements of the current approaches.\n\n\n\nIn this paper, we take the popular industrial cause bisection system on Syzbot to perform an empirical study of real-world cause bisection practice. First, we construct a dataset consisting of 1,070 publicly disclosed bugs by Syzbot. Then, we investigate the overall performance of cause bisection. Only one-third of the bisection results are correct. Moreover, we analyze the causes why cause bisection fails. More than 80\\% of failures are caused by unstable bug reproduction and unreliable bug triage. Furthermore, we discover that correct bisection results indeed facilitate bug-fixing, specifically, recommending the bug-fixing developer, indicating the bug-fixing location, and decreasing the bug-fixing time. Finally, to improve the performance of real-world cause bisection practice, we discuss possible improvements and future research directions.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663828",
+    "comment": ""
+  },
+  {
+    "title": "AgraBOT: Accelerating Third-Party Security Risk Management in Enterprise Setting through Generative AI",
+    "author": "Toslali, Mert and Snible, Edward and Chen, Jing and Cha, Alan and Singh, Sandeep and Kalantar, Michael and Parthasarathy, Srinivasan",
+    "abstract": "In the contemporary business landscape, organizations often rely on third-party services for many functions, including IT services, cloud computing, and business processes. To identify potential security risks, organizations conduct rigorous assessments before engaging with third-party vendors, referred to as Third-Party Security Risk Management (TPSRM). Traditionally, TPSRM assessments are executed manually by human experts and involve scrutinizing various third-party documents such as System and Organization Controls Type 2 (SOC 2) reports and reviewing comprehensive questionnaires along with the security policy and procedures of vendors—a process that is time-intensive and inherently lacks scalability. \n\n\n\nAgraBOT, a Retrieval Augmented Generation (RAG) framework, can assist TPSRM assessors by expediting TPSRM assessments and reducing the time required from days to mere minutes. AgraBOT utilizes cutting-edge AI techniques, including information retrieval (IR), large language models (LLMs), multi-stage ranking, prompt engineering, and in-context learning to accurately generate relevant answers from third-party documents to conduct assessments. We evaluate AgraBOT on seven real TPSRM assessments, consisting of 373 question-answer pairs, and attain an F1 score of 0.85.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663829",
+    "comment": ""
+  },
+  {
+    "title": "A Machine Learning-Based Error Mitigation Approach for Reliable Software Development on IBM’s Quantum Computers",
+    "author": "Muqeet, Asmar and Ali, Shaukat and Yue, Tao and Arcaini, Paolo",
+    "abstract": "Quantum computers have the potential to outperform classical computers for some complex computational problems. However, current quantum computers (e.g., from IBM and Google) have inherent noise that results in errors in the outputs of quantum software executing on the quantum computers, affecting the reliability of quantum software development. The industry is increasingly interested in machine learning (ML)-based error mitigation techniques, given their scalability and practicality. However, existing ML-based techniques have limitations, such as only targeting specific noise types or specific quantum circuits. This paper proposes a practical ML-based approach, called Q-LEAR, with a novel feature set, to mitigate noise errors in quantum software outputs. We evaluated Q-LEAR on eight quantum computers and their corresponding noisy simulators, all from IBM, and compared Q-LEAR with a state-of-the-art ML-based approach taken as baseline. Results show that, compared to the baseline, Q-LEAR achieved a 25\\% average improvement in error mitigation on both real quantum computers and simulators. We also discuss the implications and practicality of Q-LEAR, which, we believe, is valuable for practitioners.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663830",
+    "comment": ""
+  },
+  {
+    "title": "Costs and Benefits of Machine Learning Software Defect Prediction: Industrial Case Study",
+    "author": "Stradowski, Szymon and Madeyski, Lech",
+    "abstract": "Context: Our research is set in the industrial context of Nokia 5G and the introduction of Machine Learning Software Defect Prediction (ML SDP) to the existing quality assurance process within the company. Objective: We aim to support or undermine the profitability of the proposed ML SDP solution designed to complement the system-level black-box testing at Nokia, as cost-effectiveness is the main success criterion for further feasibility studies leading to a potential commercial introduction. Method: To evaluate the expected cost-effectiveness, we utilize one of the available cost models for software defect prediction formulated by previous studies on the subject. Second, we calculate the standard Return on Investment (ROI) and Benefit-Cost Ratio (BCR) financial ratios to demonstrate the profitability of the developed approach based on real-world, business-driven examples. Third, we build an MS Excel-based tool to automate the evaluation of similar scenarios that other researchers and practitioners can use. Results: We considered different periods of operation and varying efficiency of predictions, depending on which of the two proposed scenarios were selected (lightweight or advanced). Performed ROI and BCR calculations have shown that the implemented ML SDP can have a positive monetary impact and be cost-effective in both scenarios. Conclusions: The cost of adopting new technology is rarely analyzed and discussed in the existing scientific literature, while it is vital for many software companies worldwide. Accordingly, we bridge emerging technology (machine learning software defect prediction) with a software engineering domain (5G system-level testing) and business considerations (cost efficiency) in an industrial environment of one of the leaders in 5G wireless technology.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663831",
+    "comment": ""
+  },
+  {
+    "title": "Neat: Mobile App Layout Similarity Comparison Based on Graph Convolutional Networks",
+    "author": "Tao, Zhu and Gao, Yongqiang and Qi, Jiayi and Peng, Chao and Wu, Qinyun and Chen, Xiang and Yang, Ping",
+    "abstract": "A wide variety of device models, screen resolutions and operating systems have emerged with recent advances in mobile devices. As a result, the graphical user interface (GUI) layout in mobile apps has become increasingly complex due to this market fragmentation, with rapid iterations being the norm. Testing page layout issues under these circumstances hence becomes a resource-intensive task, requiring significant manpower and effort due to the vast number of device models and screen resolution adaptations. One of the most challenging issues to cover manually is multi-model and cross-version layout verification for the same GUI page. To address this issue, we propose Neat, a non-intrusive end-to-end mobile app layout similarity measurement tool that utilizes computer vision techniques for GUI element detection, layout feature extraction, and similarity metrics. Our empirical evaluation and industrial application have demonstrated that our approach is effective in improving the efficiency of layout assertion testing and ensuring application quality.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663832",
+    "comment": ""
+  },
+  {
+    "title": "Fault Diagnosis for Test Alarms in Microservices through Multi-source Data",
+    "author": "Zhang, Shenglin and Zhu, Jun and Hao, Bowen and Sun, Yongqian and Nie, Xiaohui and Zhu, Jingwen and Liu, Xilin and Li, Xiaoqian and Ma, Yuchi and Pei, Dan",
+    "abstract": "Nowadays, the testing of large-scale microservices could produce an enormous number of test alarms daily. Manually diagnosing these alarms is time-consuming and laborious for the testers. Automatic fault diagnosis with fault classification and localization can help testers efficiently handle the increasing volume of failed test cases. However, the current methods for diagnosing test alarms struggle to deal with the complex and frequently updated microservices. In this paper, we introduce SynthoDiag, a novel fault diagnosis framework for test alarms in microservices through multi-source logs (execution logs, trace logs, and test case information) organized with a knowledge graph. An Entity Fault Association and Position Value (EFA-PV) algorithm is proposed to localize the fault-indicative log entries. Additionally, an efficient block-based differentiation approach is used to filter out fault-irrelevant entries in the test cases, significantly improving the overall performance of fault diagnosis. At last, SynthoDiag is systematically evaluated with a large-scale real-world dataset from a top-tier global cloud service provider, Huawei Cloud, which provides services for more than three million users. The results show the Micro-F1 and Macro-F1 scores improvement of SynthoDiag over baseline methods in fault classification are 21\\% and 30\\%, respectively, and its top-5 accuracy of fault localization is 81.9\\%, significantly surpassing the previous methods.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663833",
+    "comment": ""
+  },
+  {
+    "title": "Illuminating the Gray Zone: Non-intrusive Gray Failure Localization in Server Operating Systems",
+    "author": "Zhang, Shenglin and Zhao, Yongxin and Xiong, Xiao and Sun, Yongqian and Nie, Xiaohui and Zhang, Jiacheng and Wang, Fenglai and Zheng, Xian and Zhang, Yuzhi and Pei, Dan",
+    "abstract": "Timely localization of the root causes of gray failure is essential for maintaining the stability of the server OS. The previous intrusive gray failure localization methods usually require modifying the source code of applications, limiting their practical deployment. In this paper, we propose GrayScope, a method for non-intrusively localizing the root causes of gray failures based on the metric data in the server OS. Its core idea is to combine expert knowledge with causal learning techniques to capture more reliable inter-metric causal relationships. It then incorporates metric correlations and anomaly degrees, aiding in identifying potential root causes of gray failures. Additionally, it infers the gray failure propagation paths between metrics, providing interpretability and enhancing operators’ efficiency in mitigating gray failures. We evaluate GrayScope’s performance based on 1241 injected gray failure cases and 135 ones from industrial experiments in Huawei. GrayScope achieves the AC@5 of 90\\% and interpretability accuracy of 81\\%, significantly outperforming popular root cause localization methods. Additionally, we have made the code publicly available to facilitate further research.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663834",
+    "comment": ""
+  },
+  {
+    "title": "Unveil the Mystery of Critical Software Vulnerabilities",
+    "author": "Pan, Shengyi and Bao, Lingfeng and Zhou, Jiayuan and Hu, Xing and Xia, Xin and Li, Shanping",
+    "abstract": "Today’s software industry heavily relies on open source software (OSS). However, the rapidly increasing number of OSS software vulnerabilities (SVs) poses huge security risks to the software supply chain. Managing the SVs in the relied OSS components has become a critical concern for software vendors. Due to the limited resources in practice, an essential focus for the vendors is to locate and prioritize the remediation of critical SVs (CSVs), i.e., those tend to cause huge losses. Particularly, in the software industry, vendors are obliged to comply with the security service level agreement (SLA), which mandates the fix of CSVs within a short time frame (e.g., 15 days). However, to the best of our knowledge, there is no empirical study that specifically investigates CSVs. The existing works only target at general SVs, missing a view of the unique characteristics of CSVs. In this paper, we investigate the distributions (from temporal, type, and repository dimension) and the current remediation practice of CSVs in the OSS ecosystem, especially their differences compared with non-critical SVs (NCSVs). We adopt the industry standard to refer SVs with a 9+ Common Vulnerability Scoring System (CVSS) score as CSVs and others as NCSVs. We collect a large-scale dataset containing 14,867 SVs and artifacts associated with their remediation (e.g., issue report, commit) across 4,462 GitHub repositories. Our findings regarding CSV distributions can help practitioners better locate these hot spots. Regarding the remediation practice, we observe that though CSVs receive higher priorities, some practices (e.g., complicated review and testing pro-cess) may unintentionally cause the delay to their fixes. We also point out the risks of SV information leakage during remediation process, which could leave a window-of-opportunity of over 30 days on median for zero-day attacks. Based on our findings, we provide implications to improve the current CSV remediation practice.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663835",
+    "comment": ""
+  },
+  {
+    "title": "Multi-line AI-Assisted Code Authoring",
+    "author": "Dunay, Omer and Cheng, Daniel and Tait, Adam and Thakkar, Parth and Rigby, Peter C. and Chiu, Andy and Ahmad, Imad and Ganesan, Arun and Maddila, Chandra and Murali, Vijayaraghavan and Tayyebi, Ali and Nagappan, Nachiappan",
+    "abstract": "CodeCompose is an AI-assisted code authoring tool powered by large language models (LLMs) that provides inline suggestions all developers at Meta. In this paper, we present how we scaled the product from displaying single-line suggestions to multi-line suggestions. This evolution required us to overcome several unique challenges in improving the usability of these suggestions for developers.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst, we discuss how multi-line suggestions can have a \"jarring\" effect, as the LLM’s suggestions constantly move around the developer’s existing code, which would otherwise result in decreased productivity and satisfaction.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSecond, multi-line suggestions take significantly longer to generate; hence we present several innovative investments we made to reduce the perceived latency for users. These model-hosting optimizations sped up multi-line suggestion latency by 2.5x.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinally, we conduct experiments on 10’s of thousands of engineers to understand how multi-line suggestions impact the user experience and contrast this with single-line suggestions. Our experiments reveal that (i) multi-line suggestions account for 42\\% of total characters accepted (despite only accounting for 16\\% for dis- played suggestions) (ii) multi-line suggestions almost doubled the percentage of keystrokes saved for users from 9\\% to 17\\%. Multi-line CodeCompose has been rolled out to all engineers at Meta, and less than 1\\% of engineers have opted out of multi-line suggestions.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663836",
+    "comment": ""
+  },
+  {
+    "title": "Insights into Transitioning towards Electrics/Electronics Platform Management in the Automotive Industry",
+    "author": "Holsten, Lennart and Kr\\\"{u}ger, Jacob and Leich, Thomas",
+    "abstract": "In the automotive industry, platform strategies have proved effective for streamlining the development of complex, highly variable cyber-physical systems. Particularly software-driven innovations are becoming the primary source of new features in automotive systems, such as lane-keeping assistants, traffic-sign recognition, or even autonomous driving. To address the growing importance of software, automotive companies are progressively adopting concepts of software-platform engineering, such as software product lines. However, even when adapting such concepts, a noticeable gap exists regarding the holistic management of all aspects within a cyber-physical system, including hardware, software, electronics, variability, and interactions between all of these. Within the automotive industry, electrics/electronics platforms are an emerging trend to achieve this holistic management. In this paper, we report insights into the transition towards electrics/electronics platform management in the automotive industry, eliciting current challenges, their respective key success factors, and strategies for resolving them. For this purpose, we performed 24 semi-structured interviews with practitioners within the automotive industry. Our insights contribute strategies for other companies working on adopting electrics/electronics platform management (e.g., centralizing platform responsibilities), while also highlighting possible directions for future research (e.g., improving over-the-air updates).",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663837",
+    "comment": ""
+  },
+  {
+    "title": "Observation-Based Unit Test Generation at Meta",
+    "author": "Alshahwan, Nadia and Harman, Mark and Marginean, Alexandru and Tal, Rotem and Wang, Eddy",
+    "abstract": "TestGen automatically generates unit tests, carved from serialized observations of complex objects, observed during app execution.  We describe the development and deployment of TestGen at Meta.   In particular, we focus on the scalability challenges overcome during development in order to deploy observation-based test carving at scale in industry.  So far, TestGen has landed 518 tests into production, which have been executed 9,617,349 times in continuous integration, finding 5,702 faults.   Meta is currently in the process of more widespread deployment.  Our evaluation reveals that, when carving its observations from 4,361 reliable end-to-end tests, TestGen was able to generate tests for at least 86\\% of the classes covered by end-to-end tests.   Testing on 16 Kotlin Instagram app-launch-blocking tasks demonstrated that the TestGen tests would have trapped 13 of these before they became launch blocking.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663838",
+    "comment": ""
+  },
+  {
+    "title": "Automated Unit Test Improvement using Large Language Models at Meta",
+    "author": "Alshahwan, Nadia and Chheda, Jubin and Finogenova, Anastasia and Gokkaya, Beliz and Harman, Mark and Harper, Inna and Marginean, Alexandru and Sengupta, Shubho and Wang, Eddy",
+    "abstract": "This paper describes Meta’s TestGen-LLM tool, which uses LLMs to automatically improve existing human-written tests.     TestGen-LLM verifies that its generated test classes successfully clear a set of filters that assure measurable improvement over the original test suite, thereby eliminating problems due to LLM hallucination.    We describe the deployment of TestGen-LLM at Meta test-a-thons for the Instagram and Facebook platforms.     In an evaluation on Reels and Stories products for Instagram,     75\\% of TestGen-LLM’s test cases built correctly, 57\\% passed reliably, and 25\\% increased coverage.    During Meta’s Instagram and Facebook test-a-thons, it improved 11.5\\% of all classes to which it was applied, with 73\\% of its recommendations being accepted for production deployment by Meta software engineers.    We believe this is the first report on industrial scale deployment of LLM-generated code backed by such assurances of code improvement.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663839",
+    "comment": ""
+  },
+  {
+    "title": "Evolutionary Generative Fuzzing for Differential Testing of the Kotlin Compiler",
+    "author": "Georgescu, C\\u{a}lin and Olsthoorn, Mitchell and Derakhshanfar, Pouria and Akhin, Marat and Panichella, Annibale",
+    "abstract": "Compiler correctness is a cornerstone of reliable software development. However, systematic testing of compilers is infeasible, given the vast space of possible programs and the complexity of modern programming languages. In this context, differential testing offers a practical methodology as it addresses the oracle problem by comparing the output of alternative compilers given the same set of programs as input. In this paper, we investigate the effectiveness of differential testing in finding bugs within the Kotlin compilers developed at JetBrains. We propose a black-box generative approach that creates input programs for the K1 and K2 compilers. First, we build workable models of Kotlin semantic (semantic interface) and syntactic (enriched context-free grammar) language features, which are subsequently exploited to generate random code snippets. Second, we extend random sampling by introducing two genetic algorithms (GAs) that aim to generate more diverse input programs. Our case study shows that the proposed approach effectively detects bugs in K1 and K2; these bugs have been confirmed and (some) fixed by JetBrains developers. While we do not observe a significant difference w.r.t. the number of defects uncovered by the different search algorithms, random search and GAs are complementary as they find different categories of bugs. Finally, we provide insights into the relationships between the size, complexity, and fault detection capability of the generated input programs.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663864",
+    "comment": ""
+  },
+  {
+    "title": "Exploring LLM-Based Agents for Root Cause Analysis",
+    "author": "Roy, Devjeet and Zhang, Xuchao and Bhave, Rashi and Bansal, Chetan and Las-Casas, Pedro and Fonseca, Rodrigo and Rajmohan, Saravan",
+    "abstract": "The growing complexity of cloud based software systems has resulted in incident management becoming an integral part of the software development lifecycle. Root cause analysis (RCA), a critical part of the incident management process, is a demanding task for on-call engineers, requiring deep domain knowledge and extensive experience with a team’s specific services. Automation of RCA can result in significant savings of time, and ease the burden of incident management on on-call engineers. Recently, researchers have utilized Large Language Models (LLMs) to perform RCA, and have demonstrated promising results. However, these approaches are not able to dynamically collect additional diagnostic information such as incident related logs, metrics or databases, severely restricting their ability to diagnose root causes. In this work, we explore the use of LLM based agents for RCA to address this limitation. We present a thorough empirical evaluation of a ReAct agent equipped with retrieval tools, on an out-of-distribution dataset of production incidents collected at a large IT corporation. Results show that ReAct performs competitively with strong retrieval and reasoning baselines, but with highly increased factual accuracy. We then extend this evaluation by incorporating discussions associated with incident reports as additional inputs for the models, which surprisingly does not yield significant performance improvements. Lastly, we conduct a case study with a team at Microsoft to equip the ReAct agent with tools that give it access to external diagnostic services that are used by the team for manual RCA. Our results show how agents can overcome the limitations of prior work, and practical considerations for implementing such a system in practice.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663841",
+    "comment": ""
+  },
+  {
+    "title": "Combating Missed Recalls in E-commerce Search: A CoT-Prompting Testing Approach",
+    "author": "Wu, Shengnan and Hu, Yongxiang and Wang, Yingchuan and Gu, Jiazhen and Meng, Jin and Fan, Liujie and Luan, Zhongshi and Wang, Xin and Zhou, Yangfan",
+    "abstract": "Search components in e-commerce apps, often complex AI-based systems, are prone to bugs that can lead to missed recalls—situations where items that should be listed in search results aren't. This can frustrate shop owners and harm the app's profitability. However, testing for missed recalls is challenging due to difficulties in generating user-aligned test cases and the absence of oracles. In this paper, we introduce mrDetector, the first automatic testing approach specifically for missed recalls. To tackle the test case generation challenge, we use findings from how users construct queries during searching to create a CoT prompt to generate user-aligned queries by LLM. In addition, we learn from users who create multiple queries for one shop and compare search results, and provide a test oracle through a metamorphic relation. Extensive experiments using open access data demonstrate that mrDetector outperforms all baselines with the lowest false positive ratio. Experiments with real industrial data show that mrDetector discovers over one hundred missed recalls with only 17 false positives.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663842",
+    "comment": ""
+  },
+  {
+    "title": "An Empirically Grounded Path Forward for Scenario-Based Testing of Autonomous Driving Systems",
+    "author": "Song, Qunying and Engstr\\\"{o}m, Emelie and Runeson, Per",
+    "abstract": "Testing of autonomous driving systems (ADS) is a crucial, yet complex task that requires different approaches to ensure the safety and reliability of the system in various driving scenarios. Currently, there is a lack of understanding of the industry practices for testing such systems, and also the related challenges. To this end, we conduct a secondary analysis of our previous exploratory study, where we interviewed 13 experts from 7 ADS companies in Sweden. We explore testing practices and challenges in industry, with a special focus on scenario-based testing as it is widely used in research for testing ADS. Through a detailed analysis and synthesis of the interviews, we identify key practices and challenges of testing ADS. Our analysis shows that the industry practices are primarily concerned with various types of testing methodologies, testing principles, selection and identification of test scenarios, test analysis, and relevant standards and tools as well as some general initiatives. Challenges mainly include discrepancies in concepts and methodologies used by different companies, together with a lack of comprehensive standards, regulations, and effective tools, approaches, and techniques for optimal testing. To address these issues, we propose a `3CO' strategy (Combine, Collaborate, Continuously learn, and be Open) as a collective path forward for industry and academia to improve the testing frameworks for ADS.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663843",
+    "comment": ""
+  },
+  {
+    "title": "Dodrio: Parallelizing Taint Analysis Based Fuzzing via Redundancy-Free Scheduling",
+    "author": "Liang, Jie and Wang, Mingzhe and Zhou, Chijin and Wu, Zhiyong and Liu, Jianzhong and Jiang, Yu",
+    "abstract": "Taint analysis significantly enhances the capacity of fuzzing to navigate intricate constraints and delve into the state spaces of the target program. However, practical scenarios involving taint analysis based fuzzers with the common parallel mode still have limitations in terms of overall throughput. These limitations primarily stem from redundant taint analyses and mutations among different fuzzer instances. In this paper, we propose Dodrio, a framework that parallelizes taint analysis based fuzzing. The main idea is to schedule fuzzing tasks in a balanced way by exploiting real-time global state. It consists of two modules: real-time synchronization and load-balanced task dispatch. Real-time synchronization updates global states among all instances by utilizing dual global coverage bitmaps to reduce data race. Based on the global state, load-balanced task dispatch efficiently allocates different tasks to different instances, thereby minimizing redundant behaviors and maximizing the utilization of computing resources.\n\n\n\n\n\n\n\nWe evaluated Dodrio on real-world programs both in Google’s fuzzer-test-suite and FuzzBench against AFL’s classical parallel mode, PAFL, and Ye’s PAFL on parallelizing two taint analysis based fuzzer FairFuzz and PATA. The results show that Dodrio achieved an average speedup of 123\\%–398\\% in covering basic blocks compared to others. Based on the speedup, Dodrio found 5\\%–16\\% more basic blocks.We also assessed the scalability of Dodrio. With the same resources, the coverage improvement increases from 4\\% to 35\\% when the number of instances in parallel (i.e., CPU cores) increases from 4 to 64, compared to the classical parallel mode.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663844",
+    "comment": ""
+  },
+  {
+    "title": "Checking Complex Source Code-Level Constraints using Runtime Verification",
+    "author": "Dawes, Joshua Heneage and Bianculli, Domenico",
+    "abstract": "Runtime Verification (RV) is the process of taking a trace, representing an execution of some computational system, and checking it for satisfaction of some specification, written in a specification language. RV approaches are often aimed at being used as part of software development processes. In this case, engineers might maintain a set of specifications that capture properties concerning their source code’s behaviour at runtime. To be used in such a setting, an RV approach must provide a specification language that is practical for engineers to use regularly, along with an efficient monitoring algorithm that enables program executions to be checked quickly.        This work develops an RV approach that has been adopted by two industry partners. In particular, we take a source code fragment of an existing specification language, , which enables properties of interest to our partners to be captured easily, and develop 1) a new semantics for the fragment, 2) an instrumentation approach, and 3) a monitoring procedure for it. We show that our monitoring procedure scales to program execution traces containing up to one million events, and describe initial applications of our prototype framework (that implements our instrumentation and monitoring procedures) by the partners themselves.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663845",
+    "comment": ""
+  },
+  {
+    "title": "Automated Root Causing of Cloud Incidents using In-Context Learning with GPT-4",
+    "author": "Zhang, Xuchao and Ghosh, Supriyo and Bansal, Chetan and Wang, Rujia and Ma, Minghua and Kang, Yu and Rajmohan, Saravan",
+    "abstract": "Root Cause Analysis (RCA) plays a pivotal role in the incident diagnosis process for cloud services, requiring on-call engineers to identify the primary issues and implement corrective actions to prevent future recurrences. Improving the incident RCA process is vital for minimizing service downtime, customer impact and manual toil. Recent advances in artificial intelligence have introduced state-of-the-art Large Language Models (LLMs) like GPT-4, which have proven effective in tackling various AIOps problems, ranging from code authoring to incident management. Nonetheless, the GPT-4 model’s immense size presents challenges when trying to fine-tune it on user data because of the significant GPU resource demand and the necessity for continuous model fine-tuning with the emergence of new data. To address the high cost of fine-tuning LLM, we propose an in-context learning approach for automated root causing, which eliminates the need for fine-tuning. We conduct extensive study over 100,000 production incidents from Microsoft, comparing several large language models using multiple metrics. The results reveal that our in-context learning approach outperforms the previous fine-tuned large language models such as GPT-3 by an average of 24.8\\% across all metrics, with an impressive 49.7\\% improvement over the zero-shot model. Moreover, human evaluation involving actual incident owners demonstrates its superiority over the fine-tuned model, achieving a 43.5\\% improvement in correctness and an 8.7\\% enhancement in readability. The impressive results demonstrate the viability of utilizing a vanilla GPT model for the RCA task, thereby avoiding the high computational and maintenance costs associated with a fine-tuned model.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663846",
+    "comment": ""
+  },
+  {
+    "title": "Automating Issue Reporting in Software Testing: Lessons Learned from Using the Template Generator Tool",
+    "author": "Chaves, Lennon and Oliveira, Fl\\'{a}via and Tiago, Leonardo",
+    "abstract": "Software testing is a crucial process for ensuring the quality of software systems that are widely used in users' lives through various solutions. Software testing is performed during the implementation phase, and if any issues are found, the testing team reports them to the development team. However, if the necessary information is not described assertively, the development team may not be able to resolve the issue effectively, leading to additional costs and time. To overcome this problem, a tool called the Template Generator was developed, which is a web application that generates a pre-filled issue-reporting template with all the necessary information, including the title, preconditions, reproduction route, found results, and expected results. The use of the tool resulted in a 50\\% reduction in the time spent on reporting issues, and all members of the testing team found it easy to use, as confirmed through interviews. This study aims to share the lessons learned from using the Template Generator tool with industry and academia, as it automates the process of registering issues in software testing teams, particularly those working on Android mobile projects.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663847",
+    "comment": ""
+  },
+  {
+    "title": "An Empirical Study of Code Search in Intelligent Coding Assistant: Perceptions, Expectations, and Directions",
+    "author": "Liu, Chao and Zhang, Xindong and Zhang, Hongyu and Wan, Zhiyuan and Huang, Zhan and Yan, Meng",
+    "abstract": "Code search plays an important role in enhancing the productivity of software developers. Throughout the years, numerous code search tools have been developed and widely utilized. Many researchers have conducted empirical studies to understand the practical challenges in using web search engines, like Google and Koders, for code search. To understand the latest industrial practice, we conducted a comprehensive empirical investigation into the code search capability of TONGYI Lingma (short for Lingma), an IDE-based coding assistant recently developed by Alibaba Cloud and available to users worldwide. The investigation involved 146,893 code search events from 24,543 users who consented for recording. The quantitative analysis revealed that developers occasionally perform code search as needed, an effective tool should consistently deliver useful results in practice. To gain deeper insights into developers' perceptions and expectations, we surveyed 53 users and interviewed 7 respondents in person. This study yielded many significant findings, such as developers' expectations for a smarter code search tool capable of understanding their search intents within the local programming context in IDE. Based on the findings, we suggest practical directions for code search researchers and practitioners.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663848",
+    "comment": ""
+  },
+  {
+    "title": "Rethinking Software Engineering in the Era of Foundation Models: A Curated Catalogue of Challenges in the Development of Trustworthy FMware",
+    "author": "Hassan, Ahmed E. and Lin, Dayi and Rajbahadur, Gopi Krishnan and Gallaba, Keheliya and Cogo, Filipe Roseiro and Chen, Boyuan and Zhang, Haoxiang and Thangarajah, Kishanthan and Oliva, Gustavo and Lin, Jiahuei (Justina) and Abdullah, Wali Mohammad and Jiang, Zhen Ming (Jack)",
+    "abstract": "Foundation models (FMs), such as Large Language Models (LLMs), have revolutionized software development by enabling new use cases and business models. We refer to software built using FMs as FMware. The unique properties of FMware (e.g., prompts, agents and the need for orchestration), coupled with the intrinsic limitations of FMs (e.g., hallucination) lead to a completely new set of software engineering challenges. Based on our industrial experience, we identified ten key SE4FMware challenges that have caused enterprise FMware development to be unproductive, costly, and risky. For each of those challenges, we state the path for innovation that we envision. We hope that the disclosure of the challenges will not only raise awareness but also promote deeper and further discussions, knowledge sharing, and innovative solutions.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663849",
+    "comment": ""
+  },
+  {
+    "title": "Easy over Hard: A Simple Baseline for Test Failures Causes Prediction",
+    "author": "Gao, Zhipeng and Xue, Zhipeng and Hu, Xing and Shang, Weiyi and Xia, Xin",
+    "abstract": "The test failure causes analysis is critical since it determines the subsequent way of handling different types of bugs, which is the prerequisite to get the bugs properly analyzed and fixed. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAfter a test case fails, software testers have to inspect the test execution logs line by line to identify its root cause. However, manual root cause determination is often tedious and time-consuming, which can cost 30-40\\% of the time needed to fix a problem. Therefore, there is a need for automatically predicting the test failure causes to lighten the burden of software testers. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn this paper, we present a simple but hard-to-beat approach, named NCChecker (Naive Failure Cause Checker), to automatically identify the failure causes for failed test logs. Our approach can help developers efficiently identify the test failure causes, and flag the most probable log lines of indicating the root causes for investigation. Our approach has three main stages: log abstraction, lookup table construction, and failure causes prediction. We first perform log abstraction to parse the unstructured log messages into structured log events. NCChecker then automatically maintains and updates a lookup table via employing our heuristic rules, which record the matching score between different log events and test failure causes. When it comes to the failure cause prediction stage, for a newly generated failed test log, NCChecker can easily infer its failed reason by checking out the associated log events' scores from the lookup table. We have developed a prototype and evaluated our tool on a real-world industrial dataset with more than 10K test logs. The extensive experiments show the promising performance of our model over a set of benchmarks. Moreover, our approach is highly efficient and memory-saving, and can successfully handle the data imbalance problem. Considering the effectiveness and simplicity of our approach, we recommend relevant practitioners to adopt our approach as a baseline to beat in the future.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663850",
+    "comment": ""
+  },
+  {
+    "title": "Decision Making for Managing Automotive Platforms: An Interview Survey on the State-of-Practice",
+    "author": "Zellmer, Philipp and Kr\\\"{u}ger, Jacob and Leich, Thomas",
+    "abstract": "The automotive industry is changing due to digitization, a growing focus on software, and the increasing use of electronic control units. Consequently, automotive engineering is shifting from hardware-focused towards software-focused platform concepts to address these challenges. This shift includes adopting and integrating methods like electrics/electronics platforms, software product-line engineering, and product generation. Although these concepts are well-known in their respective research fields and different industries, there is limited research on their practical effectiveness and issues—particularly when implementing and using these concepts for modern automotive platforms. The lack of research and practical experiences challenges particularly decision makers, who cannot build on reliable evidence or techniques. In this paper, we address this gap by reporting on the state-of-practice of supporting the decision making for managing automotive electrics/electronics platforms, which integrate hardware, software, and electrics/electronics artifacts. For this purpose, we conducted 26 interviews with experts from the automotive domain. We derived questions from a previous mapping study in which we collected current research on product-structuring concepts, aiming to derive insights on the consequent practical challenges and requirements. Specifically, we contribute an overview of the requirements and criteria for (re)designing the decision-making process for managing electrics/electronics platforms within the automotive domain from the practitioners’ view. Through this, we aim to assist practitioners in managing electrics/electronics platforms, while also providing starting points for future research on a real-world problem.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663851",
+    "comment": ""
+  },
+  {
+    "title": "CVECenter: Industry Practice of Automated Vulnerability Management for Linux Distribution Community",
+    "author": "Luo, Jing and Shi, Heyuan and Zhang, Yongchao and Wang, Runzhe and Shen, Yuheng and Chen, Yuao and Shi, Xiaohai and Liu, Rongkai and Hu, Chao and Jiang, Yu",
+    "abstract": "Vulnerability management is a time-consuming and labor-intensive task for Linux distribution maintainers. It involves the continuous identification, assessment, and fixing of vulnerabilities in Linux distributions. Due to the complexity of the vulnerability management process and the gap between community requirements and existing tools, there is little systematic study on automated vulnerability management for Linux distributions. In this paper, in collaboration with enterprise developers from Alibaba and maintainers from the Linux distribution community of OpenAnolis, we develop an automated vulnerability management system called CVECenter. We conduct the industry practice on the 3 versions of Linux distribution, which are responsible for many business and cloud services. We address the following challenges in developing and applying CVECenter to the Linux distribution: multi-source heterogeneous vulnerability record inconsistency, large-scale vulnerability retrieval response delay, manual vulnerability assessment cost, vulnerability auto-fixing tools absence, and continuous vulnerability management complexity. By CVECenter, we have successfully managed over 8,000 CVEs related to the Linux distribution and published a total of 1,157 security advisories, which reduces the mean time to fix vulnerabilities by 70\\% compared to the traditional workflow of the Linux distribution community.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663852",
+    "comment": ""
+  },
+  {
+    "title": "An LGPD Compliance Inspection Checklist to Assess IoT Solutions",
+    "author": "Neto, Ivonildo Pereira Gomes and Mendes, Jo\\~{a}o and Ferreira, Waldemar and Rivero, Luis and Viana, Davi and Soares, Sergio",
+    "abstract": "With the growing role of technology in modern society, the Internet of Things (IoT) emerges as one of the leading technologies, connecting devices and integrating the physical and digital worlds. However, the interconnection of sensitive data in IoT solutions demands rigorous measures from companies to ensure information security and confidentiality. Concerns about personal data protection have led many countries, including Brazil, to enact laws and regulations such as the Brazilian General Data Protection Law (LGPD), which establishes rights and guarantees for citizens regarding the collection and processing of their data. This study proposes an instrument for industry professionals to evaluate the compliance of their IoT solutions with the LGPD. We propose a comprehensive checklist that serves as a framework for assessing LGPD compliance in software projects. The checklist's creation considered IoT domain specificities, and we evaluated it in a real-life IoT solution of a private industrial innovation institution. The results indicated that the instrument effectively facilitated verifying the solution's compliance with the LGPD. The positive evaluation of the instrument by IoT practitioners reinforces its utility. Future efforts aim to automate the checklist, replicate the study in different organizations, and explore other areas for its extension.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663853",
+    "comment": ""
+  },
+  {
+    "title": "How We Built Cedar: A Verification-Guided Approach",
+    "author": "Disselkoen, Craig and Eline, Aaron and He, Shaobo and Headley, Kyle and Hicks, Michael and Hietala, Kesha and Kastner, John and Mamat, Anwar and McCutchen, Matt and Rungta, Neha and Shah, Bhakti and Torlak, Emina and Wells, Andrew",
+    "abstract": "This paper presents verification-guided development (VGD), a software engineering process we used to build Cedar, a new policy language for expressive, fast, safe, and analyzable authorization.                                Developing a system with VGD involves writing an executable model of the system and mechanically proving properties about the model; writing production code for the system and using differential random testing (DRT) to check that the production code matches the model; and using property-based testing (PBT) to check properties of unmodeled parts of the production code.                                Using VGD for Cedar, we can build fast, idiomatic production code, prove our model correct, and find and fix subtle implementation bugs that evade code reviews and unit testing. While carrying out proofs, we found and fixed 4 bugs in Cedar’s policy validator, and DRT and PBT helped us find and fix 21 additional bugs in various parts of Cedar.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663854",
+    "comment": ""
+  },
+  {
+    "title": "Leveraging Large Language Models for the Auto-remediation of Microservice Applications: An Experimental Study",
+    "author": "Sarda, Komal and Namrud, Zakeya and Litoiu, Marin and Shwartz, Larisa and Watts, Ian",
+    "abstract": "Runtime auto-remediation is crucial for ensuring the reliability and efficiency of distributed systems, especially within complex microservice-based applications. However, the complexity of modern microservice deployments often surpasses the capabilities of traditional manual remediation and existing autonomic computing methods. Our proposed solution harnesses large language models (LLMs) to generate and execute Ansible playbooks automatically to address issues within these complex environments. Ansible playbooks, a widely adopted markup language for IT task automation, facilitate critical actions such as addressing network failures, resource constraints, configuration errors, and application bugs prevalent in managing microservices. We apply in-context learning on pre-trained LLMs using our custom-made Ansible-based remediation dataset, equipping these models to comprehend diverse remediation tasks within microservice environments. Then, these tuned LLMs efficiently generate precise Ansible scripts tailored to specific issues encountered, surpassing current state-of-the-art techniques with high functional correctness (95.45\\%) and average correctness (98.86\\%).",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663855",
+    "comment": ""
+  },
+  {
+    "title": "Practitioners’ Challenges and Perceptions of CI Build Failure Predictions at Atlassian",
+    "author": "Hong, Yang and Tantithamthavorn, Chakkrit and Pasuksmit, Jirat and Thongtanunam, Patanamon and Friedman, Arik and Zhao, Xing and Krasikov, Anton",
+    "abstract": "Continuous Integration (CI) build failures could significantly impact the software development process and teams, such as delaying the release of new features and reducing developers' productivity. In this work, we report on an empirical study that investigates CI build failures throughout product development at Atlassian. Our quantitative analysis found that the repository dimension is the key factor influencing CI build failures. In addition, our qualitative survey revealed that Atlassian developers perceive CI build failures as challenging issues in practice. Furthermore, we found that the CI build prediction can not only provide proactive insight into CI build failures but also facilitate the team's decision-making. Our study sheds light on the challenges and expectations involved in integrating CI build prediction tools into the Bitbucket environment, providing valuable insights for enhancing CI processes.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663856",
+    "comment": ""
+  },
+  {
+    "title": "Decoding Anomalies! Unraveling Operational Challenges in Human-in-the-Loop Anomaly Validation",
+    "author": "Kim, Dong Jae and Locke, Steven and Chen, Tse-Hsun (Peter) and Toma, Andrei and Sajedi, Sarah and Sporea, Steve and Weinkam, Laura",
+    "abstract": "Artificial intelligence has been driving new industrial solutions for challenging problems in recent years, with many companies leveraging AI to enhance business processes and products. Automated anomaly detection emerges as one of the top priorities in AI adoption, sought after by numerous small to large-scale enterprises. Extending beyond domain-specific applications like software log analytics, where anomaly detection has perhaps garnered the most interest in software engineering, we find that very little research effort has been devoted to post-anomaly detection, such as validating anomalies. For example, validating anomalies requires human-in-the-loop interaction, though working with human experts is challenging due to uncertain requirements on how to elicit valuable feedback from them, posing formidable operationalizing challenges. In this study, we provide an experience report delving into a more holistic view of the complexities of adopting effective anomaly detection models from a requirement engineering perspective. We address challenges and provide solutions to mitigate challenges associated with operationalizing anomaly detection from diverse perspectives: inherent issues in dynamic datasets, diverse business contexts, and the dynamic interplay between human expertise and AI guidance in the decision-making process. We believe our experience report will provide insights for other companies looking to adopt anomaly detection in their own business settings.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663857",
+    "comment": ""
+  },
+  {
+    "title": "LM-PACE: Confidence Estimation by Large Language Models for Effective Root Causing of Cloud Incidents",
+    "author": "Zhang, Dylan and Zhang, Xuchao and Bansal, Chetan and Las-Casas, Pedro and Fonseca, Rodrigo and Rajmohan, Saravan",
+    "abstract": "Major cloud providers have employed advanced AI-based solutions like large language models to aid humans in identifying the root causes of cloud incidents. Even though AI-driven assistants are be- coming more common in the process of analyzing root causes, their usefulness in supporting on-call engineers is limited by their unstable accuracy. This limitation arises from the fundamental challenges of the task, the tendency of language model-based methods to produce hallucinate information, and the difficulty in distinguishing these well-disguised hallucinations. To address this challenge, we propose a novel confidence estimation method to assign reliable confidence scores to root cause recommendations, aiding on-call engineers in deciding whether to trust the model’s predictions. We made re- training-free confidence estimation on out-of-domain tasks possible via retrieval augmentation. To elicit better-calibrated confidence es- timates, we adopt a two-stage prompting procedure and a learnable transformation, which reduces the estimated calibration error (ECE) to 31\\% of the direct prompting baseline on a dataset comprising over 100,000 incidents from Microsoft. Additionally, we demonstrate that our method is applicable across various root cause prediction models. Our study takes an important move towards reliably and effectively embedding LLMs into cloud incident management systems",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663858",
+    "comment": ""
+  },
+  {
+    "title": "Application of Quantum Extreme Learning Machines for QoS Prediction of Elevators’ Software in an Industrial Context",
+    "author": "Wang, Xinyi and Ali, Shaukat and Arrieta, Aitor and Arcaini, Paolo and Arratibel, Maite",
+    "abstract": "Quantum Extreme Learning Machine (QELM) is an emerging technique that utilizes quantum dynamics and an easy-training strategy to solve problems such as classification and regression efficiently. Although QELM has many potential benefits, its real-world applications remain limited. To this end, we present QELM’s industrial application in the context of elevators, by proposing an approach called QUELL. In QUELL, we use QELM for the waiting time prediction related to the scheduling software of elevators, with applications for software regression testing, elevator digital twins, and real-time performance prediction. The scheduling software is a classical software implemented by our industrial partner Orona, a globally recognized leader in elevator technology. We assess the performance of with four days of operational data of a real elevator installation with various feature sets and demonstrate that QUELL can efficiently predict waiting times, with prediction quality significantly better than that of classical ML models employed in a state-of-the-practice approach. Moreover, we show that the prediction quality of QUELL does not degrade when using fewer features. Based on our industrial application, we further provide insights into using QELM in other applications in Orona, and discuss how QELM could be applied to other industrial applications.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663859",
+    "comment": ""
+  },
+  {
+    "title": "Supporting Early Architectural Decision-Making through Tradeoff Analysis: A Study with Volvo Cars",
+    "author": "\\\"{O}qvist, Karl and Messinger, Jacob and Wohlrab, Rebekka",
+    "abstract": "As automotive companies increasingly move operations to the cloud, they need to carefully make architectural decisions. Currently, architectural decisions are made ad-hoc and depend on the experience of the involved architects. Recent research has proposed the use of data-driven techniques that help humans to understand complex design spaces and make thought-through decisions. This paper presents a design science study in which we explored the use of such techniques in collaboration with architects at Volvo Cars. We show how a software architecture can be simulated to make more principled design decisions and allow for architectural tradeoff analysis. Concretely, we apply machine learning-based techniques such as Principal Component Analysis, Decision Tree Learning, and clustering. Our findings show that the tradeoff analysis performed on the data from simulated architectures gave important insights into what the key tradeoffs are and what design decisions shall be taken early on to arrive at a high-quality architecture.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663860",
+    "comment": ""
+  },
+  {
+    "title": "X-Lifecycle Learning for Cloud Incident Management using LLMs",
+    "author": "Goel, Drishti and Husain, Fiza and Singh, Aditya and Ghosh, Supriyo and Parayil, Anjaly and Bansal, Chetan and Zhang, Xuchao and Rajmohan, Saravan",
+    "abstract": "Incident management for large cloud services is a complex and tedious process that requires a significant amount of manual effort from on-call engineers (OCEs). OCEs typically leverage data from different stages of the software development lifecycle [SDLC] (e.g., codes, configuration, monitor data, service properties, service dependencies, trouble-shooting documents, etc.) to generate insights for detection, root cause analysis and mitigation of incidents. Recent advancements in large language models [LLMs] (e.g., ChatGPT, GPT-4, Gemini) have created opportunities to automatically generate contextual recommendations for the OCEs, assisting them in quickly identifying and mitigating critical issues. However, existing research typically takes a silo-ed view of solving a certain task in incident management by leveraging data from a single stage of the SDLC. In this paper, we demonstrate that augmenting additional contextual data from different stages of the SDLC improves the performance of two critically important and practically challenging tasks: (1) automatically generating root cause recommendations for dependency failure related incidents, and (2) identifying the ontology of service monitors used for automatically detecting incidents. By leveraging a dataset of 353 incidents and 260 monitors from Microsoft, we demonstrate that augmenting contextual information from different stages of the SDLC improves the performance over state-of-the-art methods.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663861",
+    "comment": ""
+  },
+  {
+    "title": "S.C.A.L.E: A CO2-Aware Scheduler for OpenShift at ING",
+    "author": "Den Toonder, Jurriaan and Braakman, Paul and Durieux, Thomas",
+    "abstract": "This paper investigates the potential of reducing greenhouse gas emissions in data centers by intelligently scheduling batch processing jobs. A carbon-aware scheduler, S.C.A.L.E (Scheduler for Carbon-Aware Load Execution), was developed and applied to a resource-intensive data processing pipeline at ING. The scheduler optimizes the use of green energy hours, times with higher renewable energy availability, and lower carbon emissions. The S.C.A.L.E comprises three modules for predicting task running times, forecasting renewable energy generation and electricity grid demand, and interacting with the processing pipeline. Our evaluation shows an expected reduction in greenhouse gas emissions of around 20\\% when using the carbon-aware scheduler. The scheduler’s effectiveness varies depending on the season and the expected arrival time of the batched input data. Despite its limitations, the scheduler demonstrates the feasibility and benefits of implementing a carbon-aware scheduler in resource-intensive processing pipeline.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663862",
+    "comment": ""
+  },
+  {
+    "title": "Property-Based Testing for Validating User Privacy-Related Functionalities in Social Media Apps",
+    "author": "Sun, Jingling and Su, Ting and Sun, Jun and Li, Jianwen and Wang, Mengfei and Pu, Geguang",
+    "abstract": "There are various privacy-related functionalities in social media apps. For example, users of TikTok can upload videos that record their daily activities and specify which users can view these videos. Ensuring the correctness of these functionalities is crucial. Otherwise, it may threaten the users' privacy or frustrate users. Due to the absence of appropriate automated testing techniques, manual testing remains the primary approach for validating these functionalities in the industrial setting, which is cumbersome, error-prone, and inadequate due to its small-scale validation. To this end, we adapt property-based testing to validate app behaviors against the properties described by the given privacy specifications. Our key idea is that privacy specifications maintained by testers written in natural language can be transformed into the B\\\"{u}chi automata, which can be used to determine whether the app has reached unexpected states as well as guide the test case generation. To support the application of our approach, we implemented an automated GUI testing tool, PDTDroid, which can detect the app behavior that is inconsistent with the checked privacy specifications. Our evaluation on TikTok, involving 125 real privacy specifications, shows that PDTDroid can efficiently validate privacy-related functionality and reduce manual effort by an average of 95.2\\% before each app release.Our further experiments on six popular social media apps show the generability and applicability of PDTDroid. During the evaluation, PDTDroid also found 22 previously unknown inconsistencies between the specification and implementation in these extensively tested apps (including four privacy leakage bugs, nine privacy-related functional bugs, and nine specification issues).",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663863",
+    "comment": ""
+  },
+  {
+    "title": "The Patch Overfitting Problem in Automated Program Repair: Practical Magnitude and a Baseline for Realistic Benchmarking",
+    "author": "Petke, Justyna and Martinez, Matias and Kechagia, Maria and Aleti, Aldeida and Sarro, Federica",
+    "abstract": "Automated program repair techniques aim to generate patches for software bugs, mainly relying on testing to check their validity. The generation of a large number of such plausible yet incorrect patches is widely believed to hinder wider application of APR in practice, which has motivated research in automated patch assessment. We reflect on the validity of this motivation and carry out an empirical study to analyse the extent to which 10 APR tools suffer from the overfitting problem in practice. We observe that the number of plausible patches generated by any of the APR tools analysed for a given bug from the Defects4J dataset is remarkably low, a median of 2, indicating that a developer only needs to consider 2 patches in most cases to be confident to find a fix or confirming its nonexistence. This study unveils that the overfitting problem might not be as bad as previously thought. We reflect on current evaluation strategies of automated patch assessment techniques and propose a Random Selection baseline to assess whether and when using such techniques is beneficial for reducing human effort. We advocate future work should evaluate the benefit arising from patch overfitting assessment usage against the random baseline.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663776",
+    "comment": ""
+  },
+  {
+    "title": "From Models to Practice: Enhancing OSS Project Sustainability with Evidence-Based Advice",
+    "author": "Khan, Nafiz Imtiaz and Filkov, Vladimir",
+    "abstract": "Sustainability in Open Source Software (OSS) projects is crucial for long-term innovation, community support, and the enduring success of open-source solutions. Although multitude of studies have provided effective models for OSS sustainability, their practical implications have been lacking because most identified features are not amenable to direct tuning by developers (e.g., levels of communication, number of commits per project). \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn this paper, we report on preliminary work toward making models more actionable based on evidence-based findings from prior research. Given a set of identified features of interest to OSS project sustainability, we performed comprehensive literature review related to those features to uncover practical, evidence-based advice, which we call Researched Actionables (ReACTs). The ReACTs are practical advice with specific steps, found in prior work to associate with tangible results. Starting from a set of sustainability-related features, this study contributes 105 ReACTs to the SE community by analyzing 186 published articles. Moreover, this study introduces a newly developed tool (ReACTive) designed to enhance the exploration of ReACTs through visualization across various facets of the OSS ecosystem. The ReACTs idea opens new avenues for connecting SE metrics to actionable research in SE in general.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663777",
+    "comment": ""
+  },
+  {
+    "title": "Reproducibility Debt: Challenges and Future Pathways",
+    "author": "Hassan, Zara and Treude, Christoph and Norrish, Michael and Williams, Graham and Potanin, Alex",
+    "abstract": "Reproducibility of scientific computation is a critical factor in validating its underlying process, but it is often elusive. Complexity and continuous evolution in software systems have introduced new challenges for reproducibility across a myriad of computational sciences, resulting in growing debt. This requires a comprehensive domain-agnostic study to define and asses Reproducibility Debt (RpD) in scientific software, thus uncovering and classifying all underlying factors attributed towards its emergence and identification i.e., causes and effects. Moreover, an organised map of prevention strategies is imperative to guide researchers for its proactive management. This vision paper highlights the challenges that hinder effective management of RpD in scientific software, with preliminary results from our ongoing work and an agenda for future research.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663778",
+    "comment": ""
+  },
+  {
+    "title": "Testing Learning-Enabled Cyber-Physical Systems with Large-Language Models: A Formal Approach",
+    "author": "Zheng, Xi and Mok, Aloysius K. and Piskac, Ruzica and Lee, Yong Jae and Krishnamachari, Bhaskar and Zhu, Dakai and Sokolsky, Oleg and Lee, Insup",
+    "abstract": "The integration of machine learning into cyber-physical systems (CPS) promises enhanced efficiency and autonomous capabilities, revolutionizing fields like autonomous vehicles and telemedicine. This evolution necessitates a shift in the software development life cycle, where data and learning are pivotal. Traditional verification and validation methods are inadequate for these AI-driven systems. This study focuses on the challenges in ensuring safety in learning-enabled CPS. It emphasizes the role of testing as a primary method for verification and validation, critiques current methodologies, and advocates for a more rigorous approach to assure formal safety.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663779",
+    "comment": ""
+  },
+  {
+    "title": "AutoOffAB: Toward Automated Offline A/B Testing for Data-Driven Requirement Engineering",
+    "author": "Wu, Jie JW",
+    "abstract": "Software companies have widely used online A/B testing to evaluate the impact of a new technology by offering it to groups of users and comparing it against the unmodified product. However, running online A/B testing needs not only efforts in design, implementation, and stakeholders’ approval to be served in production but also several weeks to collect the data in iterations. To address these issues, a recently emerging topic, called offline A/B testing, is getting increasing attention, intending to conduct the offline evaluation of new technologies by estimating historical logged data. Although this approach is promising due to lower implementation effort, faster turnaround time, and no potential user harm, for it to be effectively prioritized as requirements in practice, several limitations need to be addressed, including its discrepancy with online A/B test results, and lack of systematic updates on varying data and parameters. In response, in this vision paper, I introduce AutoOffAB, an idea to automatically run variants of offline A/B testing against recent logging and update the offline evaluation results, which are used to make decisions on requirements more reliably and systematically.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663780",
+    "comment": ""
+  },
+  {
+    "title": "Personal Data-Less Personalized Software Applications",
+    "author": "Belguith, Sana and Omoronyia, Inah and Chitchyan, Ruzanna",
+    "abstract": "Adoption of software solutions is often hindered by privacy concerns, especially for applications which aim to collect data capable of `total privacy eradication'. To address this, the General Data Protection Regulation (GDPR) has introduced the Data Minimization principle that stipulates on only collecting the minimum amount of data necessary to achieve a legitimate and pre-defined purpose. Privacy researchers have argued that this principle has led to a privacy-utility trade-off, claiming that the less personal data is collected by a software application the less utility users receive from that software. In this paper, we demonstrate that software can be designed to provide quite \"personalized\" utility even before any sensitive personal data is collected. \n\n\n\nTo do so, we have re-engineered the software use process by allowing users to self-categorize within personas (i.e., generic user categories with similar software use needs to that of the intended beneficiary user groups). This approach is illustrated with a case study of home energy management system design.\n\n\n\n\n\nOnly when a householder decides to fully use particular personalization features to fine-tune the application to their own needs would this householder choose to give up their personal data.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663781",
+    "comment": ""
+  },
+  {
+    "title": "The Lion, the Ecologist and the Plankton: A Classification of Species in Multi-bot Ecosystems",
+    "author": "Platis, Dimitrios and Erlenhov, Linda and Neto, Francisco Gomes de Oliveira",
+    "abstract": "The vast majority of state-of-the-art and practice have, so far, focused on understanding and developing individual bots that support software development (DevBots), while the interactions and collaborations between those DevBots introduce intriguing challenges and synergies that can both disrupt and enhance development cycles. In this vision paper we propose a taxonomy for DevBot roles in an ecosystem, based on how they interact. Much like biology, DevBots ecosystems rely on a balance between the creation, usage and maintenance of DevBots, particularly, on how they depend on one another. Further we contribute with reflections on how these interactions affect multi-bot projects.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663782",
+    "comment": ""
+  },
+  {
+    "title": "Verification of Programs with Common Fragments",
+    "author": "Postolski, Ivan and Braberman, V\\'{\\i}ctor and Garbervetsky, Diego and Uchitel, Sebastian",
+    "abstract": "We introduce a novel verification problem that exploits common code fragments between two programs. We discuss a solution based on Mimicry Monitors that anticipate if the execution of a Program Under Analysis has a counterpart in an Oracle Program without executing the latter. We discuss how such monitors can be leveraged in different software engineering tasks.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663783",
+    "comment": ""
+  },
+  {
+    "title": "When Fuzzing Meets LLMs: Challenges and Opportunities",
+    "author": "Jiang, Yu and Liang, Jie and Ma, Fuchen and Chen, Yuanliang and Zhou, Chijin and Shen, Yuheng and Wu, Zhiyong and Fu, Jingzhou and Wang, Mingzhe and Li, Shanshan and Zhang, Quan",
+    "abstract": "Fuzzing, a widely-used technique for bug detection, has seen advancements through Large Language Models (LLMs). Despite their potential, LLMs face specific challenges in fuzzing. In this paper, we identified five major challenges of LLM-assisted fuzzing. To support our findings, we revisited the most recent papers from top-tier conferences, confirming that these challenges are widespread. As a remedy, we propose some actionable recommendations to help improve applying LLM in Fuzzing and conduct preliminary evaluations on DBMS fuzzing. The results demonstrate that our recommendations effectively address the identified challenges.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663784",
+    "comment": ""
+  },
+  {
+    "title": "Using Run-Time Information to Enhance Static Analysis of Machine Learning Code in Notebooks",
+    "author": "Wang, Yiran and L\\'{o}pez, Jos\\'{e} Antonio Hern\\'{a}ndez and Nilsson, Ulf and Varr\\'{o}, D\\'{a}niel",
+    "abstract": "A prevalent method for developing machine learning (ML) prototypes involves the use of notebooks. Notebooks are sequences of cells containing both code and natural language documentation. When executed during development, these code cells provide valuable run-time information. Nevertheless, current static analyzers for notebooks do not leverage this run-time information to detect ML bugs. Consequently, our primary proposition in this paper is that harvesting this run-time information in notebooks can significantly improve the effectiveness of static analysis in detecting ML bugs. To substantiate our claim, we focus on bugs related to tensor shapes and conduct experiments using two static analyzers: 1) PYTHIA, a traditional rule-based static analyzer, and 2) GPT-4, a large language model that can also be used as a static analyzer. The results demonstrate that using run-time information in static analyzers enhances their bug detection performance and it also helped reveal a hidden bug in a public dataset.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663785",
+    "comment": ""
+  },
+  {
+    "title": "Human-Imperceptible Retrieval Poisoning Attacks in LLM-Powered Applications",
+    "author": "Zhang, Quan and Zeng, Binqi and Zhou, Chijin and Go, Gwihwan and Shi, Heyuan and Jiang, Yu",
+    "abstract": "Presently, with the assistance of advanced LLM application development frameworks, more and more LLM-powered applications can effortlessly augment the LLMs' knowledge with external content using the retrieval augmented generation (RAG) technique. However, these frameworks' designs do not have sufficient consideration of the risk of external content, thereby allowing attackers to undermine the applications developed with these frameworks. In this paper, we reveal a new threat to LLM-powered applications, termed retrieval poisoning, where attackers can guide the application to yield malicious responses during the RAG process. Specifically, through the analysis of LLM application frameworks, attackers can craft documents visually indistinguishable from benign ones. Despite the documents providing correct information, once they are used as reference sources for RAG, the application is misled into generating incorrect responses. Our preliminary experiments indicate that attackers can mislead LLMs with an 88.33\\% success rate, and achieve a 66.67\\% success rate in the real-world application, demonstrating the potential impact of retrieval poisoning.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663786",
+    "comment": ""
+  },
+  {
+    "title": "On Polyglot Program Testing",
+    "author": "Houdaille, Phil\\'{e}mon and Khelladi, Djamel Eddine and Combemale, Benoit and Mussbacher, Gunter",
+    "abstract": "In modern applications, it has become increasingly necessary to use multiple languages in a coordinated way to deal with the complexity and diversity of concerns encountered during development. This practice is known as polyglot programming. However, while execution platforms for polyglot programs are increasingly mature, there is a lack of support in how to test polyglot programs. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis paper is a first step to increase awareness about polyglot testing efforts. It provides an overview of how polyglot programs are constructed, and an analysis of the impact on test writing at its different steps. More specifically, we focus on dynamic white box testing, and how polyglot programming impacts selection of input data, scenario specification and execution, and oracle expression.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe discuss the related challenges in particular with regards to the current state of the practice. We envision in this paper to raise interest in polyglot program testing within the software engineering community, and help in defining directions for future work.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663787",
+    "comment": ""
+  },
+  {
+    "title": "A Vision on Open Science for the Evolution of Software Engineering Research and Practice",
+    "author": "OliveiraJr, Edson and Madeiral, Fernanda and Santos, Alcemir Rodrigues and von Flach, Christina and Soares, Sergio",
+    "abstract": "Open Science aims to foster openness and collaboration in research, leading to more significant scientific and social impact. However, practicing Open Science comes with several challenges and is currently not properly rewarded. In this paper, we share our vision for addressing those challenges through a conceptual framework that connects essential building blocks for a change in the Software Engineering community, both culturally and technically. The idea behind this framework is that Open Science is treated as a first-class requirement for better Software Engineering research, practice, recognition, and relevant social impact. There is a long road for us, as a community, to truly embrace and gain from the benefits of Open Science. Nevertheless, we shed light on the directions for promoting the necessary culture shift and empowering the Software Engineering community.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663788",
+    "comment": ""
+  },
+  {
+    "title": "Execution-Free Program Repair",
+    "author": "Huang, Li and Meyer, Bertrand and Mustafin, Ilgiz and Oriol, Manuel",
+    "abstract": "Automatic program repair usually relies heavily on test cases for both bug identification and fix validation. The issue is that writing test cases is tedious, running them takes much time, and validating a fix through tests does not guarantee its correctness. The novel idea in the Proof2Fix methodology and tool presented here is to rely instead on a program prover, without the need to run tests or to run the program at all. Results show that Proof2Fix automatically finds and fixes significant historical bugs",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663789",
+    "comment": ""
+  },
+  {
+    "title": "Look Ma, No Input Samples! Mining Input Grammars from Code with Symbolic Parsing",
+    "author": "Bettscheider, Leon and Zeller, Andreas",
+    "abstract": "Generating test inputs at the system level (“fuzzing”) is most effective if one has a complete specification (such as a grammar) of the input language.  In the absence of a specification, all known fuzzing approaches rely on a set of input samples to infer input properties and guide test generation.  If the set of inputs is incomplete, however, so will be the resulting test cases; if one has no input samples, meaningful test generation so far has been hard to impossible.    In this paper, we introduce a means to determine the input language of a program from the program code alone, opening several new possibilities for comprehensive testing of a wide range of programs.  Our symbolic parsing approach first transforms the program such that (1) ‍calls to parsing functions are abstracted into parsing corresponding symbolic nonterminals, and (2) ‍loops and recursions are limited such that the transformed parser then has a finite set of paths.  Symbolic testing then associates each path with a sequence of symbolic nonterminals and terminals, which form a grammar.  First grammars extracted from nontrivial C subjects by our prototype show very high recall and precision, enabling new levels of effectiveness, efficiency, and applicability in test generators.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663790",
+    "comment": ""
+  },
+  {
+    "title": "A Preliminary Study on the Privacy Concerns of Using IP Addresses in Log Data",
+    "author": "Sedki, Issam",
+    "abstract": "Log data, crucial for system monitoring and debugging, inherently contains information that may conflict with privacy safeguards. This study addresses the delicate interplay between log utility and the protection of sensitive data, with a focus on how IP addresses are recorded. We scrutinize the logging practices against the privacy policies of Linux, OpenSSH, and MacOS, uncovering discrepancies that hint at broader privacy concerns. Our methodology, anchored in privacy benchmarks like GDPR, evaluates both open-source and commercial systems, revealing that the former may lack rigorous privacy controls. The research finds that the actual logging of IP addresses often deviates from policy statements, especially in open-source systems. By systematically contrasting stated policies with practical application, our study identifies privacy risks and advocates for policy reform. We call for improved privacy governance in open-source software and a reformation of privacy policies to ensure they reflect actual practices, enhancing transparency and data protection within log management.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663791",
+    "comment": ""
+  },
+  {
+    "title": "Monitoring the Execution of 14K Tests: Methods Tend to Have One Path That Is Significantly More Executed",
+    "author": "Hora, Andre",
+    "abstract": "The literature has provided evidence that developers are likely to test some behaviors of the program and avoid other ones. Despite this observation, we still lack empirical evidence from real-world systems. In this paper, we propose to automatically identify the tested paths of a method as a way to detect the method's behaviors. Then, we provide an empirical study to assess the tested paths quantitatively. We monitor the execution of 14,177 tests from 25 real-world Python systems and assess 11,425 tested paths from 2,357 methods. Overall, our empirical study shows that one tested path is prevalent and receives most of the calls, while others are significantly less executed. We find that the most frequently executed tested path of a method has 4x more calls than the second one. Based on these findings, we discuss practical implications for practitioners and researchers and future research directions.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663792",
+    "comment": ""
+  },
+  {
+    "title": "Test Polarity: Detecting Positive and Negative Tests",
+    "author": "Hora, Andre",
+    "abstract": "Positive tests (aka, happy path tests) cover the expected behavior of the program, while negative tests (aka, unhappy path tests) check the unexpected behavior. Ideally, test suites should have both positive and negative tests to better protect against regressions. In practice, unfortunately, we cannot easily identify whether a test is positive or negative. A better understanding of whether a test suite is more positive or negative is fundamental to assessing the overall test suite capability in testing expected and unexpected behaviors. In this paper, we propose test polarity, an automated approach to detect positive and negative tests. Our approach runs/monitors the test suite and collects runtime data about the application execution to classify the test methods as positive or negative. In a first evaluation, test polarity correctly classified 117 tests as as positive or negative. Finally, we provide a preliminary empirical study to analyze the test polarity of 2,054 test methods from 12 real-world test suites of the Python Standard Library. We find that most of the analyzed test methods are negative (88\\%) and a minority is positive (12\\%). However, there is a large variation per project: while some libraries have an equivalent number of positive and negative tests, others have mostly negative ones.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663793",
+    "comment": ""
+  },
+  {
+    "title": "Predicting Test Results without Execution",
+    "author": "Hora, Andre",
+    "abstract": "As software systems grow, test suites may become complex, making it challenging to run the tests frequently and locally. Recently, Large Language Models (LLMs) have been adopted in multiple software engineering tasks. It has demonstrated great results in code generation, however, it is not yet clear whether these models understand code execution. Particularly, it is unclear whether LLMs can be used to predict test results, and, potentially, overcome the issues of running real-world tests. To shed some light on this problem, in this paper, we explore the capability of LLMs to predict test results without execution. We evaluate the performance of the state-of-the-art GPT-4 in predicting the execution of 200 test cases of the Python Standard Library. Among these 200 test cases, 100 are passing and 100 are failing ones. Overall, we find that GPT-4 has a precision of 88.8\\%, recall of 71\\%, and accuracy of 81\\% in the test result prediction. However, the results vary depending on the test complexity: GPT-4 presented better precision and recall when predicting simpler tests (93.2\\% and 82\\%) than complex ones (83.3\\% and 60\\%). We also find differences among the analyzed test suites, with the precision ranging from 77.8\\% to 94.7\\% and recall between 60\\% and 90\\%. Our findings suggest that GPT-4 still needs significant progress in predicting test results.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663794",
+    "comment": ""
+  },
+  {
+    "title": "Decide: Knowledge-Based Version Incompatibility Detection in Deep Learning Stacks",
+    "author": "Zhou, Zihan and Zhao, Zhongkai and Kou, Bonan and Zhang, Tianyi",
+    "abstract": "Version incompatibility issues are prevalent when reusing or reproducing deep learning (DL) models and applications. Compared with official API documentation, which is often incomplete or out-of-date, Stack Overflow (SO) discussions possess a wealth of version knowledge that has not been explored by previous approaches. To bridge this gap, we present Decide, a web-based visualization of a knowledge graph that contains 2,376 version knowledge extracted from SO discussions. As an interactive tool, Decide allows users to easily check whether two libraries are compatible and explore compatibility knowledge of certain DL stack components with or without the version specified. A video demonstrating the usage of Decide is available at https://youtu.be/wqPxF2ZaZo0.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663796",
+    "comment": ""
+  },
+  {
+    "title": "MineCPP: Mining Bug Fix Pairs and Their Structures",
+    "author": "Avula, Sai Krishna and Mondal, Shouvick",
+    "abstract": "Modern software repositories serve as valuable sources of information for understanding and addressing software bugs. In this paper, we present MineCPP, a tool designed for large-scale bug fixing dataset generation, extending the capabilities of a recently proposed approach, namely Minecraft. MineCPP not only captures bug locations and types across multiple programming languages but introduces novel features like offset of a bug in a buggy source file, the sequence of syntactic constructs up to and including the location of the bug, etc. We discuss architectural and operational aspects of MineCPP, and show how it can be used to automatically mine GitHub repositories. A Graphical User Interface (GUI) further enhances user experience by providing interactive visualizations and quantitative analyses, facilitating fine-grained insights about the structure of bug fix pairs. MineCPP serves as a helpful solution for researchers, practitioners, and developers seeking comprehensive bug-fixing datasets and insights into coding practices. Tool demonstration is available at https://youtu.be/ln99irvbADE.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663797",
+    "comment": ""
+  },
+  {
+    "title": "Tests4Py: A Benchmark for System Testing",
+    "author": "Smytzek, Marius and Eberlein, Martin and Ser\\c{c}e, Batuhan and Grunske, Lars and Zeller, Andreas",
+    "abstract": "Benchmarks are among the main drivers of progress in software engineering research. However, many current benchmarks are limited by inadequate system oracles and sparse unit tests.\n\nOur Tests4Py benchmark, derived from the BugsInPy benchmark, addresses these limitations.\n\nIt includes 73 bugs from seven real-world Python applications and six bugs from example programs.\n\nEach subject in Tests4Py is equipped with an oracle for verifying functional correctness and supports both system and unit test generation.\n\nThis allows for comprehensive qualitative studies and extensive evaluations, making Tests4Py a cutting-edge benchmark for research in test generation, debugging, and automatic program repair.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663798",
+    "comment": ""
+  },
+  {
+    "title": "Ctest4J: A Practical Configuration Testing Framework for Java",
+    "author": "Wang, Shuai and Lian, Xinyu and Li, Qingyu and Marinov, Darko and Xu, Tianyin",
+    "abstract": "We present Ctest4J, a practical configuration testing framework for\n\n\n\nJava projects. Configuration testing is a recently proposed approach\n\n\n\nfor finding both misconfigurations and code bugs. Ctest4J addresses\n\n\n\nthe limitations of configuration testing scripts from prior work,\n\n\n\nincluding lack of parallel test execution, poor maintainability due\n\n\n\nto external dependencies, limited integration with modern build\n\n\n\nsystems, and the need for manual instrumentation of configuration\n\n\n\nAPI. Ctest4J is a unified framework to write, maintain, and execute\n\n\n\nconfiguration tests (Ctests) and integrates with multiple testing\n\n\n\nframeworks (JUnit4, JUnit5, and TestNG) and build systems (Maven\n\n\n\nand Gradle). With Ctest4J, Ctests can be maintained similarly to\n\n\n\nregular unit tests. Ctest4J also provides a utility for automated\n\n\n\ncode instrumentation for common configuration API. We evaluate\n\n\n\nCtest4J on 12 open-source projects. We show that Ctest4J effectively\n\n\n\nenables configuration testing for these projects and speeds up Ctest\n\n\n\nexecution by 3.4X compared to prior scripts. Ctest4J can be found\n\n\n\nat https://github.com/xlab-uiuc/ctest4j.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663799",
+    "comment": ""
+  },
+  {
+    "title": "VinJ: An Automated Tool for Large-Scale Software Vulnerability Data Generation",
+    "author": "Nong, Yu and Yang, Haoran and Chen, Feng and Cai, Haipeng",
+    "abstract": "We present VinJ, an efficient automated tool for large-scale diverse vulnerability data generation. VinJ automatically generates vulnerability data by injecting vulnerabilities into given programs, based on knowledge learned from existing vulnerability data. VinJ is able to generate diverse vulnerability data covering 18 CWEs with 69\\% success rate and generate 686k vulnerability samples in 74 hours (i.e., 0.4 seconds per sample), indicating it is efficient. The generated data is able to improve existing DL-based vulnerability detection, localization, and repair models significantly. The demo video of VinJ can be found at https://youtu.be/-oKoUqBbxD4. The tool website can be found at https://github.com/NewGillig/VInj. We also release the generated large-scale vulnerability dataset, which can be found at https://zenodo.org/records/10574446.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663800",
+    "comment": ""
+  },
+  {
+    "title": "ChatUniTest: A Framework for LLM-Based Test Generation",
+    "author": "Chen, Yinghao and Hu, Zehao and Zhi, Chen and Han, Junxiao and Deng, Shuiguang and Yin, Jianwei",
+    "abstract": "Unit testing is an essential yet frequently arduous task. Various automated unit test generation tools have been introduced to mitigate this challenge. Notably, methods based on large language models (LLMs) have garnered considerable attention and exhibited promising results in recent years. Nevertheless, LLM-based tools encounter limitations in generating accurate unit tests. This paper presents ChatUniTest, an LLM-based automated unit test generation framework. ChatUniTest incorporates an adaptive focal context mechanism to encompass valuable context in prompts and adheres to a generation-validation-repair mechanism to rectify errors in generated unit tests.\n\nSubsequently, we have developed ChatUniTest Core, a common library that implements core workflow, complemented by the ChatUniTest Toolchain, a suite of seamlessly integrated tools enhancing the capabilities of ChatUniTest. Our effectiveness evaluation reveals that ChatUniTest outperforms TestSpark and EvoSuite in half of the evaluated projects, achieving the highest overall line coverage.\n\nFurthermore, insights from our user study affirm that ChatUniTest delivers substantial value to various stakeholders in the software testing domain.\n\nChatUniTest is available at https://github.com/ZJU-ACES-ISE/ChatUniTest, and the demo video is available at https://www.youtube.com/watch?v=GmfxQUqm2ZQ.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663801",
+    "comment": ""
+  },
+  {
+    "title": "ASAC: A Benchmark for Algorithm Synthesis",
+    "author": "Zhang, Zhao and Sun, Yican and Ji, Ruyi and Li, Siyuan and Peng, Xuanyu and Huang, Zhechong and Li, Sizhe and Zhu, Tianran and Xiong, Yingfei",
+    "abstract": "In this paper, we present the first benchmark for algorithm synthesis from formal specification: ASAC. ASAC consists of 136 tasks covering a wide range of algorithmic paradigms and various difficulty levels. Each task includes a formal specification and an efficiency requirement, and the program synthesizer is expected to produce a program that satisfies the formal specification and meets the efficiency requirement. Our evaluation of two state-of-the-art (SOTA) approaches in ASAC shows that ASAC exposes new challenges for future research on program synthesis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nASAC is available at https://auqwqua.github.io/ASACBenchmark, and the demo video is available at https://youtu.be/JXVleCdBh8U.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663802",
+    "comment": ""
+  },
+  {
+    "title": "EM-Assist: Safe Automated ExtractMethod Refactoring with LLMs",
+    "author": "Pomian, Dorin and Bellur, Abhiram and Dilhara, Malinda and Kurbatova, Zarina and Bogomolov, Egor and Sokolov, Andrey and Bryksin, Timofey and Dig, Danny",
+    "abstract": "Excessively long methods, loaded with multiple responsibilities, are challenging to understand, debug, reuse, and maintain. The\n\nsolution lies in the widely recognized Extract Method refactoring. While the application of this refactoring is supported in modern\n\nIDEs, recommending which code fragments to extract has been the topic of many research tools. However, they often struggle to replicate real-world developer practices, resulting in recommendations that do not align with what a human developer would do in real\n\nlife. To address this issue, we introduce EM-Assist, an IntelliJ IDEA plugin that uses LLMs to generate refactoring suggestions and subsequently validates, enhances, and ranks them. Finally, EM-Assist uses the IntelliJ IDE to apply the user-selected recommendation.\n\nIn our extensive evaluation of 1,752 real-world refactorings that actually took place in open-source projects, EM-Assist’s recall rate\n\nwas 53.4\\% among its top-5 recommendations, compared to 39.4\\% for the previous best-in-class tool that relies solely on static analysis. Moreover, we conducted a usability survey with 18 industrial developers and 94.4\\% gave a positive rating.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663803",
+    "comment": ""
+  },
+  {
+    "title": "ATheNA-S: A Testing Tool for Simulink Models Driven by Software Requirements and Domain Expertise",
+    "author": "Formica, Federico and Mahboob, Mohammad Mahdi and Askarpour, Mehrnoosh and Menghi, Claudio",
+    "abstract": "Search-based software testing (SBST) is widely used to verify software systems. \n\n\n\n\n\n\n\nSBST iteratively generates new test inputs driven by fitness functions, i.e., objective functions that guide the test case generation. \n\n\n\n\n\n\n\nIn previous work, we proposed ATheNA, a novel SBST framework that combines fitness functions automatically generated from requirements' specifications with those manually defined by engineers, and showed its effectiveness. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis tool demonstration paper describes ATheNA-S, an instance of ATheNA that targets Simulink models. \n\n\n\n\n\n\n\nWe demonstrate our tool using an automotive case study and present our implementation and design decisions.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA video walkthrough of the case study is available on YouTube: youtu.be/dhw9rwO7L4k.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663804",
+    "comment": ""
+  },
+  {
+    "title": "CognitIDE: An IDE Plugin for Mapping Physiological Measurements to Source Code",
+    "author": "Stolp, Fabian and Stellmacher, Malte and Arnrich, Bert",
+    "abstract": "We present CognitIDE, a tool for collecting physiological measurements, mapping them to source code, and visualizing them directly within IntelliJ-based Integrated Development Environments (IDE)s. CognitIDE facilitates the setup and conduction of empirical studies evaluating the relationships between software artifacts and physiological parameters. Corresponding measurements enable researchers to evaluate, for example, the cognitive load software developers are experiencing. Our tool lets study participants use IDEs in a natural way while eye gaze, further body sensor data, and interactions with the IDE are collected. Furthermore, CognitIDE enables highlighting code positions according to the physiological values collected while corresponding positions were looked at. This facilitates the identification of poorly maintainable code and provides a direct way for study participants to reflect on whether the measurements mirror their perception. Moreover, the plugin has additional features for facilitating studies, such as interrupting participants and letting them answer predefined questions. Our tool supports recording measurements with the wide variety of devices supported by the Lab Streaming Layer.  Video: https://youtu.be/9yLV5AdTiJw",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663805",
+    "comment": ""
+  },
+  {
+    "title": "AndroLog: Android Instrumentation and Code Coverage Analysis",
+    "author": "Samhi, Jordan and Zeller, Andreas",
+    "abstract": "Dynamic analysis has emerged as a pivotal technique for testing Android apps, enabling the detection of bugs, malicious code, and vulnerabilities. A key metric in evaluating the efficacy of tools employed by both research and practitioner communities for this purpose is code coverage. Obtaining code coverage typically requires planting probes within apps to gather coverage data during runtime. Due to the general unavailability of source code to analysts, there is a necessity for instrumenting apps to insert these probes in black-box environments. However, the tools available for such instrumentation are limited in their reliability and require intrusive changes interfering with apps’ functionalities.\n\n\n\nThis paper introduces AndroLog, a novel tool developed on top of the Soot framework, designed to provide fine-grained coverage information at multiple levels, including class, methods, statements, and Android components. In contrast to existing tools, AndroLog leaves the responsibility to test apps to analysts, and its motto is simplicity. As demonstrated in this paper, AndroLog can instrument up to 98\\% of recent Android apps compared to existing tools with 79\\% and 48\\% respectively for COSMO and ACVTool. AndroLog also stands out for its potential for future enhancements to increase granularity on demand. We make AndroLog available to the community and provide a video demonstration of AndroLog.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663806",
+    "comment": ""
+  },
+  {
+    "title": "Py-holmes: Causal Testing for Deep Neural Networks in Python",
+    "author": "McQueary, Wren and Mim, Sadia Afrin and Raihan, Md Nishat and Smith, Justin and Johnson, Brittany",
+    "abstract": "Deep learning has become a go-to solution for many problems. This increases the importance of our ability to understand and improve these technologies. While many tools exist to support debugging deep learning models (e.g., DNNs), few attempt to provide support for understanding the root cause of unexpected behavior. Causal testing is a technique that has been shown to help developers understand and fix the root causes of defects. Causal testing may be particularly valuable in DNNs, where causality is often hard to understand due to the abstractions DNNs create to represent data. In theory, causal testing is capable of supporting root cause debugging in various types of programs and software systems. However, the only implementation that exists is in Java and was not implemented as an end-to-end tool or for use on DNNs, making validation of this theory difficult. In this paper, we introduce py-holmes, a prototype tool that supports causal testing on Python programs, for both DNNs and shallow programs. For more information about py-holmes' internal process, see our GitHub repository: https://go.gmu.edu/pyHolmes_Public_Repo. Our demo video can be found here: https://go.gmu.edu/pyholmes_demo_2024.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663807",
+    "comment": ""
+  },
+  {
+    "title": "MicroKarta: Visualising Microservice Architectures",
+    "author": "Manglaras, Oscar and Farkas, Alex and Fule, Peter and Treude, Christoph and Wagner, Markus",
+    "abstract": "Conceptualising and debugging a microservice architecture can be a challenge for developers due to the complex topology of inter-service communication, which may only apparent when viewing the architecture as a whole. In this paper, we present MicroKarta, a dashboard containing three types of network diagram that visualise complex microservice architectures, and that are designed to address problems faced by developers of these architectures. Initial feedback from industry developers has been positive. This dashboard can be used by developers to explore and debug microservice architectures, and can be used to compare the effectiveness of different types of network visualisation for assisting with various development tasks.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663808",
+    "comment": ""
+  },
+  {
+    "title": "XGuard: Detecting Inconsistency Behaviors of Crosschain Bridges",
+    "author": "Wang, Ke and Li, Yue and Wang, Che and Gao, Jianbo and Guan, Zhi and Chen, Zhong",
+    "abstract": "Crosschain bridges have become a key solution for connecting independent blockchains and enabling the transfer of assets and information between them. However, recent bridge hacks have exposed severe security issues, and these bridges provide new strategic weapons for malicious activities. Thus, it is crucial to fully understand and identify the security issues of crosschain bridges in the real world. To address this, we define a novel abstraction called inconsistency behavior to comprehensively summarize the crosschain security issues. Then, we further develop XGuard, a static analyzer to find the inconsistency behavior of cross-chain bridges in the real world. Specifically, XGuard first extracts the crosschain semantic information in the bridge contract on both the source chain and destination chain, and then identifies inconsistency behaviors that occur on multiple blockchains.\n\n\n\n\n\n\n\nOur results show that XGuard can successfully identify vulnerable crosschain bridges in the real world. The demonstration of the tool is available at https://youtu.be/UMASWldZHgg, the online service\n\n\n\n\n\n\n\nis available at https://xguard.sh/, and the related code is available at https://github.com/seccross/xguard.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663809",
+    "comment": ""
+  },
+  {
+    "title": "ModelFoundry: A Tool for DNN Modularization and On-Demand Model Reuse Inspired by the Wisdom of Software Engineering",
+    "author": "Bi, Xiaohan and Zhao, Ruobing and Qi, Binhang and Sun, Hailong and Gao, Xiang and Yu, Yue and Liang, Xiaojun",
+    "abstract": "Reusing DNN models provides an efficient way to meet new requirements without training models from scratch.        Recently, inspired by the wisdom of software reuse, on-demand model reuse has drawn much attention, which aims to reduce the overhead and security risk of model reuse via decomposing models into modules and reusing modules according to user’s requirements. However, existing efforts for on-demand model reuse mainly provide algorithm implementations without tool support. These implementations involve ad-hoc decomposition in experiments and require considerable manual efforts to adapt to new models; thus obstructing the practicality of on-demand model reuse. In this paper, we introduce , a tool that systematically integrates two modularization approaches proposed in our prior work. supports automated model decomposition and module reuse, making it more practical and easily integrated into model-sharing platforms. Evaluations conducted on widely used models sourced from PyTorch and GitHub platforms demonstrate that achieves effective model decomposition and module reuse, as well as good generalizability to various models.         A demonstration is available at https://youtu.be/dXHeQ0fGldk.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663810",
+    "comment": ""
+  },
+  {
+    "title": "GAISSALabel: A Tool for Energy Labeling of ML Models",
+    "author": "Duran, Pau and Casta\\~{n}o, Joel and G\\'{o}mez, Cristina and Mart\\'{\\i}nez-Fern\\'{a}ndez, Silverio",
+    "abstract": "The increasing environmental impact of Information Technologies, particularly in Machine Learning (ML), highlights the need for sustainable practices in software engineering. The escalating complexity and energy consumption of ML models need tools for assessing and improving their energy efficiency. This paper introduces GAISSALabel, a web-based tool designed to evaluate and label the energy efficiency of ML models. GAISSALabel is a technology transfer development from a former research on energy efficiency classification of ML, consisting of a holistic tool for assessing both the training and inference phases of ML models, considering various metrics such as power draw, model size efficiency, CO2e emissions and more. GAISSALabel offers a labeling system for energy efficiency, akin to labels on consumer appliances, making it accessible to ML stakeholders of varying backgrounds. The tool's adaptability allows for customization in the proposed labeling system, ensuring its relevance in the rapidly evolving ML field. GAISSALabel represents a significant step forward in sustainable software engineering, offering a solution for balancing high-performance ML models with environmental impacts. The tool's effectiveness and market relevance will be further assessed through planned evaluations using the Technology Acceptance Model.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663811",
+    "comment": ""
+  },
+  {
+    "title": "Rapid Taint Assisted Concolic Execution (TACE)",
+    "author": "Jain, Ridhi and Tihanyi, Norbert and Ndhlovu, Mthandazo and Ferrag, Mohamed Amine and Cordeiro, Lucas C.",
+    "abstract": "While fuzz testing is a popular choice for testing open-source software, it might not effectively detect bugs in programs that feature many symbols due to the significant increase in exploration of the program executions. Fuzzers can be more effective when they concentrate on a smaller and more relevant set of symbols, focusing specifically on the key executions. We present rapid Taint Assisted Concolic Execution (TACE), which utilizes the concept of taint in symbolic execution to identify all sets of dependent symbols. TACE can evaluate a subset of these sets with a significantly reduced testing effort by concretizing some symbols from selected subsets. The remaining subsets are explored with symbolic values. TACE significantly enhances speed, achieving a 50x constraint-solving time improvement over SymQEMU in binary applications. In our fuzzing campaign, we tested five popular open-source libraries (minizip-ng, TPCDump, GifLib, OpenJpeg, bzip2) and identified a new heap buffer overflow in the latest version of GifLib 5.2.1 with an assigned CVE-2023-48161 number. Under identical conditions and hardware environments, SymCC could not identify the same issue, underscoring TACE's enhanced capability in quickly discovering real-world vulnerabilities.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663812",
+    "comment": ""
+  },
+  {
+    "title": "Variability-Aware Differencing with DiffDetective",
+    "author": "Bittner, Paul Maximilian and Schulthei\\ss{}, Alexander and Moosherr, Benjamin and Kehrer, Timo and Th\\\"{u}m, Thomas",
+    "abstract": "Diff tools are essential in developers' daily workflows and software engineering research. Motivated by limitations of traditional line-based differencing, countless specialized diff tools have been proposed, aware of the underlying artifacts' type, such as a program's syntax or semantics. However, no diff tool is aware of systematic variability embodied in highly configurable systems such as the Linux kernel. Our software library called DiffDetective can turn any generic diff tool into a variability-aware differencer such that a changes' impact on the source code and its superimposed variability can be distinguished and analyzed. Besides graphical diff inspectors, DiffDetective provides a framework for large-scale empirical analyses of version histories, tested on a substantial body of configurable software including the Linux kernel. DiffDetective has been successfully employed to explain edits, generate clone-and-own scenarios, or evaluate diff algorithms and patch mutations.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663813",
+    "comment": ""
+  },
+  {
+    "title": "CoqPyt: Proof Navigation in Python in the Era of LLMs",
+    "author": "Carrott, Pedro and Saavedra, Nuno and Thompson, Kyle and Lerner, Sorin and Ferreira, Jo\\~{a}o F. and First, Emily",
+    "abstract": "Proof assistants enable users to develop machine-checked proofs regarding software-related properties. Unfortunately, the interactive nature of these proof assistants imposes most of the proof burden on the user, making formal verification a complex, and time-consuming endeavor. Recent automation techniques based on neural methods address this issue, but require good programmatic support for collecting data and interacting with proof assistants. This paper presents CoqPyt, a Python tool for interacting with the Coq proof assistant. CoqPyt improves on other Coq-related tools by providing novel features, such as the extraction of rich premise data. We expect our work to aid development of tools and techniques, especially LLM-based, designed for proof synthesis and repair. A video describing and demonstrating CoqPyt is available at: https://youtu.be/fk74o0rePM8.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663814",
+    "comment": ""
+  },
+  {
+    "title": "ConDefects: A Complementary Dataset to Address the Data Leakage Concern for LLM-Based Fault Localization and Program Repair",
+    "author": "Wu, Yonghao and Li, Zheng and Zhang, Jie M. and Liu, Yong",
+    "abstract": "With the growing interest on Large Language Models (LLMs) for fault localization and program repair, ensuring the integrity and generalizability of the LLM-based methods becomes paramount. The code in existing widely-adopted benchmarks for these tasks was written before the bloom of LLMs and may be included in the training data of existing popular LLMs, thereby suffering from the threat of data leakage, leading to misleadingly optimistic performance metrics.  To address this issue, we introduce ConDefects, a dataset developed as a complement to existing datasets, meticulously curated with real faults to eliminate such overlap. ConDefects contains 1,254 Java faulty programs and 1,625 Python faulty programs. All these programs are sourced from the online competition platform AtCoder and were produced between October 2021 and September 2023. We pair each fault with fault locations and the corresponding repaired code versions, making it tailored for fault localization and program repair related research. We also provide interfaces for selecting subsets based on different time windows and coding task difficulties. While inspired by LLM-based tasks, ConDefects can be adopted for benchmarking ALL types of fault localization and program repair methods. The dataset is publicly available, and a demo video can be found at https://www.youtube.com/watch?v=22j15Hj5ONk.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663815",
+    "comment": ""
+  },
+  {
+    "title": "PathSpotter: Exploring Tested Paths to Discover Missing Tests",
+    "author": "Hora, Andre",
+    "abstract": "When creating test cases, ideally, developers should test both the expected and unexpected behaviors of the program to catch more bugs and avoid regressions. However, the literature has provided evidence that developers are more likely to test expected behaviors than unexpected ones. In this paper, we propose PathSpotter, a tool to automatically identify tested paths and support the detection of missing tests. Based on PathSpotter, we provide an approach to guide us in detecting missing tests. To evaluate it, we submitted pull requests with test improvements to open-source projects. As a result, 6 out of 8 pull requests were accepted and merged in relevant systems, including CPython, Pylint, and Jupyter Client. These pull requests created/updated 32 tests and added 80 novel assertions covering untested cases. This indicates that our test improvement solution is well received by open-source projects.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663816",
+    "comment": ""
+  },
+  {
+    "title": "ExLi: An Inline-Test Generation Tool for Java",
+    "author": "Liu, Yu and Thimmaiah, Aditya and Legunsen, Owolabi and Gligoric, Milos",
+    "abstract": "We present ExLi, a tool for automatically generating inline tests, which were recently proposed for statement-level code validation. ExLi is the first tool to support retrofitting inline tests to existing codebases, towards increasing adoption of this type of tests. ExLi first extracts inline tests from unit tests that validate methods that enclose the target statement under test. Then, ExLi uses a coverage-then-mutants based approach to minimize the set of initially generated inline tests, while preserving their fault-detection capability. ExLi works for Java, and we use it to generate inline tests for 645 target statements in 31 open-source projects. ExLi reduces the initially generated 27,415 inline tests to 873. ExLi improves the fault-detection capability of unit test suites from which inline tests are generated: the final set of inline tests kills up to 24.4\\% more mutants on target statements than developer written and automatically generated unit tests. ExLi is open sourced at https://github.com/EngineeringSoftware/exli and a video demo is available at https://youtu.be/qaEB4qDeds4.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663817",
+    "comment": ""
+  },
+  {
+    "title": "Inferring Natural Preconditions via Program Transformation",
+    "author": "Dinella, Elizabeth and Lahiri, Shuvendu K. and Naik, Mayur",
+    "abstract": "We introduce an approach for inferring natural preconditions from code. Prior works generate preconditions from scratch through combinations of boolean predicates, but fall short in readability and ease of comprehension. In contrast, our technique leverages the structure of the target method as a seed to infer a precondition through program transformations. Our technique is a multi-phase approach involving iterative test generation and program transformation. Our evaluation shows that humans can more easily reason over preconditions inferred using our approach. Consumers of our preconditions completed reasoning tasks more accurately (92.86\\%) with an average total duration of 109 seconds. In contrast, consumers of the preconditions inferred by prior work took twice as long (217 seconds) to finish the study and answered with lower accuracy (85.61\\%).",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663865",
+    "comment": ""
+  },
+  {
+    "title": "Building Software Engineering Capacity through a University Open Source Program Office",
+    "author": "Holdener, Ekaterina and Shown, Daniel",
+    "abstract": "This work introduces an innovative program for training the next generation of software engineers within university settings, addressing the limitations of traditional software engineering courses. Initial program costs were significant, totaling $551,420 in direct expenditures to pay for program staff salaries and benefits over two years. We present a strategy for reducing overall costs and establishing sustainable funding sources to perpetuate the program, which has yielded educational, research, professional, and societal benefits.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663866",
+    "comment": ""
+  },
+  {
+    "title": "Go the Extra Mile: Fixing Propagated Error-Handling Bugs",
+    "author": "Liu, Haoran and Jia, Zhouyang and Zhou, Huiping and Zhou, Haifang and Li, Shanshan",
+    "abstract": "Error handling bugs are widespread in software, compromising its reliability. In C/C++ environments, error-handling bugs are often propagated to multiple functions through return values.\n\n\n\nThis paper introduces EH-Fixer, a conversation-based automated method for fixing propagated error-handling (PEH) bugs. EH-Fixer employs LLM in a conversation style, utilizing information retrieval to address PEH bugs. We constructed a dataset containing 30 PEH bugs and evaluated EH-Fixer against two state-of-the-art approaches. Preliminary results indicate that EH-Fixer successfully fixed 19 more PEH bugs than existing approaches.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663868",
+    "comment": ""
+  },
+  {
+    "title": "Do Large Language Models Recognize Python Identifier Swaps in Their Generated Code?",
+    "author": "Chavan, Sagar Bhikan and Mondal, Shouvick",
+    "abstract": "Large Language Models (LLMs) have transformed natural language processing and generation activities in recent years. However, as the scale and complexity of these models grow, their ability to write correct and secure code has come under scrutiny. In our research, we delve into the critical examination of LLMs including ChatGPT-3.5, legacy Bard, and Gemini Pro, and their proficiency in generating accurate and secure code, particularly focusing on the occurrence of identifier swaps within the code they produce. Our methodology encompasses the creation of a diverse dataset comprising a range of coding tasks designed to challenge the code generation capabilities of these models. Further, we employ Pylint for an extensive code quality assessment and undertake a manual multi-turn prompted “Python identifier-swap” test session to evaluate the models’ ability to maintain context and coherence over sequential coding prompts. Our preliminary findings indicate a concern for developers: LLMs capable of generating better quality codes can perform worse when queried to recognize identifier swaps.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663869",
+    "comment": ""
+  },
+  {
+    "title": "Testing AI Systems Leveraging Graph Perturbation",
+    "author": "Yang, Zhaorui and Zhu, Haichao and Zhang, Qian",
+    "abstract": "Automated testing for emerging AI-enabled systems is challenging, because data is often highly structured, semantically rich, and continuously evolving. Fuzz testing has been proven to be highly effective; however, it is nontrivial to apply traditional fuzzing to AI systems directly for three reasons: (1) it often fails to bypass format validity checks, which are crucial for testing the core logic of an AI application; (2) it struggles to explore various semantic properties of inputs; and (3) it is incapable of accommodating the latency of AI systems.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn this paper, we propose a novel fuzz testing framework specifically for AI systems, called SynGraph. Our approach stands out in two key aspects. First, we utilize graph perturbations to produce syntactically correct data, as opposed to traditional bit-level data manipulation. To achieve this, SynGraph captures the structured information intrinsic to the data and represents it as a graph. Second, we conduct directed mutations that preserve semantic similarity by applying the same mutations to adjacent and similar vertices. SynGraph has been successfully implemented for 5 input modalities. Experimental results demonstrate that this approach significantly enhances testing efficiency.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663870",
+    "comment": ""
+  },
+  {
+    "title": "RFNIT: Robotic Framework for Non-invasive Testing",
+    "author": "Freitas, Davi and Miranda, Breno and Iyoda, Juliano",
+    "abstract": "This paper presents an innovative software testing framework, based on robotics, designed to perform less invasive tests on mobile devices, with a special focus on smartphones. Our framework provides developers with an intuitive, PyTest-like approach, enabling the creation of test cases by describing actions to be executed by a robot. These actions encompass a variety of interactions, such as touches, scrolls, typings, double rotations, among others.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663871",
+    "comment": ""
+  },
+  {
+    "title": "Hybrid Regression Test Selection by Synergizing File and Method Call Dependences",
+    "author": "Liu, Luyao and Zhang, Guofeng and Chen, Zhenbang and Wang, Ji",
+    "abstract": "Regression Test Selection (RTS) minimizes the cost of regression testing by selecting only the tests affected by code changes. We introduce a novel hybrid RTS approach, JcgEks, which enhances Ekstazi by integrating static method call graphs. It combines the advantages of both dynamic and static analyses, improving the precision from class level to method level without sacrificing safety and reducing the overall time. Moreover, it safely addresses the challenge of handling callbacks from external libraries at the static method-level RTS. To evaluate the safety of JcgEks, we insert log statements into code patches and monitor the relationship between the test and the output during execution to gauge the test's impact accurately. The preliminary experimental results are promising.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663872",
+    "comment": ""
+  },
+  {
+    "title": "Do Large Language Models Generate Similar Codes from Mutated Prompts? A Case Study of Gemini Pro",
+    "author": "Patel, Hetvi and Shah, Kevin Amit and Mondal, Shouvick",
+    "abstract": "In this work, we delve into the domain of source code similarity detection using Large Language Models (LLMs). Our investigation is motivated by the necessity to identify similarities among different pieces of source code, a critical aspect for tasks such as plagiarism detection and code reuse. We specifically focus on exploring the effectiveness of leveraging LLMs for this purpose. To achieve this, we utilized the LLMSecEval dataset, comprising 150 NL prompts for code generation across two languages: C and Python, and employed radamsa, a mutation-based input generator, to create 26 different mutations per NL prompt. Next, using the Gemini Pro LLM, we generated code for the original and mutated NL prompts. Finally, we detect code similarities using the recently proposed CodeBERTScore metric that utilizes the CodeBERT LLM. Our experiment aims to uncover the extent to which LLMs can consistently generate similar code despite mutations in the input NL prompts, providing insights into the robustness and generalizability of LLMs in understanding and comparing code syntax and semantics.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663873",
+    "comment": ""
+  },
+  {
+    "title": "MicroSensor: Towards an Extensible Tool for the Static Analysis of Microservices Systems in Continuous Integration",
+    "author": "Soares, Edson and Paixao, Matheus and Ara\\'{u}jo, Allysson Allex",
+    "abstract": "In the context of modern Continuous Integration (CI) practices, static analysis sits at the core, being employed in the identification of defects, compliance with coding styles, automated documentation, and many other aspects of software development.    However, the availability of ready-to-use static analyzers for microservices systems and focused on developer experience is still scarce. Current state-of-the-art tools are not suited for a CI environment, being difficult to setup and providing limited data visualization.     To address this gap, we introduce our software product under progress called µSensor: a new open-source tool to facilitate the integration of microservice-based static analyzers into CI pipelines as modules with minimal setup, where the resulting reports can be viewed on a webpage. By doing so, µSensor contributes to data visualization and enhances the developer experience.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663874",
+    "comment": ""
+  },
+  {
+    "title": "Towards Realistic SATD Identification through Machine Learning Models: Ongoing Research and Preliminary Results",
+    "author": "Gama, Eliakim and Paixao, Matheus and Cort\\'{e}s, Mariela I. and Monteiro, Lucas",
+    "abstract": "Automated identification of self-admitted technical debt (SATD) has been crucial for advancements in managing such debt. However, state-of-the-arts studies often overlook chronological factors, leading to experiments that do not faithfully replicate the conditions developers face in their daily routines. This study initiates a chronological analysis of SATD identification through machine learning models, emphasizing the significance of temporal factors in automated SATD detection. The research is in its preliminary phase, divided into two stages: evaluating model performance trained on historical data and tested in prospective contexts, and examining model generalization across various projects. Preliminary results reveal that the chronological factor can positively or negatively influence model performance and that some models are not sufficiently general when trained and tested on different projects.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663876",
+    "comment": ""
+  },
+  {
+    "title": "Toward Systematizing Hot Fixing for Production Software",
+    "author": "Hanna, Carol",
+    "abstract": "A hot fix is an unplanned improvement to a specific time-critical issue deployed to a system in production. This topic has never been surveyed within software engineering despite hot fixing being a long-standing and common activity. We present a preliminary overview of existing work on the topic. We find that practices around hot fixing are generally not systematized, and thus present an initial taxonomy of work found with ideas for future studies. We hope our work will drive research on hot fixing forward.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3664456",
+    "comment": ""
+  },
+  {
+    "title": "Unlocking the Full Potential of AI Chatbots: A Guide to Maximizing Your Digital Companions",
+    "author": "Yu, Chihao",
+    "abstract": "Recent advancements in code-generating AI technologies, such as ChatGPT and Cody, are set to significantly transform the programming landscape. Utilizing a qualitative methodology, this study presents recommendations on how programmers should extract information from Cody.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3664457",
+    "comment": ""
+  },
+  {
+    "title": "Detecting Code Comment Inconsistencies using LLM and Program Analysis",
+    "author": "Zhang, Yichi",
+    "abstract": "Code comments are the most important medium for documenting program logic and design.\n\n\n\nNevertheless, as modern software undergoes frequent updates and modifications, maintaining the accuracy and relevance of comments becomes a labor-intensive endeavor. Drawing inspiration from the remarkable performance of Large Language Model (LLM) in comprehending software programs, this paper introduces a program analysis based and LLM-driven methodology for identifying inconsistencies in code comments. Our approach capitalizes on LLMs' ability to interpret natural language descriptions within code comments, enabling the extraction of design constraints. Subsequently, we employ program analysis techniques to accurately identify the implementation of these constraints. We instantiate this methodology using GPT 4.0, focusing on three prevalent types of constraints. In the experiment on 13 open-source projects, our approach identified 160 inconsistencies, and 23 of them have been confirmed and fixed by the developers.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3664458",
+    "comment": ""
+  },
+  {
+    "title": "Enhancing Code Representation for Improved Graph Neural Network-Based Fault Localization",
+    "author": "Rafi, Md Nakhla",
+    "abstract": "Software fault localization in complex systems poses significant challenges. Traditional spectrum-based methods (SBFL) and newer learning-based approaches often fail to fully grasp the software’s complexity. Graph Neural Network (GNN) techniques, which model code as graphs, show promise but frequently overlook method in- teractions and code evolution. This paper introduces DepGraph, utilizing Gated Graph Neural Networks (GGNN) to incorporate interprocedural method calls and historical code changes, aiming for a more comprehensive fault localization. DepGraph’s graph rep- resentation merges code structure, method calls, and test coverage to enhance fault detection. Tested against the Defects4j bench- mark, DepGraph surpasses existing methods, notably improving fault detection by 13\\% at Top-1 and significantly improving Mean First Rank (MFR) and Mean Average Rank (MAR) by over 50\\%. It effectively utilizes historical code changes, boosting fault identi- fication by 20\\% at Top-1. Additionally, DepGraph’s optimization techniques reduce graph size by 70\\% and lower GPU memory use by 44\\%, indicating efficiency gains for GNN-based fault localization. In cross-project scenarios, DepGraph shows exceptional adaptability and performance, with a 42\\% increase in Top-1 accuracy and sub- stantial improvements in MFR and MAR, highlighting its robustness and versatility in various software environments.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3664459",
+    "comment": ""
+  },
+  {
+    "title": "Productionizing PILAR as a Logstash Plugin",
+    "author": "Abraham, Aaron and Dani, Yash and Zhang, Kevin",
+    "abstract": "Unlike industry log parsing solutions, most academia log parsers can handle changing log events. However, such log parsers are often not engineered to work at the scale of production software. In this paper, we re-architect PILAR, a highly-accurate research log parser, into a multithreaded Ruby plugin built to integrate with Logstash, an industry log management software. Our approach maintains PILAR's high accuracy while significantly improving scalability and efficiency, processing millions of log events per minute.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3664460",
+    "comment": ""
+  },
+  {
+    "title": "Studying Privacy Leaks in Android App Logs",
+    "author": "Chen, Zhiyuan",
+    "abstract": "Privacy leakage in software logs, especially in Android apps, has become a major concern. While the significance of software logs in debugging and monitoring software state is well recognized, the exponential growth in log size has led to challenges in identifying unexpected information, including sensitive user information. This paper provides a comprehensive study of privacy leakage in Android app logs to address the lack of extensive research in this area. From a dataset constructed from PlayDrone-selected Android apps, we analyze privacy leaks, detect instances of privacy leakage, and identify third-party libraries that are implicated. The findings highlight the prevalence of privacy leaks in Android app logs, with implications for user security and potential economic losses. This study emphasizes the need for developers to be more aware and take proactive measures to protect user privacy in software logging practices.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3664461",
+    "comment": ""
+  },
+  {
+    "title": "Evaluating Social Bias in Code Generation Models",
+    "author": "Ling, Lin",
+    "abstract": "The functional correctness of Code Generation Models (CLMs) has been well-studied, but their social bias has not. This study aims to fill this gap by creating an evaluation set for human-centered tasks and empirically assessing social bias in CLMs. We introduce a novel evaluation framework to assess biases in CLM-generated code, using differential testing to determine if the code exhibits biases towards specific demographic groups in social issues. Our core contributions are (1) a dataset for evaluating social problems and (2) a testing framework to quantify CLM fairness in code generation, promoting ethical AI development.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3664462",
+    "comment": ""
+  },
+  {
+    "title": "Comparing Gemini Pro and GPT-3.5 in Algorithmic Problems",
+    "author": "Souza, D\\'{e}bora",
+    "abstract": "The GPT-3.5 and Gemini Pro models can help generating code based on the natural language prompts they receive. However, it’s not certain the strengths and weaknesses of each model. We compare them with 100 programming problems across various difficulty levels, GPT-3.5 outperforms Gemini Pro by 30\\%, highlighting their utility for programmers despite neither achieving 100\\% accuracy.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3664463",
+    "comment": ""
+  },
+  {
+    "title": "Towards a Theory for Source Code Rejuvenation",
+    "author": "Mendon\\c{c}a, Walter",
+    "abstract": "The evolution of programming languages introduces both opportunities and challenges for developers. With frequent releases, legacy systems risk becoming outdated, leading to increased maintenance burdens. To address this, developers might benefit from software migration techniques like source code rejuvenation, which offer pathways for adapting to new language features. Despite the benefits, practitioners confront various challenges in rejuvenating legacy code. This study aims to fill the gap in understanding developers’ motivations, challenges, and practices in source code rejuvenation, employing a constructivist-grounded theory approach based on interviews with 23 professional developers.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3664464",
+    "comment": ""
+  },
+  {
+    "title": "Software Engineering and Gender: A Tutorial",
+    "author": "Jaccheri, Letizia and Duc, Anh Nguyen",
+    "abstract": "Software runs the world and should provide equal rights and opportunities to all genders. However, the gender gap exists in the software engineering workforce and many software products are still gender biased. Recently, AI systems, including modern large language models are shown to be related to gender bias issues. Many efforts have been devoted to understanding the problem and investigating solutions. The tutorial aims to present a set of scientific studies based on qualitative and quantitative research methods. The authors have a long record of research leadership in interdisciplinary projects with a focus on gender and software engineering. The issues with team diversity in software development and AI engineering will be presented to highlight the importance of fostering inclusive and diverse software development teams.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663818",
+    "comment": ""
+  },
+  {
+    "title": "Methodology and Guidelines for Evaluating Multi-objective Search-Based Software Engineering",
+    "author": "Li, Miqing and Chen, Tao",
+    "abstract": "Search-Based Software Engineering (SBSE) has been becoming an increasingly important research paradigm for automating and solving different software engineering tasks. When the considered tasks have more than one objective/criterion to be optimised, they are called multi-objective ones. In such a scenario, the outcome is typically a set of incomparable solutions (i.e., being Pareto non- dominated to each other), and then a common question faced by many SBSE practitioners is: how to evaluate the obtained sets by using the right methods and indicators in the SBSE context? In this tutorial, we seek to provide a systematic methodology and guide- line for answering this question. We start off by discussing why we need formal evaluation methods/indicators for multi-objective optimisation problems in general, and the result of a survey on how they have been dominantly used in SBSE. This is then followed by a detailed introduction of representative evaluation methods and quality indicators used in SBSE, including their behaviors and preferences. In the meantime, we demonstrate the patterns and examples of potentially misleading usages/choices of evaluation methods and quality indicators from the SBSE community, high- lighting their consequences. Afterwards, we present a systematic methodology that can guide the selection and use of evaluation methods and quality indicators for a given SBSE problem in general, together with pointers that we hope to spark dialogues about some future directions on this important research topic for SBSE. Lastly, we showcase a real-world multi-objective SBSE case study, in which we demonstrate the consequences of incorrect use of evaluation methods/indicators and exemplify the implementation of the guidance provided.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663819",
+    "comment": ""
+  },
+  {
+    "title": "A Tutorial on Software Engineering for FMware",
+    "author": "Cogo, Filipe Roseiro and Rajbahadur, Gopi Krishnan and Lin, Dayi and Hassan, Ahmed E.",
+    "abstract": "Foundation Models (FMs) like GPT-4 have given rise to FMware, FM-powered applications representing a new generation of software that is developed with new roles, assets, and paradigms. FMware has been widely adopted in both software engineering (SE) research (e.g., test generation) and industrial products (e.g., GitHub copilot), despite the numerous challenges introduced by the stochastic nature of FMs. In our tutorial, we will present the latest research and industrial practices in engineering FMware, along with a hands-on session to acquaint attendees with core tools and techniques to build FMware. Our tutorial's perspective is firmly rooted in SE rather than artificial intelligence (AI), ensuring that participants are spared from delving into mathematical and AI-related intricacies unless they are crucial for introducing SE challenges and opportunities.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663820",
+    "comment": ""
+  },
+  {
+    "title": "A Developer’s Guide to Building and Testing Accessible Mobile Apps",
+    "author": "Sandoval Alcocer, Juan Pablo and Merino, Leonel and Fernandez-Blanco, Alison and Ravelo-Mendez, William and Escobar-Vel\\'{a}squez, Camilo and Linares-V\\'{a}squez, Mario",
+    "abstract": "Mobile applications play a relevant role in users' daily lives by improving and easing daily processes such as commuting or making financial transactions. The aforementioned interactions enhance the usability of commonly used services. Nevertheless, the improvements should also consider special execution environments such as weak network connections or special requirements inherited from the user's condition. Due to this, the design of mobile applications should be driven by improving the user experience. This tutorial targets the usage of inclusive and accessibility design in the development process of mobile apps. Making sure that applications are accessible to all users, regardless of disabilities, is not just about following the law or fulfilling ethical obligations; it is crucial in creating inclusive and fair digital environments. This tutorial will educate participants on accessibility principles and the available tools. They will gain practical experience with specific Android and iOS platform features, as well as become acquainted with state-of-the-art automated and manual testing tools.",
+    "year": "2024",
+    "publication": "fse",
+    "link": "https://doi.org/10.1145/3663529.3663821",
+    "comment": ""
+  }
+]
