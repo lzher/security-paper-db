@@ -3,6 +3,13 @@
         "json/security-2024-summer.json",
         "json/security-2024-fall.json",
         "json/security-2023-summer.json",
-        "json/security-2023-fall.json"
+        "json/security-2023-fall.json",
+        "json/security-2022-summer.json",
+        "json/security-2022-fall.json",
+        "json/sp-2024.json",
+        "json/sp-2023.json",
+        "json/sp-2022.json",
+        "json/sp-2021.json",
+        "json/sp-2020.json"
     ]
 }
