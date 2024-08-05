@@ -37,9 +37,21 @@ def main(target_url, keyword, year, publication):
             link_soup = BeautifulSoup(link_response.text, 'html.parser')
 
             # 提取所需的信息
-            title = link_soup.select_one('#page-title').get_text(strip=True) if link_soup.select_one('#page-title') else '无标题'
-            abstract = link_soup.select_one('.field-name-field-paper-description').get_text(strip=True) if link_soup.select_one('.field-name-field-paper-description') else '无摘要'
-            author = link_soup.select_one('.field-name-field-paper-people-text').get_text(strip=True) if link_soup.select_one('.field-name-field-paper-people-text') else '无作者信息'
+            if publication == 'security':
+                title = link_soup.select_one('#page-title').get_text(strip=True) if link_soup.select_one('#page-title') else '无标题'
+                abstract = link_soup.select_one('.field-name-field-paper-description').get_text(strip=True) if link_soup.select_one('.field-name-field-paper-description') else '无摘要'
+                author = link_soup.select_one('.field-name-field-paper-people-text').get_text(strip=True) if link_soup.select_one('.field-name-field-paper-people-text') else '无作者信息'
+            elif publication == 'ccs':
+                title = link_soup.select_one('h1[property=name]').get_text(strip=True) if link_soup.select_one('h1[property=name]') else '无标题'
+                abstract = link_soup.select_one('section#abstract').get_text(strip=True) if link_soup.select_one('section#abstract') else '无摘要'
+                author = link_soup.select_one('div.contributors').get_text(strip=True) if link_soup.select_one('div.contributors') else '无作者信息'
+            else:
+                print("不支持的刊物类型")
+                break
+
+            if title == "无标题":
+                print(full_link, "无效链接")
+                continue
 
             # 构建 JSON 对象
             result = {
