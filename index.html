@@ -40,33 +40,42 @@
         .checkbox-container {
             margin-bottom: 10px;
         }
+        .language-toggle {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>安全顶会论文搜索</h1>
+    <div class="language-toggle">
+        <button id="langSwitch" onclick="toggleLanguage()">Show in English</button>
+    </div>
+
+    <h1 id="mainTitle">安全顶会论文搜索</h1>
     
     <input type="text" id="titleAbstractInput" placeholder="正则搜索标题和摘要...">
     <input type="text" id="authorInput" placeholder="基于作者搜索...">
     <input type="number" id="yearInput" placeholder="只搜索某年以后的论文...">
-    <button onclick="filterTable()">搜索</button>
+    <button onclick="filterTable()" id="searchButton">搜索</button>
 
     <div class="checkbox-container">
-        <button onclick="selectAll()">全选</button>
-        <button onclick="deselectAll()">全不选</button>
+        <button onclick="selectAll()" id="selectAllButton">全选</button>
+        <button onclick="deselectAll()" id="deselectAllButton">全不选</button>
         <div id="publicationFilters"></div>
     </div>
 
     <table id="resultsTable">
         <thead>
             <tr>
-                <th>序号</th>
-                <th>标题</th>
-                <th>摘要</th>
-                <th>作者</th>
-                <th>年份</th>
-                <th>发表刊物</th>
-                <th>链接</th>
+                <th id="indexHeader">序号</th>
+                <th id="titleHeader">标题</th>
+                <th id="abstractHeader">摘要</th>
+                <th id="authorHeader">作者</th>
+                <th id="yearHeader">年份</th>
+                <th id="publicationHeader">发表刊物</th>
+                <th id="linkHeader">链接</th>
             </tr>
         </thead>
         <tbody id="resultsBody">
@@ -76,6 +85,73 @@
 
     <script>
         let jsonData = [];
+        let currentLanguage = localStorage.getItem('language') || 'zh';
+
+        // 语言文本
+        const texts = {
+            zh: {
+                title: "安全顶会论文搜索",
+                searchPlaceholder: "正则搜索标题和摘要...",
+                authorPlaceholder: "基于作者搜索...",
+                yearPlaceholder: "只搜索某年以后的论文...",
+                toggleButton: "Show in English",
+                searchButton: "搜索",
+                selectAllButton: "全选",
+                deselectAllButton: "全不选",
+                indexHeader: "序号",
+                titleHeader: "标题",
+                abstractHeader: "摘要",
+                authorHeader: "作者",
+                yearHeader: "年份",
+                publicationHeader: "发表刊物",
+                linkHeader: "链接",
+                viewLink: "查看",
+            },
+            en: {
+                title: "Security Top Conference Paper Search",
+                searchPlaceholder: "Regex search titles and abstracts...",
+                authorPlaceholder: "Search by author...",
+                yearPlaceholder: "Only search papers after a certain year...",
+                toggleButton: "中文显示",
+                searchButton: "Search",
+                selectAllButton: "Select All",
+                deselectAllButton: "Deselect All",
+                indexHeader: "Index",
+                titleHeader: "Title",
+                abstractHeader: "Abstract",
+                authorHeader: "Author",
+                yearHeader: "Year",
+                publicationHeader: "Publication",
+                linkHeader: "Link",
+                viewLink: "View",
+            }
+        };
+
+        // 切换语言
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
+            localStorage.setItem('language', currentLanguage);
+            updateLanguage();
+        }
+
+        // 更新界面语言
+        function updateLanguage() {
+            document.getElementById('mainTitle').innerText = texts[currentLanguage].title;
+            document.getElementById('titleAbstractInput').placeholder = texts[currentLanguage].searchPlaceholder;
+            document.getElementById('authorInput').placeholder = texts[currentLanguage].authorPlaceholder;
+            document.getElementById('yearInput').placeholder = texts[currentLanguage].yearPlaceholder;
+            document.getElementById('langSwitch').innerText = texts[currentLanguage].toggleButton;
+            document.getElementById('searchButton').innerText = texts[currentLanguage].searchButton;
+            document.getElementById('selectAllButton').innerText = texts[currentLanguage].selectAllButton;
+            document.getElementById('deselectAllButton').innerText = texts[currentLanguage].deselectAllButton;
+            document.getElementById('indexHeader').innerText = texts[currentLanguage].indexHeader;
+            document.getElementById('titleHeader').innerText = texts[currentLanguage].titleHeader;
+            document.getElementById('abstractHeader').innerText = texts[currentLanguage].abstractHeader;
+            document.getElementById('authorHeader').innerText = texts[currentLanguage].authorHeader;
+            document.getElementById('yearHeader').innerText = texts[currentLanguage].yearHeader;
+            document.getElementById('publicationHeader').innerText = texts[currentLanguage].publicationHeader;
+            document.getElementById('linkHeader').innerText = texts[currentLanguage].linkHeader;
+        }
 
         // 从配置文件加载 JSON 文件
         async function loadConfig() {
@@ -124,7 +200,7 @@
                     <td>${item.author}</td>
                     <td>${item.year}</td>
                     <td>${item.publication}</td>
-                    <td><a href="${item.link}" target="_blank">查看</a></td>
+                    <td><a href="${item.link}" target="_blank">${texts[currentLanguage].viewLink}</a></td>
                 `;
                 tableBody.appendChild(row);
             });
@@ -171,6 +247,7 @@
 
         // 初始加载配置和数据
         loadConfig();
+        updateLanguage(); // 更新语言
     </script>
 
 </body>
