@@ -83,6 +83,7 @@
         </tbody>
     </table>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
     <script>
         let jsonData = [];
         let currentLanguage = localStorage.getItem('language') || 'zh';
@@ -154,10 +155,33 @@
         }
 
         // 从配置文件加载 JSON 文件
+        function storeData(file, data) {
+            const compressedData = LZString.compress(JSON.stringify(data));
+            localStorage.setItem(file, compressedData);
+        }
+
+        function getData(file) {
+            const compressedData = localStorage.getItem(file);
+            return compressedData ? JSON.parse(LZString.decompress(compressedData)) : null;
+        }
+        
         async function loadConfig() {
             const response = await fetch('config.json');
             const config = await response.json();
-            const filePromises = config.json_files.map(file => fetch(file).then(res => res.json()));
+            
+            // 使用 Promise.all 来并行处理所有文件
+            const filePromises = config.json_files.map(async file => {
+                const cachedData = getData(file); // 尝试从 localStorage 获取缓存
+                if (cachedData) {
+                    return JSON.parse(cachedData); // 如果有缓存，解析并返回
+                } else {
+                    const res = await fetch(file); // 如果没有缓存，下载文件
+                    const jsonData = await res.json();
+                    storeData(file, JSON.stringify(jsonData)); // 存储到 localStorage
+                    return jsonData; // 返回下载的数据
+                }
+            });
+
             jsonData = (await Promise.all(filePromises)).flat(); // 将多个 JSON 文件的数据合并
             loadPublicationFilters(jsonData);
             loadTableData(jsonData); // 初始加载数据
