@@ -10,10 +10,10 @@ def parse_bibtex(bibtex_content, year, publication):
 
     for entry in bib_data.entries:
         # 提取所需字段
-        title = entry.get('title', '无标题')
-        author = entry.get('author', '无作者信息')
-        abstract = entry.get('abstract', '无摘要')
-        url = entry.get('url', '无链接')
+        title = entry.get('title', '无标题').strip()
+        author = entry.get('author', '无作者信息').strip()
+        abstract = entry.get('abstract', '无摘要').strip()
+        url = entry.get('url', '无链接').strip()
 
         # 创建 JSON 对象
         result = {
