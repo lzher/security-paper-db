@@ -272,6 +272,24 @@
         // 初始加载配置和数据
         loadConfig();
         updateLanguage(); // 更新语言
+
+        // 允许输入框通过回车键触发查询
+        document.getElementById('titleAbstractInput').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                filterTable();
+            }
+        });
+        document.getElementById('authorInput').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                filterTable();
+            }
+        });
+        document.getElementById('yearInput').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                filterTable();
+            }
+        });
+
     </script>
 
 </body>
