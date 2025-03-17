@@ -1,8 +1,7 @@
 {
     "json_files": [
         "json/security-2024.json",
-        "json/security-2023-summer.json",
-        "json/security-2023-fall.json",
+        "json/security-2023.json",
         "json/security-2022-summer.json",
         "json/security-2022-fall.json",
         "json/security-2021-summer.json",
