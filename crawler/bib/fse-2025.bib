@@ -1,0 +1,457 @@
+@inbook{10.1145/3696630.3734199,
+author = {Harman, Mark and O'Hearn, Peter and Sengupta, Shubho},
+title = {Harden and Catch for Just-in-Time Assured LLM-Based Software Testing: Open Research Challenges},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3734199},
+abstract = {Despite decades of research and practice in automated software testing, several fundamental concepts remain ill-defined and under-explored, yet offer enormous potential real-world impact. We show that these concepts raise exciting new challenges in the context of Large Language Models for software test generation. More specifically, we formally define and investigate the properties of hardening and catching tests. A hardening test is one that seeks to protect against future regressions, while a catching test is one that catches such a regression or a fault in new functionality introduced by a code change. Hardening tests can be generated at any time and may become catching tests when a future regression is caught. We also define and motivate the Catching 'Just-in-Time' (JiTTest) Challenge, in which tests are generated 'just-in-time' to catch new faults before they land into production. We show that any solution to Catching JiTTest generation can also be repurposed to catch latent faults in legacy code. We enumerate possible outcomes for hardening and catching tests and JiTTests, and discuss open research problems, deployment options, and initial results from our work on automated LLM-based hardening at Meta. This paper1 was written to accompany the keynote by the authors at the ACM International Conference on the Foundations of Software Engineering (FSE) 2025.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {1–17},
+numpages = {17}
+}
+
+@inproceedings{10.1145/3696630.3734200,
+author = {Williams, Laurie and Hamer, Sivana and Zahan, Nusrat},
+title = {Can the Rising Tide of Software Supply Chain Attacks Raise All Software Engineering Boats?},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3734200},
+doi = {10.1145/3696630.3734200},
+abstract = {Software organizations largely did not anticipate how the software supply chain (SSC) would become a deliberate attack vector. Attackers have moved from finding and exploiting vulnerabilities contributed by well-intentioned developers, such as log4j, to a new generation of software supply chain attacks, aggressively implanting vulnerabilities directly into dependencies available in open source. As with SolarWinds, adversaries also find their way into builds and deployments to deploy rogue software. Once implanted, these vulnerabilities become an efficient attack vector for adversaries to gain leverage at scale by exploiting the software supply chain. Software supply chain attacks have increased exponentially since 2020.These attacks have heightened awareness among governments and software organizations worldwide of the need for software development teams to adopt good software security practices - and, in the process, good software engineering practices. This awareness has led to two US Executive Orders, the EU Cyber Resilience Act, and other actions worldwide. For example, the CEOs of software organizations who sell to the US government now need to sign a document attesting that good software security/engineering practices were used. This paper will share an overview of these actions, empirical observations in the state-of-practice in software security practice adoption, automated software practice measurement, and how these efforts can move into general software engineering.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {18–26},
+numpages = {9},
+keywords = {software development practice, software framework, software security, security outcome, software supply chain attack},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
+@inbook{10.1145/3696630.3728529,
+author = {Gao, Yanjie and Luo, Jiyu and Lin, Haoxiang and Zhang, Hongyu and Wu, Ming and Yang, Mao},
+title = {dl²: Detecting Communication Deadlocks in Deep Learning Jobs},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728529},
+abstract = {In recent years, deep learning has seen widespread adoption across various domains, giving rise to large-scale models such as large language models. Training these models, particularly in distributed environments, presents substantial computational and communication challenges. A critical issue is the communication deadlock—a state in which processes become indefinitely stalled while awaiting network messages from others, which leads to resource wastage and reduced productivity. Current approaches to deadlock handling are either unsuitable for deep learning due to its unique hybrid programming paradigm or limit optimization opportunities. This paper presents dl2, a novel dynamic analysis tool designed to detect communication deadlocks in deep learning jobs. dl2 models the runtime trace of a job as an execution graph, detects unmatched communications, and constructs a wait-for graph to identify deadlock cycles. dl2 can also handle nondeterministic communication behaviors, providing replay and diagnostic support for root cause analysis. We evaluate dl2 using PyTorch with a combination of synthetic test cases and real-world deep learning workloads. The experimental results show that dl2 successfully detects all communication deadlocks, achieving 100\% precision and recall, which highlights its effectiveness.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {27–38},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728530,
+author = {Tan, Jingwen and Rajbahadur, Gopi Krishnan and Li, Zi and Song, Xiangfu and Lin, Jianshan and Li, Dan and Zheng, Zibin and Hassan, Ahmed E.},
+title = {LicenseGPT: A Fine-tuned Foundation Model for Publicly Available Dataset License Compliance},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728530},
+abstract = {Dataset license compliance is a critical yet complex aspect of developing commercial AI products, particularly with the increasing use of publicly available datasets. Ambiguities in dataset licenses pose significant legal risks, making it challenging even for software IP lawyers to accurately interpret rights and obligations. In this paper, we introduce LicenseGPT, a fine-tuned foundation model (FM) specifically designed for dataset license compliance analysis. We first evaluate existing legal FMs (i.e., FMs specialized in understanding and processing legal texts) and find that the best-performing model achieves a Prediction Agreement (PA) of only 43.75\%. LicenseGPT, fine-tuned on a curated dataset of 500 licenses annotated by legal experts, significantly improves PA to 64.30\%, outperforming both legal and general-purpose FMs. Through an A/B test and user study with software IP lawyers, we demonstrate that LicenseGPT reduces analysis time by 94.44\%, from 108 seconds to 6 seconds per license, without compromising accuracy. Software IP lawyers perceive LicenseGPT as a valuable supplementary tool that enhances efficiency while acknowledging the need for human oversight in complex cases. Our work underscores the potential of specialized AI tools in legal practice and offers a publicly available resource for practitioners and researchers. Moreover, LicenseGPT has the potential to assist AI software developers in managing preliminary license checks before involving legal counsel, helping to avoid costly late-stage rework and ensuring AI software compliance.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {39–50},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728531,
+author = {Jiang, Zhihan and Huang, Junjie and Yu, Guangba and Chen, Zhuangbin and Li, Yichen and Zhong, Renyi and Feng, Cong and Yang, Yongqiang and Yang, Zengyin and Lyu, Michael},
+title = {L4: Diagnosing Large-scale LLM Training Failures via Automated Log Analysis},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728531},
+abstract = {As Large Language Models (LLMs) show their capabilities across various applications, training customized LLMs has become essential for modern enterprises. However, due to the complexity of LLM training, which requires massive computational resources and extensive training time, failures are inevitable during the training process. These failures result in considerable waste of resource and time, highlighting the critical need for effective and efficient failure diagnosis to reduce the cost of LLM training.In this paper, we present the first empirical study on the failure reports of 428 LLM training failures in our production Platform-X between May 2023 and April 2024. Our study reveals that hardware and user faults are the predominant root causes, and current diagnosis processes rely heavily on training logs. Unfortunately, existing log-based diagnostic methods fall short in handling LLM training logs. Considering the unique features of LLM training, we identify three distinct patterns of LLM training logs: cross-job, spatial, and temporal patterns. We then introduce our Log-based Large-scale LLM training failure diagnosis framework, L4, which can automatically extract failure-indicating information (i.e., log events, nodes, stages, and iterations) from extensive training logs, thereby reducing manual effort and facilitating failure recovery. Experimental results on real-world datasets show that L4 outperforms existing approaches in identifying failure-indicating logs and localizing faulty nodes. Furthermore, L4 has been applied in Platform-X and demonstrated its effectiveness in enabling accurate and efficient failure diagnosis.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {51–63},
+numpages = {13}
+}
+
+@inbook{10.1145/3696630.3728532,
+author = {Xie, Yinglin and Hou, Xinyi and Zhao, Yanjie and Chen, Kai and Wang, Haoyu},
+title = {LLM App Squatting and Cloning},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728532},
+abstract = {Impersonation tactics, such as app squatting and app cloning, have posed longstanding challenges in the mobile app industry, where malicious actors exploit the names and reputations of popular apps to deceive users. With the rapid growth of large language model (LLM) stores like GPT Store and FlowGPT, these issues have similarly surfaced, highlighting the urgent need for robust industry standards and automated detection mechanisms to safeguard the LLM app ecosystem and protect users from fraudulent practices. In this study, we present the first large-scale analysis of LLM app squatting and cloning using our custom-built tool, LLMappCrazy. LLMappCrazy covers 14 squatting generation techniques and integrates Levenshtein distance and BERT-based semantic analysis to detect cloning by analyzing app functional similarities. Using this tool, we generated variations of the top 1000 app names and found over 5,000 squatting LLM apps in the dataset. Additionally, we observed 13,325 cloning cases across six major platforms. After sampling, we find that 4.7\% of the squatting apps and 18.4\% of the cloning apps exhibited malicious behavior, including phishing, malware distribution, fake content dissemination, and aggressive ad injection. Our work provides actionable insights for industry stakeholders to address these growing threats and foster a safer, more trustworthy LLM app ecosystem.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {64–74},
+numpages = {11}
+}
+
+@inbook{10.1145/3696630.3728533,
+author = {Mao, Yuetian and He, Junjie and Chen, Chunyang},
+title = {From Prompts to Templates: A Systematic Prompt Template Analysis for Real-world LLMapps},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728533},
+abstract = {Large Language Models (LLMs) have revolutionized human-AI interaction by enabling intuitive task execution through natural language prompts. Despite their potential, designing effective prompts remains a significant challenge, as small variations in structure or wording can result in substantial differences in output. To address these challenges, LLM-powered applications (LLMapps) rely on prompt templates to simplify interactions, enhance usability, and support specialized tasks such as document analysis, creative content generation, and code synthesis. However, current practices heavily depend on individual expertise and iterative trial-and-error processes, underscoring the need for systematic methods to optimize prompt template design in LLMapps. This paper presents a comprehensive analysis of prompt templates in practical LLMapps. We construct a dataset of real-world templates from open-source LLMapps, including those from leading companies like Uber and Microsoft. Through a combination of LLM-driven analysis and human review, we categorize template components and placeholders, analyze their distributions, and identify frequent co-occurrence patterns. Additionally, we evaluate the impact of identified patterns on LLMs' instruction-following performance through sample testing. Our findings provide practical insights on prompt template design for developers, supporting the broader adoption and optimization of LLMapps in industrial settings.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {75–86},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728534,
+author = {Antinyan, Vard},
+title = {Pursuit of Automotive Software Variant Reduction for Engineering Simplicity},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728534},
+abstract = {One of the underexplored areas in automotive development is the reduction of software variants to achieve engineering simplicity. While variants of functionality enable automakers to meet diverse customer needs and preferences, they also increase engineering complexity and the risk of production defects. This paper presents research on identifying practical approaches to reducing automotive software variants without compromising customer choice.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {87–92},
+numpages = {6}
+}
+
+@inbook{10.1145/3696630.3728535,
+author = {Wang, Chaozheng and Yang, Zezhou and Gao, Shuzheng and Gao, Cuiyun and Peng, Ting and Huang, Hailiang and Deng, Yuetang and Lyu, Michael},
+title = {RAG or Fine-tuning? A Comparative Study on LCMs-based Code Completion in Industry},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728535},
+abstract = {Code completion, a crucial practice in industrial settings, helps developers improve programming efficiency by automatically suggesting code snippets during development. With the emergence of Large Code Models (LCMs), this field has witnessed significant advancements. Due to the natural differences between open-source and industrial codebases, such as coding patterns and unique internal dependencies, it is a common practice for developers to conduct domain adaptation when adopting LCMs in industry. There exist multiple adaptation approaches, among which retrieval-augmented generation (RAG) and fine-tuning are the two most popular paradigms. However, no prior research has explored the trade-off of the two approaches in industrial scenarios.To mitigate the gap, we comprehensively compare the two paradigms including Retrieval-Augmented Generation (RAG) and Fine-tuning (FT), for industrial code completion in this paper. In collaboration with Tencent's WXG department, we collect over 160,000 internal C++ files as our codebase. We then compare the two types of adaptation approaches from three dimensions that are concerned by industrial practitioners, including effectiveness, efficiency, and parameter sensitivity, using six LCMs. Our findings reveal that RAG, when implemented with appropriate embedding models that map code snippets into dense vector representations, can achieve higher accuracy than fine-tuning alone. Specifically, BM25 presents superior retrieval effectiveness and efficiency among studied RAG methods. Moreover, RAG and fine-tuning are orthogonal and their combination leads to further improvement. We also observe that RAG demonstrates better scalability than FT, showing more sustained performance gains with larger scales of codebase. Our findings provide actionable guidance for choosing and implementing appropriate methods to adopt LCMs based on specific industrial scenarios and requirements.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {93–104},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728536,
+author = {Ji, Juntao and Fu, Yubao and Jin, Rongtong and Lin, Qingshan},
+title = {Designing for Scalability: Building a Universal Serverless Messaging Architecture with Apache RocketMQ},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728536},
+abstract = {Message middleware plays a crucial role in the modern world, facilitating seamless communication between distributed systems and enhancing overall application performance. From the user's standpoint, message middleware should operate in a serverless manner, focusing solely on message publishing and consumption [7]. As business throughput increases, it is essential that any message middleware has robust horizontal scalability. To this end, Alibaba Cloud has implemented a serverless paradigm based on Apache RocketMQ and has developed several mainstream message middleware solutions in this serverless form, such as RabbitMQ, MQTT, and Kafka. Taking RabbitMQ, which is characterized by its hard-to-scale architecture, as a case study, our RocketMQ-based RabbitMQ is compatible with all open-source clients and provides an unlimited throughput limit for single queues. Furthermore, the capabilities for managing queue-related metadata and message accumulation are over 1000\% greater than those of open-source RabbitMQ. The RocketMQ-based message middleware serverless architecture is expected to support stable commercial applications in Alibaba Cloud [4] and has the potential to serve as a reliable solution for large-scale message system clusters in the future.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {105–110},
+numpages = {6}
+}
+
+@inbook{10.1145/3696630.3728537,
+author = {Xiao, Pei and Wang, Lu and Yang, Fangkai and Geng, Guoqing and Li, Haoran and Zhu, Jeff and Kang, Yu and Li, Yifan and Chen, Terry and Chen, Yue and Rajmohan, Saravan and Zhang, Qi},
+title = {Te-PID: An Adaptive Erasure Coding Temperature Management System for Optimized Cloud Storage},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728537},
+abstract = {Cloud storage systems widely adopt temperature-based erasure coding (EC) formats to balance data access efficiency and storage costs. These systems categorize data into hot and cold EC formats based on access frequency, allocating frequently accessed data to hot EC and less accessed data to cold EC. However, achieving an optimal balance between storage costs with different EC formats and access efficiency through effective data categorization remains a significant challenge due to the dynamic nature of data access patterns. Existing static, rule-based methods lack predictive capability, fail to consider the global system state, and cannot dynamically adapt to changing environments. To address these limitations, we propose Te-PID (Temperature Proportional-Integral-Derivative), an adaptive EC temperature management system that optimizes data storage by integrating individual access behaviors with global system patterns. Te-PID consists of three components: a prediction model to forecast traffic patterns and anticipate storage needs, a filter module to minimize unnecessary EC format transitions, and a PID controller to maintain the cold traffic ratio within predefined constraints, balancing storage costs and performance. Experiments on Microsoft Azure's XTemperature system, including a 30-day real-world deployment across 830 tenants, demonstrate that Te-PID achieves a 30.1\% improvement in storage savings compared to existing methods, while maintaining access efficiency and adhering to system constraint.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {111–121},
+numpages = {11}
+}
+
+@inbook{10.1145/3696630.3728538,
+author = {Gao, Yanjie and Lu, Ruiming and Lin, Haoxiang and Chen, Yueguo},
+title = {An Empirical Study of Issues in Large Language Model Training Systems},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728538},
+abstract = {Large language models (LLMs) have gained significant traction in recent years, driving advancements in various applications. The training and evaluation of these models depend heavily on specialized LLM training systems, which are deployed across numerous GPUs, partition LLMs, and process large datasets. However, issues in LLM training systems can lead to program crashes or unexpected behavior, reducing development productivity and wasting valuable resources such as GPUs and storage.This paper presents the first comprehensive empirical study of issues in LLM training systems. We conducted a manual analysis of 300 high-quality issue reports and corresponding fix commits from the GitHub repositories of three prominent LLM training systems: Microsoft DeepSpeed, NVIDIA Megatron-LM, and Hugging Face Transformers. Our analysis identified common symptoms, root causes, typical fixes, and debugging and testing practices in LLM training systems. Our major findings include: (1) LLM training systems exhibit issues and trends that are uncommon in traditional deep learning, such as Concurrency Error and Tensor Management Error occurring in parallel training, which are particularly difficult to diagnose and resolve. (2) The primary root causes of these issues are API Misuse (19.67\%), Configuration Error (18.33\%), and General Code Error (16.33\%), respectively. Such issues often arise from the rapid evolution of the systems, the integration of complex external dependencies, and a configuration-driven development paradigm. (3) Current testing and debugging practices are often insufficient for identifying issues related to parallel training and large-scale numerical computations. Based on our findings, we propose several research topics and tooling improvements that can facilitate the future development of LLMs.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {122–133},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728539,
+author = {Lamar, Kenneth and Pirkelbauer, Peter and Painter, Zachary and Dechev, Damian},
+title = {ROSE LCOM Tools},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728539},
+abstract = {Lack of Cohesion of Methods (LCOM) quantitatively measures the cohesiveness of methods within a class. High cohesiveness indicates a class specialized for a given task, making it easier to understand and maintain. LCOM identifies classes with low cohesion, useful for targeted code refactoring in object-oriented software development.Although LCOM definitions are well-understood, real-world language features complicate practical implementations. In this work, we propose the first known implementation of LCOM for the Ada programming language and use an extendable design via the ROSE compiler tool to provide C++ support as well. In this work, we propose a tool to measure and visualize LCOM for C++ and Ada code. It is the first known implementation of LCOM for the Ada programming language. We evaluate the design decisions needed for a practical LCOM implementation, analyze the approach against open-source code, and compare our analyzer against existing tools. We find that our work is competitive with other evaluated tools while handling edge cases ignored by related works, reporting more accurate LCOM metrics. Finally, we provide a release of our tool, ROSE LCOM Tools, under an open-source license.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {134–143},
+numpages = {10}
+}
+
+@inproceedings{10.1145/3696630.3728540,
+author = {Go, Gwihwan and Zhou, Chijin and Zhang, Quan and Jiang, Yu and Wei, Zhao},
+title = {LSPAI: An IDE Plugin for LLM-Powered Multi-Language Unit Test Generation with Language Server Protocol},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728540},
+doi = {10.1145/3696630.3728540},
+abstract = {Unit testing is crucial to ensure the validity of the code, and research has been conducted to advance this domain. However, existing studies fail to address industry requirements, support for multi-language static analysis and real-time unit test generation. While integrating static analysis with a Large Language Model (LLM) could address these challenges, it typically requires effort to implement across programming languages. To address this, we propose LspAi, an automated unit test generation tool that leverages language analysis tools and integrates them into a unified development environment via the Language Server Protocol. This approach equips LLM with multi-language static analysis capabilities, allowing a single tool to support unit test generation across multiple languages. We evaluated our method by comparing line coverage across different LLMs and programming languages, demonstrating superior performance and broad applicability. In projects, LspAi achieved line coverage improvements of 145\% for Java, 931\% for Golang, and 95.62\% for Python compared to Copilot. In addition, we also share our lessons learned from applying the tool in Tencent Ltd.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {144–149},
+numpages = {6},
+keywords = {unit testing, language server protocol, large language model},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
+@inbook{10.1145/3696630.3728541,
+author = {Shi, Kensen and Alt\i{}nb\"{u}ken, Deniz and Anand, Saswat and Christodorescu, Mihai and Gr\"{u}nwedel, Katja and Koenings, Alexa and Naidu, Sai and Pathak, Anurag and Rasi, Marc and Ribeiro, Fredde and Ruffin, Brandon and Sanyam, Siddhant and Tabachnyk, Maxim and Toth, Sara and Tu, Roy and Welp, Tobias and Yin, Pengcheng and Zaheer, Manzil and Chandra, Satish and Sutton, Charles},
+title = {Natural Language Outlines for Code: Literate Programming in the LLM Era},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728541},
+abstract = {We propose using natural language outlines as a novel modality and interaction surface for providing AI assistance to developers throughout the software development process. An NL outline for a code function comprises multiple statements written in concise prose, which partition the code and summarize its main ideas in the style of literate programming. Crucially, we find that modern LLMs can generate accurate and high-quality NL outlines in practice. Moreover, NL outlines enable a bidirectional sync between code and NL, where a developer can change either code or NL and have the LLM automatically update the other. We discuss many use cases for NL outlines: they can accelerate understanding and navigation of code and diffs, simplify code maintenance, augment code search, steer code generation, and more. We then propose and compare multiple LLM prompting techniques for generating outlines and ask professional developers to judge outline quality. Finally, we present two case studies applying NL outlines toward code review and malware detection.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {150–161},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728542,
+author = {Ziftci, Celal and Nikolov, Stoyan and Sj\"{o}vall, Anna and Kim, Bo and Codecasa, Daniele and Kim, Max},
+title = {Migrating Code At Scale With LLMs At Google},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728542},
+abstract = {Developers often evolve an existing software system by making internal changes, called migration. Moving to a new framework, changing implementation to improve efficiency, and upgrading a dependency to its latest version are examples of migrations.Migration is a common and typically continuous maintenance task undertaken either manually or through tooling. Certain migrations are labor intensive and costly, developers do not find the required work rewarding, and they may take years to complete. Hence, automation is preferred for such migrations.In this paper, we discuss a large-scale, costly and traditionally manual migration project at Google, propose a novel automated algorithm that uses change location discovery and a Large Language Model (LLM) to aid developers conduct the migration, report the results of a large case study, and discuss lessons learned.Our case study on 39 distinct migrations undertaken by three developers over twelve months shows that a total of 595 code changes with 93, 574 edits have been submitted, where 74.45\% of the code changes and 69.46\% of the edits were generated by the LLM. The developers reported high satisfaction with the automated tooling, and estimated a 50\% reduction on the total time spent on the migration compared to earlier manual migrations.Our results suggest that our automated, LLM-assisted workflow can serve as a model for similar initiatives.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {162–173},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728543,
+author = {Kong, Qichao and Lv, Zhengwei and Xiong, Yiheng and Wang, Dingchun and Sun, Jingling and Su, Ting and Li, Letao and Yang, Xu and Huo, Gang},
+title = {ProphetAgent: Automatically Synthesizing GUI Tests from Test Cases in Natural Language for Mobile Apps},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728543},
+abstract = {GUI tests is crucial for ensuring software quality and user satisfaction of mobile apps. In practice, companies often maintain extensive test cases written in natural language. Testers need to convert these test cases into executable scripts for regression and compatibility testing. Requirement changes or version updates often necessitate the addition and modification to these test cases. Thus, when faced with large volumes of test cases and regular updates, this process becomes costly, which is a common challenge across the industry. To address this issue, this paper proposes ProphetAgent that can automatically synthesize executable GUI tests from the test cases written in natural language. ProphetAgent first constructs a Clustered UI Transition Graph (CUTG) enriched with semantic information, then leverages large language models to generate the executable test case based on CUTG and test cases written in natural language. Experiment results show that ProphetAgent achieved a 78.1\% success rate across 120 test cases in Douyin, Doubao, and six open-source apps, surpassing existing automated approaches (21.4\% for AppAgent and 32.5\% for AutoDroid). Additionally, statistical data from ByteDance's testing platform show that ProphetAgent increased testers' efficiency in synthesizing UI tests by 260\%.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {174–179},
+numpages = {6}
+}
+
+@inbook{10.1145/3696630.3728544,
+author = {Harman, Mark and Ritchey, Jillian and Harper, Inna and Sengupta, Shubho and Mao, Ke and Gulati, Abhishek and Foster, Christopher and Robert, Herv\'{e}},
+title = {Mutation-Guided LLM-based Test Generation at Meta},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728544},
+abstract = {This paper1 describes Meta's Automated Compliance Hardening (ACH) system for mutation-guided LLM-based test generation. ACH generates relatively few mutants (aka simulated faults), compared to traditional mutation testing. Instead, it focuses on generating currently undetected faults that are specific to an issue of concern. From these currently uncaught faults, ACH generates tests that can catch them, thereby 'killing' the mutants and consequently hardening the platform against regressions. We use privacy concerns to illustrate our approach, but ACH can harden code against any type of regression. In total, ACH was applied to 10,795 Android Kotlin classes in 7 software platforms deployed by Meta, from which it generated 9,095 mutants and 571 privacy-hardening test cases. ACH also deploys an LLM-based equivalent mutant detection agent that achieves a precision of 0.79 and a recall of 0.47 (rising to 0.95 and 0.96 with simple pre-processing). ACH was used in Messenger and WhatsApp test-a-thons where engineers accepted 73\% of its tests, judging 36\% to privacy relevant. We conclude that ACH hardens code against specific concerns and that, even when its tests do not directly tackle the specific concern, engineers find them useful for their other benefits.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {180–191},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728545,
+author = {Wang, Jue and Chen, Shuxiang and Liu, Yu and Deng, Yuan and Zhang, Lei and Fu, Yuanchang and Liu, Bo},
+title = {TestGPT-Server: Automatically Testing Microservices with Large Language Models at ByteDance},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728545},
+abstract = {Despite the advantages of the microservice architecture, there is an urgent need for automated testing microservice APIs, ensuring that each API functions correctly and reliably without exhaustive manual effort. This paper introduces TestGPT-Server, a novel, fully automated testing system for microservice APIs developed and deployed at ByteDance, leveraging the capabilities of large language models (LLMs) to enhance test request generation and bug detection. TestGPT-Server utilizes an LLM-enhanced interface analyzer and a code analyzer to extract syntactic and semantic information of the API under test. Based on the extracted information, it employs a targeted request generator and a guided stochastic fuzzer to produce comprehensive test requests. After sending generated test requests to the API, an LLM-assisted response analyzer identifies potential service crashes, and an assertion miner automatically mines functional assertions to detect functional bugs. Deployed at ByteDance, the evaluation results demonstrate that TestGPT-Server is effective, achieving a 40.52\% improvement over existing test requests and identifying 50 crash bugs and 2 functional bugs across 14,366 microservice APIs, with minimal manual effort.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {192–203},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728546,
+author = {Yu, Jiazhao and Tu, Yanlun and Zhang, Zhanlei and Zhang, Tiehua and Xu, Cheng and Wu, Weigang and Kang, Hong Jin and Zheng, Xi},
+title = {Grey-Box Fuzzing in Constrained Ultra-Large Systems: Lessons for SE Community},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728546},
+abstract = {Testing ultra-large microservices-based FinTech systems presents significant challenges, including restricted access to production environments, complex dependencies, and stringent security constraints. We propose SandBoxFuzz, a scalable grey-box fuzzing technique that addresses these limitations by leveraging aspect-oriented programming and runtime reflection to enable dynamic specification mining, generating targeted inputs for constrained environments. SandBoxFuzz also introduces a log-based coverage mechanism, seamlessly integrated into the build pipeline, eliminating the need for runtime coverage agents that are often infeasible in industrial settings. SandBoxFuzz has been successfully deployed to Ant Group's production line and, compared to an initial solution built on a state-of-the-art fuzzing framework, it demonstrates superior performance in their microservices software. SandBoxFuzz achieves a 7.5\% increase in branch coverage, identifies 1,850 additional exceptions, and reduces setup time from hours to minutes, highlighting its effectiveness and practical utility in a real-world industrial environment. By open-sourcing SandBoxFuzz1, we provide a practical and effective tool for researchers and practitioners to test large-scale microservices systems.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {204–214},
+numpages = {11}
+}
+
+@inbook{10.1145/3696630.3728547,
+author = {Sun, Yongqian and Hao, Bowen and Wang, Xiaotian and Zhao, Chenyu and Zhao, Yongxin and Shi, Binpeng and Zhang, Shenglin and Ge, Qiao and Li, Wenhu and Wei, Hua and Pei, Dan},
+title = {LLM-Augmented Ticket Aggregation for Low-cost Mobile OS Defect Resolution},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728547},
+abstract = {Mobile OS often exhibit defects due to their complexity and frequent updates, adversely affecting user experience. To resolve these defects, OS providers enlist beta users to test the OS. During testing, any defects encountered are recorded in tickets and reported back to the providers. However, the sheer volume of these tickets significantly challenges the efficiency of the ticket handling system, especially during the triage phase, where engineers assign tickets to appropriate development teams for resolution. Enhancing triage efficiency is possible by aggregating duplicate tickets related to the same defect, allowing simultaneous assignment of multiple tickets. Nonetheless, current ticket aggregation methods demand substantial labeled data for training, imposing a labor cost that hinders their practical implementation in production environments. To reduce this labor cost, we propose TixFusion, an LLM-augmented ticket aggregation framework. TixFusion employs unsupervised clustering to aggregate tickets, minimizing the need for labeled data, and integrates an LLM to extract discriminative information from tickets, improving aggregation accuracy. Extensive experiments using a dataset collected from the production environment of a top-tier global mobile OS provider Huawei demonstrate that TixFusion outperforms existing methods while maintaining a low labor cost. Additionally, TixFusion has been deployed in Huawei for over three months, processing more than 200,000 tickets, and has increased the processing speed of triage engineers by 3.78 times.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {215–226},
+numpages = {12}
+}
+
+@inbook{10.1145/3696630.3728548,
+author = {Hans, Sandeep and Kumar, Atul and Yasue, Toshiaki and Ono, Kouichi and Krishnan, Saravanan and Sondhi, Devika and Satoh, Fumiko and Mitchell, Gerald and Kumar, Sachin and Saha, Diptikalyan},
+title = {Automated Testing of COBOL to Java Transformation},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728548},
+abstract = {Recent advances in Large Language Model (LLM) based Generative AI techniques have made it feasible to translate enterprise-level code from legacy languages such as COBOL to modern languages such as Java or Python. While the results of LLM-based automatic transformation are encouraging, the resulting code cannot be trusted to correctly translate the original code, making manual validation of translated Java code from COBOL a necessary but time-consuming and labor-intensive process. In this paper, we share our experience of developing a testing framework for IBM Watsonx Code Assistant for Z (WCA4Z) [5], an industrial tool designed for COBOL to Java translation. The framework automates the process of testing the functional equivalence of the translated Java code against the original COBOL programs in an industry context. Our framework uses symbolic execution to generate unit tests for COBOL, mocking external calls and transforming them into JUnit tests to validate semantic equivalence with translated Java. The results not only help identify and repair any detected discrepancies but also provide feedback to improve the AI model.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {227–237},
+numpages = {11}
+}
+
+@inproceedings{10.1145/3696630.3728549,
+author = {Ma, Yingwei and Yang, Qingping and Cao, Rongyu and Li, Binhua and Huang, Fei and Li, Yongbin},
+title = {Alibaba LingmaAgent: Improving Automated Issue Resolution via Comprehensive Repository Exploration},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728549},
+doi = {10.1145/3696630.3728549},
+abstract = {This paper presents Alibaba LingmaAgent, a novel Automated Software Engineering method designed to comprehensively understand and utilize whole software repositories for issue resolution. Deployed in TONGYI Lingma, an IDE-based coding assistant developed by Alibaba Cloud, LingmaAgent addresses the limitations of existing LLM-based agents that primarily focus on local code information. Our approach introduces a top-down method to condense critical repository information into a knowledge graph, reducing complexity, and employs a Monte Carlo tree search based strategy enabling agents to explore and understand entire repositories. We guide agents to summarize, analyze, and plan using repository-level knowledge, allowing them to dynamically acquire information and generate patches for real-world GitHub issues. In extensive experiments, LingmaAgent demonstrated significant improvements, achieving an 18.5\% relative improvement on the SWE-bench Lite benchmark compared to SWE-agent. In production deployment and evaluation at Alibaba Cloud, LingmaAgent automatically resolved 16.9\% of in-house issues faced by development engineers, and solved 43.3\% of problems after manual intervention. Additionally, we have open-sourced a Python prototype of LingmaAgent for reference by other industrial developers 1. In fact, LingmaAgent has been used as a developed reference by many subsequently agents.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {238–249},
+numpages = {12},
+keywords = {automatic software engineering (ASE), software engineering agents, large language models (LLMs), fault localization, automated program repair, monte carlo tree search (MCTS)},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
+@inproceedings{10.1145/3696630.3728550,
+author = {Wang, Yong and Ge, Ning and Li, Jingyao and Wang, Loulin and Zhou, Guangyu and Deng, Chengrui and Zhang, Li and Hu, Chunming},
+title = {SemServGen: Advancing Industrial Domain-Specific Language Engineering through Semantic Service Generation},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728550},
+doi = {10.1145/3696630.3728550},
+abstract = {Domain-Specific Languages (DSLs) are widely used across industries for addressing challenges within specific domains. However, designing a DSL is just the first step in DSL engineering. To truly enhance development efficiency and system quality, comprehensive syntax and semantic services are essential. Currently, semantic services are primarily implemented manually, leading to high development costs. Automating their generation can significantly improve efficiency and reduce costs in DSL projects. This paper presents SemServGen, a framework that defines a structured approach to DSL semantic service development. SemServGen comprises SemaDSL, a unified semantic service expression language; SemServ-editor, which provides editing, syntax, semantic, template, and DSL-binding services; and SemServ-gen, an automated semantic service generator. SemaDSL enables the specification of both generic and domain-specific semantic services, while SemServ-gen translates these formal specifications into executable semantic services. We evaluated SemServGen with industry partners using CRL and SemaDSL as target DSLs. The results demonstrate that SemaDSL effectively models semantic service domain concepts with high usability, while SemServGen increases development efficiency by 2.5 times for CRL and 1.9 times for SemaDSL compared to manual implementation. Additionally, the generated semantic services meet industry-standard performance benchmarks for service analysis time.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {250–261},
+numpages = {12},
+keywords = {domain-specific language engineering, semantic service, semantic specification language, code generation},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
+@inproceedings{10.1145/3696630.3728551,
+author = {Ran, Dezhi and Li, Lin and Zhu, Liuchuan and Cao, Yuan and Zhao, Landelong and Tan, Xin and Liang, Guangtai and Wang, Qianxiang and Xie, Tao},
+title = {Efficient and Robust Security-Patch Localization for Disclosed OSS Vulnerabilities with Fine-Tuned LLMs in an Industrial Setting},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728551},
+doi = {10.1145/3696630.3728551},
+abstract = {Security-patch localization, which links disclosed vulnerabilities in open-source software (OSS) to corresponding patches, has become a practical technique to mitigate the risk of OSS vulnerabilities in a timely manner. While existing approaches extensively focus on estimating the correlation between individual patches and Common Vulnerabilities and Exposures (CVEs), they often fail to address two major industrial requirements that make a tool of security-patch localization desirable in industrial settings: (1) efficiency when inspecting an enormous number of commits per vulnerability and (2) robustness to handle confusing patches (related but non-fixing commits). Toward addressing the preceding industrial requirements, in this paper, we report our experiences of developing and deploying Taper, a two-stage approach for efficiently and robustly locating security patches via mining the temporal relations among commits and CVEs. In the first stage, Taper extracts the information of the fixed version and the affected version from CVE descriptions to narrow down the inspection scope of commits, thus significantly improving the efficiency. In the second stage, Taper collects temporally co-located patches around the genuine security-patch commit as hard negative examples for security-patch localization. By fine-tuning a language model with these hard negative samples, Taper avoids recognizing confusing patches as security patches, thus improving patch-localization precision and robustness. We evaluate Taper against 2,128 CVEs from 978 OSS projects, which have a balanced distribution of programming languages and are consistent with industrial settings. Evaluation results show that Taper substantially outperforms a state-of-the-art approach named PatchFinder, improving the absolute MRR and Recall@1 by 0.422 and 0.541, respectively. Taper has been deployed at Huawei Cloud since October 2024. During 800 hours of operation, Taper helps locate over 52,140 security patches, providing daily service of security-patch localization for the Huawei company and Huawei Cloud users. We summarize three major lessons learned from developing and deploying Taper.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {262–273},
+numpages = {12},
+keywords = {software supply chain, patch localization, vulnerability detection, large language models, software security, cybersecurity},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
+@inproceedings{10.1145/3696630.3728552,
+author = {Sun, Tao and Xu, Jian and Li, Yuanpeng and Yan, Zhao and Zhang, Ge and Xie, Lintao and Geng, Lu and Wang, Zheng and Chen, Yueyan and Lin, Qin and Duan, Wenbo and Sui, Kaixin and Zhu, Yuanshuo},
+title = {BitsAI-CR: Automated Code Review via LLM in Practice},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728552},
+doi = {10.1145/3696630.3728552},
+abstract = {Code review remains a critical yet resource-intensive process in software development, particularly challenging in large-scale industrial environments. While Large Language Models (LLMs) show promise for automating code review, existing solutions face significant limitations in precision and practicality. This paper presents BitsAI-CR, an innovative framework that enhances code review through a two-stage approach combining RuleChecker for initial issue detection and ReviewFilter for precision verification. The system is built upon a comprehensive taxonomy of review rules and implements a data flywheel mechanism that enables continuous performance improvement through structured feedback and evaluation metrics. Our approach introduces an Outdated Rate metric that can reflect developers' actual adoption of review comments, enabling automated evaluation and systematic optimization at scale. Empirical evaluation demonstrates BitsAI-CR's effectiveness, achieving 75.0\% precision in review comment generation. For the Go language which has predominant usage at ByteDance, we maintain an Outdated Rate of 26.7\%. The system has been successfully deployed at ByteDance, serving over 12,000 Weekly Active Users (WAU). Our work provides valuable insights into the practical application of automated code review and offers a blueprint for organizations seeking to implement automated code reviews at scale.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {274–285},
+numpages = {12},
+keywords = {code review, large language model, data flywheel},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
+@inproceedings{10.1145/3696630.3728553,
+author = {Paduraru, Ciprian and Paduraru, Miruna and Stefanescu, Alin},
+title = {Enhancing Game AI Behaviors with Large Language Models and Agentic AI},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728553},
+doi = {10.1145/3696630.3728553},
+abstract = {Integrating advanced AI behaviors is central to creating immersive and dynamic video game experiences. This paper presents a novel approach to improving AI behaviors in games using Large Language Models (LLMs) and agent-based AI. By orchestrating various interconnected parts, we propose a framework that facilitates the creation of complex behavior trees (BTs) for non-player characters (NPCs). Our method bridges the gap between source code and visual tools in game engines and enables both technical and non-technical stakeholders to effectively contribute to the development process. We also aim to increase the diversity of observable behaviors and testability of games through the same methods. The proposed architecture is designed to be adaptable to different game engines to ensure scalability and flexibility. In a collaboration between industry and academia, we validate our approach and demonstrate its potential to improve game AI development and make it more accessible and efficient. To promote the adoption of the methods, we consider small-sized models that run on typical developer platforms without the need for external solutions or expensive computing resources.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {286–296},
+numpages = {11},
+keywords = {game AI, large language models, behavior trees, agentic AI, generative AI, non-player characters (NPCs)},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
+@inproceedings{10.1145/3696630.3728554,
+author = {Lopez, Consuelo and Mehrpour, Sahar and Henley, Austin Z. and LaToza, Thomas D.},
+title = {OurCode: Experiences Transitioning University Research into a Developer Tools Startup},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728554},
+doi = {10.1145/3696630.3728554},
+abstract = {Commercializing a university research project by creating a company offers a direct path for software engineering researchers based in a university to put their research directly into the hands of practicing software engineers. In this paper, we offer insight and reflections on tech transfer through the context of our journey with OurCode, a developer tools startup aimed at rethinking how developers interact with software documentation. We detail our experience shifting from a project focused on basic research into a business mindset focused on meeting customer needs. Our lessons underscore the importance of balancing technical innovation with business needs, leveraging mentorship for strategic guidance, and fostering community-driven approaches to branding and user engagement. We report on the process of customer discovery and lessons learned about onboarding and software documentation practices and how engineering leaders make choices around the adoption of new developers tools. We conclude with reflections on the challenges and value of tech transfer in software engineering, including what researchers can learn from failed transitions to align their innovations with real-world needs and startup dynamics.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {297–307},
+numpages = {11},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
+@inproceedings{10.1145/3696630.3728555,
+author = {Krishna, Rahul and Pan, Rangeet and Sinha, Saurabh and Tamilselvam, Srikanth and Pavuluri, Raju and Vukovic, Maja},
+title = {Codellm-Devkit: A Framework for Contextualizing Code LLMs with Program Analysis Insights},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728555},
+doi = {10.1145/3696630.3728555},
+abstract = {Large Language Models for Code (or code LLMs) are increasingly gaining popularity and capabilities, offering a wide array of functionalities such as code completion, code generation, code summarization, test generation, code translation, and more. To leverage code LLMs to their full potential, developers must provide code-specific contextual information to the models. These are typically derived and distilled using program analysis tools. However, there exists a significant gap—these static analysis tools are often language-specific and come with a steep learning curve, making their effective use challenging. These tools are tailored to specific program languages, requiring developers to learn and manage multiple tools to cover various aspects of the their code base. Moreover, the complexity of configuring and integrating these tools into the existing development environments add an additional layer of difficulty. This challenge limits the potential benefits that could be gained from more widespread and effective use of static analysis in conjunction with LLMs.To address this challenge, we present codellm-devkit (hereafter, cldk), an open-source library that significantly simplifies the process of performing program analysis at various levels of granularity for different programming languages to support code LLM use cases. As a Python library, cldk offers developers an intuitive and user-friendly interface, making it incredibly easy to provide rich program analysis context to code LLMs. With this library, developers can effortlessly integrate detailed, code-specific insights that enhance the operational efficiency and effectiveness of LLMs in coding tasks. CLDK is available as an open-source library at https://github.com/codellm-devkit.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {308–318},
+numpages = {11},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
+@inproceedings{10.1145/3696630.3728556,
+author = {Lin, Zhihao and Zhou, Mingyi and Ma, Wei and Chen, Chi and Yang, Yun and Wang, Jun and Hu, Chunming and Li, Li},
+title = {HapRepair: Learn to Repair OpenHarmony Apps},
+year = {2025},
+isbn = {9798400712760},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696630.3728556},
+doi = {10.1145/3696630.3728556},
+abstract = {Software defect detection and repair are essential software engineering tasks that mitigate potential risks in the early development stages. Large Language Models (LLMs) have demonstrated significant capabilities in software defect detection and repair. However, it is hard for LLMs to handle the new programming languages such as ArkTS (which is predominantly used in the OpenHarmony platform) due to training data shortage. Additionally, LLM-based multi-defect repair suffers from the limitation of the context window of LLMs. These issues significantly affect the performance of LLM-based defect repair in new programming languages. To address the above challenges, we propose HapRepair, a defect repair framework that integrates static analysis tools with retrieval-augmented generation (RAG) to improve the effectiveness of the defect repair. Specifically, we integrate CodeLinter into our iterative defect repair framework for defect detection, which is the basis of defect repair, and utilize RAG together with ArkAnalyzer to improve the quality of our repair solutions. To overcome the context window limitation of LLMs, we propose the Surrounding Context Extractor and the Context Combination Tool. Experiment results show that HapRepair effectively repairs defects in OpenHarmony Apps, demonstrating high reliability and efficiency in addressing code issues, achieving a defect repair rate of about 99\% on the test set, compared to only about 37\% when directly using LLMs for defect repair based on the defect information. Our approach demonstrates a robust solution for defect repair on new programming languages that have limited code corpus.},
+booktitle = {Proceedings of the 33rd ACM International Conference on the Foundations of Software Engineering},
+pages = {319–330},
+numpages = {12},
+location = {Clarion Hotel Trondheim, Trondheim, Norway},
+series = {FSE Companion '25}
+}
+
