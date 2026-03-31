@@ -49,6 +49,10 @@
             margin-top: 12px;
             text-align: center;
         }
+        .result-count {
+            margin: 8px 1%;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -63,6 +67,7 @@
     <input type="text" id="authorInput" placeholder="基于作者搜索...">
     <input type="number" id="yearInput" placeholder="只搜索某年以后的论文...">
     <button onclick="filterTable()" id="searchButton">搜索</button>
+    <div id="resultCount" class="result-count">筛选命中：0</div>
 
     <div class="checkbox-container">
         <button onclick="selectAll()" id="selectAllButton">全选</button>
@@ -99,7 +104,7 @@
         const FIRST_BATCH_FILE_COUNT = 6;
         const BACKGROUND_BATCH_FILE_COUNT = 4;
         const publicationMap = new Map();
-        let currentLanguage = localStorage.getItem('language') || 'zh';
+        let currentLanguage = localStorage.getItem('language') || 'en';
 
         const texts = {
             zh: {
@@ -119,7 +124,8 @@
                 publicationHeader: "发表刊物",
                 linkHeader: "链接",
                 viewLink: "查看",
-                loadMore: "加载更多"
+                loadMore: "加载更多",
+                resultCount: "符合条件的论文数：{count}"
             },
             en: {
                 title: "Security Top Conference Paper Search",
@@ -138,9 +144,15 @@
                 publicationHeader: "Publication",
                 linkHeader: "Link",
                 viewLink: "View",
-                loadMore: "Load More"
+                loadMore: "Load More",
+                resultCount: "Matched papers: {count}"
             }
         };
+
+        function updateResultCount(count = filteredData.length) {
+            const text = texts[currentLanguage].resultCount.replace('{count}', count);
+            document.getElementById('resultCount').innerText = text;
+        }
 
         function toggleLanguage() {
             currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
@@ -165,6 +177,7 @@
             document.getElementById('publicationHeader').innerText = texts[currentLanguage].publicationHeader;
             document.getElementById('linkHeader').innerText = texts[currentLanguage].linkHeader;
             document.getElementById('loadMoreButton').innerText = texts[currentLanguage].loadMore;
+            updateResultCount();
             if (filteredData.length > 0) {
                 renderRows(true);
             }
@@ -353,6 +366,7 @@
                 return titleMatch && authorMatch && yearMatch && publicationMatch;
             });
             filteredData = nextFilteredData;
+            updateResultCount(filteredData.length);
             renderRows(true);
         }
 
