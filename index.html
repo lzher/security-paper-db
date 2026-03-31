@@ -45,6 +45,10 @@
             right: 20px;
             top: 20px;
         }
+        .load-more-container {
+            margin-top: 12px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -82,13 +86,21 @@
             <!-- 结果将填充到这里 -->
         </tbody>
     </table>
+    <div class="load-more-container">
+        <button onclick="loadMoreRows()" id="loadMoreButton" style="display: none;">加载更多</button>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
     <script>
         let jsonData = [];
+        let filteredData = [];
+        let renderedCount = 0;
+        const PAGE_SIZE = 100;
+        const FIRST_BATCH_FILE_COUNT = 6;
+        const BACKGROUND_BATCH_FILE_COUNT = 4;
+        const publicationMap = new Map();
         let currentLanguage = localStorage.getItem('language') || 'zh';
 
-        // 语言文本
         const texts = {
             zh: {
                 title: "安全顶会论文搜索",
@@ -107,6 +119,7 @@
                 publicationHeader: "发表刊物",
                 linkHeader: "链接",
                 viewLink: "查看",
+                loadMore: "加载更多"
             },
             en: {
                 title: "Security Top Conference Paper Search",
@@ -125,17 +138,16 @@
                 publicationHeader: "Publication",
                 linkHeader: "Link",
                 viewLink: "View",
+                loadMore: "Load More"
             }
         };
 
-        // 切换语言
         function toggleLanguage() {
             currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
             localStorage.setItem('language', currentLanguage);
             updateLanguage();
         }
 
-        // 更新界面语言
         function updateLanguage() {
             document.getElementById('mainTitle').innerText = texts[currentLanguage].title;
             document.getElementById('titleAbstractInput').placeholder = texts[currentLanguage].searchPlaceholder;
@@ -152,113 +164,189 @@
             document.getElementById('yearHeader').innerText = texts[currentLanguage].yearHeader;
             document.getElementById('publicationHeader').innerText = texts[currentLanguage].publicationHeader;
             document.getElementById('linkHeader').innerText = texts[currentLanguage].linkHeader;
+            document.getElementById('loadMoreButton').innerText = texts[currentLanguage].loadMore;
+            if (filteredData.length > 0) {
+                renderRows(true);
+            }
         }
 
-        // 从配置文件加载 JSON 文件
         function storeData(file, data) {
             const compressedData = LZString.compress(JSON.stringify(data));
             localStorage.setItem(file, compressedData);
         }
 
         function getData(file) {
-            const compressedData = localStorage.getItem(file);
-            return compressedData ? JSON.parse(LZString.decompress(compressedData)) : null;
-        }
-        
-        async function loadConfig() {
-            const response = await fetch('config.json');
-            const config = await response.json();
-            
-            // 使用 Promise.all 来并行处理所有文件
-            const filePromises = config.json_files.map(async file => {
-                const cachedData = getData(file); // 尝试从 localStorage 获取缓存
-                if (cachedData) {
-                    return JSON.parse(cachedData); // 如果有缓存，解析并返回
-                } else {
-                    const res = await fetch(file); // 如果没有缓存，下载文件
-                    const jsonData = await res.json();
-                    storeData(file, JSON.stringify(jsonData)); // 存储到 localStorage
-                    return jsonData; // 返回下载的数据
+            try {
+                const compressedData = localStorage.getItem(file);
+                if (!compressedData) {
+                    return null;
                 }
-            });
-
-            jsonData = (await Promise.all(filePromises)).flat(); // 将多个 JSON 文件的数据合并
-            loadPublicationFilters(jsonData);
-            loadTableData(jsonData); // 初始加载数据
+                const decompressed = LZString.decompress(compressedData);
+                if (!decompressed) {
+                    return null;
+                }
+                const parsed = JSON.parse(decompressed);
+                return Array.isArray(parsed) ? parsed : null;
+            } catch (error) {
+                return null;
+            }
         }
 
-        // 加载发表刊物的复选框
-        function loadPublicationFilters(data) {
-            const uniquePublications = [...new Set(data.map(item => item.publication))];
+        function normalizeItem(item) {
+            const title = typeof item.title === 'string' ? item.title : '';
+            const abstract = typeof item.abstract === 'string' ? item.abstract : '';
+            const author = typeof item.author === 'string' ? item.author : '';
+            const yearNumber = parseInt(item.year, 10);
+            return {
+                ...item,
+                _titleAbstractLower: `${title} ${abstract}`.toLowerCase(),
+                _authorLower: author.toLowerCase(),
+                _yearNumber: Number.isNaN(yearNumber) ? 0 : yearNumber
+            };
+        }
+
+        function createFilterId(publication) {
+            return `filter-${encodeURIComponent(publication)}`;
+        }
+
+        function appendPublicationFilter(publication) {
+            if (!publication || publicationMap.has(publication)) {
+                return;
+            }
             const filterContainer = document.getElementById('publicationFilters');
-
-            uniquePublications.forEach(publication => {
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.checked = true; // 默认全选
-                checkbox.value = publication;
-                checkbox.id = `filter-${publication}`;
-                checkbox.onchange = filterTable; // 过滤时触发
-
-                const label = document.createElement('label');
-                label.htmlFor = `filter-${publication}`;
-                label.innerText = publication;
-
-                filterContainer.appendChild(checkbox);
-                filterContainer.appendChild(label);
-                filterContainer.appendChild(document.createElement('br'));
-            });
+            const wrapper = document.createElement('div');
+            const checkbox = document.createElement('input');
+            const filterId = createFilterId(publication);
+            checkbox.type = 'checkbox';
+            checkbox.checked = true;
+            checkbox.value = publication;
+            checkbox.id = filterId;
+            checkbox.onchange = filterTable;
+            const label = document.createElement('label');
+            label.htmlFor = filterId;
+            label.innerText = publication;
+            wrapper.appendChild(checkbox);
+            wrapper.appendChild(label);
+            filterContainer.appendChild(wrapper);
+            publicationMap.set(publication, checkbox);
         }
 
-        // 向表格中填充数据
-        function loadTableData(data) {
-            const tableBody = document.getElementById('resultsBody');
-            tableBody.innerHTML = ""; // 清空现有内容
+        function loadPublicationFilters(data) {
+            data.forEach(item => appendPublicationFilter(item.publication));
+        }
 
-            data.forEach((item, index) => {
+        function renderRows(reset = false) {
+            const tableBody = document.getElementById('resultsBody');
+            if (reset) {
+                renderedCount = 0;
+                tableBody.innerHTML = "";
+            }
+            const end = Math.min(renderedCount + PAGE_SIZE, filteredData.length);
+            const fragment = document.createDocumentFragment();
+            for (let index = renderedCount; index < end; index += 1) {
+                const item = filteredData[index];
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${index + 1}</td>
-                    <td>${item.title}</td>
-                    <td>${item.abstract}</td>
-                    <td>${item.author}</td>
-                    <td>${item.year}</td>
-                    <td>${item.publication}</td>
-                    <td><a href="${item.link}" target="_blank">${texts[currentLanguage].viewLink}</a></td>
+                    <td>${item.title || ''}</td>
+                    <td>${item.abstract || ''}</td>
+                    <td>${item.author || ''}</td>
+                    <td>${item.year || ''}</td>
+                    <td>${item.publication || ''}</td>
+                    <td><a href="${item.link || '#'}" target="_blank">${texts[currentLanguage].viewLink}</a></td>
                 `;
-                tableBody.appendChild(row);
-            });
+                fragment.appendChild(row);
+            }
+            tableBody.appendChild(fragment);
+            renderedCount = end;
+            document.getElementById('loadMoreButton').style.display = renderedCount < filteredData.length ? 'inline-block' : 'none';
         }
 
-        // 搜索和筛选功能
+        function loadMoreRows() {
+            renderRows(false);
+        }
+
+        function buildTitleMatcher(input) {
+            const trimmed = input.trim();
+            if (!trimmed) {
+                return () => true;
+            }
+            try {
+                const regex = new RegExp(trimmed, 'i');
+                return item => regex.test(item.title || '') || regex.test(item.abstract || '');
+            } catch (error) {
+                const plain = trimmed.toLowerCase();
+                return item => item._titleAbstractLower.includes(plain);
+            }
+        }
+
+        async function loadJsonFile(file) {
+            const cachedData = getData(file);
+            if (cachedData) {
+                return cachedData;
+            }
+            const response = await fetch(file);
+            const data = await response.json();
+            storeData(file, data);
+            return data;
+        }
+
+        async function loadFileBatch(files) {
+            const datasets = await Promise.all(files.map(loadJsonFile));
+            const merged = datasets.flat().map(normalizeItem);
+            jsonData.push(...merged);
+            loadPublicationFilters(merged);
+        }
+
+        async function loadRemainingFiles(files) {
+            for (let i = 0; i < files.length; i += BACKGROUND_BATCH_FILE_COUNT) {
+                const batch = files.slice(i, i + BACKGROUND_BATCH_FILE_COUNT);
+                await loadFileBatch(batch);
+                filterTable();
+                await new Promise(resolve => setTimeout(resolve, 0));
+            }
+        }
+
+        async function loadConfig() {
+            const response = await fetch('config.json');
+            const config = await response.json();
+            const files = Array.isArray(config.json_files) ? config.json_files : [];
+            const firstBatch = files.slice(0, FIRST_BATCH_FILE_COUNT);
+            const remainingFiles = files.slice(FIRST_BATCH_FILE_COUNT);
+            await loadFileBatch(firstBatch);
+            filterTable();
+            loadRemainingFiles(remainingFiles);
+        }
+
         function filterTable() {
-            const titleAbstractInput = document.getElementById('titleAbstractInput').value;
-            const authorInput = document.getElementById('authorInput').value;
-            const yearInput = document.getElementById('yearInput').value;
+            const titleAbstractInput = document.getElementById('titleAbstractInput').value.trim();
+            const authorInputLower = document.getElementById('authorInput').value.trim().toLowerCase();
+            const yearInputValue = document.getElementById('yearInput').value.trim();
+            const minYear = yearInputValue ? parseInt(yearInputValue, 10) : null;
+            const titleMatcher = buildTitleMatcher(titleAbstractInput);
 
-            const checkedPublications = [...document.querySelectorAll('#publicationFilters input:checked')]
-                .map(checkbox => checkbox.value);
+            const checkedPublications = new Set(
+                [...document.querySelectorAll('#publicationFilters input:checked')].map(checkbox => checkbox.value)
+            );
 
-            const filteredData = jsonData.filter(item => {
-                const titleMatch = new RegExp(titleAbstractInput, 'i').test(item.title) || 
-                                   new RegExp(titleAbstractInput, 'i').test(item.abstract);
-                const authorMatch = item.author.toLowerCase().includes(authorInput.toLowerCase());
-                const yearMatch = yearInput ? parseInt(item.year) >= parseInt(yearInput) : true;
-                const publicationMatch = checkedPublications.includes(item.publication);
+            const nextFilteredData = jsonData.filter(item => {
+                const titleMatch = titleMatcher(item);
+                const authorMatch = !authorInputLower || item._authorLower.includes(authorInputLower);
+                const yearMatch = minYear === null || (!Number.isNaN(minYear) && item._yearNumber >= minYear);
+                const publicationMatch = checkedPublications.has(item.publication);
 
                 return titleMatch && authorMatch && yearMatch && publicationMatch;
             });
-
-            loadTableData(filteredData);
+            filteredData = nextFilteredData;
+            renderRows(true);
         }
 
-        // 全选和全不选功能
         function selectAll() {
             const checkboxes = document.querySelectorAll('#publicationFilters input[type="checkbox"]');
             checkboxes.forEach(checkbox => {
                 checkbox.checked = true;
             });
-            filterTable(); // 重新筛选
+            filterTable();
         }
 
         function deselectAll() {
@@ -266,14 +354,12 @@
             checkboxes.forEach(checkbox => {
                 checkbox.checked = false;
             });
-            filterTable(); // 重新筛选
+            filterTable();
         }
 
-        // 初始加载配置和数据
         loadConfig();
-        updateLanguage(); // 更新语言
+        updateLanguage();
 
-        // 允许输入框通过回车键触发查询
         document.getElementById('titleAbstractInput').addEventListener('keydown', function (event) {
             if (event.key === 'Enter') {
                 filterTable();
