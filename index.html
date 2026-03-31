@@ -280,6 +280,20 @@
             }
         }
 
+        function buildAuthorMatcher(input) {
+            const trimmed = input.trim();
+            if (!trimmed) {
+                return () => true;
+            }
+            try {
+                const regex = new RegExp(trimmed, 'i');
+                return item => regex.test(item.author || '');
+            } catch (error) {
+                const plain = trimmed.toLowerCase();
+                return item => item._authorLower.includes(plain);
+            }
+        }
+
         async function loadJsonFile(file) {
             const cachedData = getData(file);
             if (cachedData) {
@@ -320,10 +334,11 @@
 
         function filterTable() {
             const titleAbstractInput = document.getElementById('titleAbstractInput').value.trim();
-            const authorInputLower = document.getElementById('authorInput').value.trim().toLowerCase();
+            const authorInput = document.getElementById('authorInput').value.trim();
             const yearInputValue = document.getElementById('yearInput').value.trim();
             const minYear = yearInputValue ? parseInt(yearInputValue, 10) : null;
             const titleMatcher = buildTitleMatcher(titleAbstractInput);
+            const authorMatcher = buildAuthorMatcher(authorInput);
 
             const checkedPublications = new Set(
                 [...document.querySelectorAll('#publicationFilters input:checked')].map(checkbox => checkbox.value)
@@ -331,7 +346,7 @@
 
             const nextFilteredData = jsonData.filter(item => {
                 const titleMatch = titleMatcher(item);
-                const authorMatch = !authorInputLower || item._authorLower.includes(authorInputLower);
+                const authorMatch = authorMatcher(item);
                 const yearMatch = minYear === null || (!Number.isNaN(minYear) && item._yearNumber >= minYear);
                 const publicationMatch = checkedPublications.has(item.publication);
 
