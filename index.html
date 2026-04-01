@@ -37,6 +37,13 @@
         th {
             background-color: #f0f0f0;
         }
+        th.sortable {
+            cursor: pointer;
+            user-select: none;
+        }
+        th.sortable:hover {
+            background-color: #e0e0e0;
+        }
         .checkbox-container {
             margin-bottom: 10px;
         }
@@ -82,7 +89,7 @@
                 <th id="titleHeader">标题</th>
                 <th id="abstractHeader">摘要</th>
                 <th id="authorHeader">作者</th>
-                <th id="yearHeader">年份</th>
+                <th id="yearHeader" class="sortable" onclick="toggleSort()">年份</th>
                 <th id="publicationHeader">发表刊物</th>
                 <th id="linkHeader">链接</th>
             </tr>
@@ -105,6 +112,7 @@
         const BACKGROUND_BATCH_FILE_COUNT = 4;
         const publicationMap = new Map();
         let currentLanguage = localStorage.getItem('language') || 'en';
+        let currentSortOrder = 'desc';
 
         const texts = {
             zh: {
@@ -345,6 +353,26 @@
             loadRemainingFiles(remainingFiles);
         }
 
+        function sortData() {
+            filteredData.sort((a, b) => {
+                const yearA = a._yearNumber;
+                const yearB = b._yearNumber;
+                return currentSortOrder === 'desc' ? yearB - yearA : yearA - yearB;
+            });
+        }
+
+        function toggleSort() {
+            currentSortOrder = currentSortOrder === 'desc' ? 'asc' : 'desc';
+            sortData();
+            updateSortIndicator();
+            renderRows(true);
+        }
+
+        function updateSortIndicator() {
+            const indicator = currentSortOrder === 'desc' ? ' ↓' : ' ↑';
+            document.getElementById('yearHeader').innerText = texts[currentLanguage].yearHeader + indicator;
+        }
+
         function filterTable() {
             const titleAbstractInput = document.getElementById('titleAbstractInput').value.trim();
             const authorInput = document.getElementById('authorInput').value.trim();
@@ -366,6 +394,8 @@
                 return titleMatch && authorMatch && yearMatch && publicationMatch;
             });
             filteredData = nextFilteredData;
+            sortData();
+            updateSortIndicator();
             updateResultCount(filteredData.length);
             renderRows(true);
         }
@@ -388,6 +418,8 @@
 
         loadConfig();
         updateLanguage();
+        sortData();
+        updateSortIndicator();
 
         document.getElementById('titleAbstractInput').addEventListener('keydown', function (event) {
             if (event.key === 'Enter') {
