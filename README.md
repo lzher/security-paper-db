@@ -20,24 +20,6 @@ npm install
 npm run build
 ```
 
-### Tools
-
-| Tool | Description |
-|------|-------------|
-| `list_conferences` | List available conferences with paper counts and year ranges |
-| `search_papers` | Search papers with regex filtering on title/abstract/author, min year, and conference selection |
-
-`search_papers` parameters:
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `title_abstract_regex` | string | Regex or substring matched against title and abstract (OR), case-insensitive |
-| `author_regex` | string | Regex or substring matched against author field, case-insensitive |
-| `min_year` | integer | Inclusive minimum year (e.g. `2023`) |
-| `publications` | string[] | Conferences to include: `ccs`, `sp`, `ndss`, `security`, `icse`, `fse`, `ase` |
-| `limit` | integer | Max results to return (1–200, default 20) |
-| `offset` | integer | Pagination offset (default 0) |
-
 ### Claude Code / Claude Desktop Configuration
 
 Add to your MCP settings:
