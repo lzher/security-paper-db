@@ -60,6 +60,9 @@
             margin: 8px 1%;
             font-weight: 600;
         }
+        .no-link-text {
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -132,6 +135,8 @@
                 publicationHeader: "发表刊物",
                 linkHeader: "链接",
                 viewLink: "查看",
+                scholarLink: "Scholar 搜索",
+                noLink: "无链接",
                 loadMore: "加载更多",
                 resultCount: "符合条件的论文数：{count}"
             },
@@ -152,6 +157,8 @@
                 publicationHeader: "Publication",
                 linkHeader: "Link",
                 viewLink: "View",
+                scholarLink: "Scholar",
+                noLink: "No link",
                 loadMore: "Load More",
                 resultCount: "Matched papers: {count}"
             }
@@ -256,6 +263,65 @@
             data.forEach(item => appendPublicationFilter(item.publication));
         }
 
+        function createTextCell(value) {
+            const cell = document.createElement('td');
+            cell.textContent = value ?? '';
+            return cell;
+        }
+
+        function hasUsableLink(link) {
+            if (typeof link !== 'string') {
+                return false;
+            }
+
+            const trimmedLink = link.trim();
+            if (!trimmedLink || trimmedLink === '无链接') {
+                return false;
+            }
+
+            try {
+                const parsedUrl = new URL(trimmedLink);
+                return parsedUrl.protocol === 'http:' || parsedUrl.protocol === 'https:';
+            } catch (error) {
+                return false;
+            }
+        }
+
+        function buildScholarSearchUrl(title) {
+            if (typeof title !== 'string') {
+                return null;
+            }
+
+            const trimmedTitle = title.trim();
+            if (!trimmedTitle) {
+                return null;
+            }
+
+            return `https://scholar.google.com/scholar?q=${encodeURIComponent(trimmedTitle)}`;
+        }
+
+        function createLinkCell(link, title) {
+            const cell = document.createElement('td');
+
+            const scholarSearchUrl = buildScholarSearchUrl(title);
+
+            if (!hasUsableLink(link) && !scholarSearchUrl) {
+                const noLinkText = document.createElement('span');
+                noLinkText.className = 'no-link-text';
+                noLinkText.textContent = texts[currentLanguage].noLink;
+                cell.appendChild(noLinkText);
+                return cell;
+            }
+
+            const anchor = document.createElement('a');
+            anchor.href = hasUsableLink(link) ? link.trim() : scholarSearchUrl;
+            anchor.target = '_blank';
+            anchor.rel = 'noopener noreferrer';
+            anchor.textContent = hasUsableLink(link) ? texts[currentLanguage].viewLink : texts[currentLanguage].scholarLink;
+            cell.appendChild(anchor);
+            return cell;
+        }
+
         function renderRows(reset = false) {
             const tableBody = document.getElementById('resultsBody');
             if (reset) {
@@ -267,15 +333,13 @@
             for (let index = renderedCount; index < end; index += 1) {
                 const item = filteredData[index];
                 const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td>${item.title || ''}</td>
-                    <td>${item.abstract || ''}</td>
-                    <td>${item.author || ''}</td>
-                    <td>${item.year || ''}</td>
-                    <td>${item.publication || ''}</td>
-                    <td><a href="${item.link || '#'}" target="_blank">${texts[currentLanguage].viewLink}</a></td>
-                `;
+                row.appendChild(createTextCell(index + 1));
+                row.appendChild(createTextCell(item.title || ''));
+                row.appendChild(createTextCell(item.abstract || ''));
+                row.appendChild(createTextCell(item.author || ''));
+                row.appendChild(createTextCell(item.year || ''));
+                row.appendChild(createTextCell(item.publication || ''));
+                row.appendChild(createLinkCell(item.link, item.title));
                 fragment.appendChild(row);
             }
             tableBody.appendChild(fragment);
